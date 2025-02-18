@@ -82,60 +82,118 @@ L denota la Transformada de Laplace.
 𝑓(0) es el valor de la función en 𝑡=0.  
 
 #### 4.2. Descomposición en fracciones parciales.
+# **Descomposición en Fracciones Parciales**
+
+Dada la siguiente fracción:  
+
+$$\[\frac{2s^2 - 4}{(s+1)(s-2)(s-3)} = \frac{A}{s+1} + \frac{B}{s-2} + \frac{C}{s-3}\]$$  
+
+Multiplicamos por el denominador común para cancelar fracciones:  
+
+$$\[2s^2 - 4 = A(s-2)(s-3) + B(s+1)(s-3) + C(s+1)(s-2)\]$$
+
+Paso 2: Sustituimos valores para encontrar \( A, B, C \)**
+
+Para $$\( s = 2 \)$$:  
+
+$$\[2(4) - 4 = B(2+1)(2-3)\]$$  
+
+$$\[8 - 4 = B(3)(-1)\]$$
+
+$$\[4 = -3B\]$$
+
+$$\[B = -\frac{4}{3}\]$$
+
+Para $$\( s = 3 \)$$:
+
+
+$$\[2(9) - 4 = C(4)(1)\]$$
+
+$$\[18 - 4 = 4C\]$$
+
+$$\[14 = 4C\]$$
+
+$$\[C = \frac{7}{2}\]$$
+
+
+
+Para $$\( s = -1 \)$$:
+
+$$\[2(-1)^2 - 4 = A(-1-2)(-1-3)\]$$
+
+$$\[2 - 4 = A(-3)(-4)\]$$
+
+$$\[-2 = 12A\]$$
+
+$$\[A = -\frac{1}{6}\]$$
+
+
+## **Resultado Final**
+Sustituyendo los valores de \( A, B, C \):
+
+$$\[\frac{2s^2 - 4}{(s+1)(s-2)(s-3)} = \frac{-1/6}{s+1} + \frac{-4/3}{s-2} + \frac{7/2}{s-3}\]$$
+
 
 
 ## 5. Ejemplos
-💡Ejemplo 1: Transformada de inversa de Laplace  
-x''+4x=0            x(0) = 5 ; x'(0)=0  
-Donde: x'' = S^2X(s)-sX(0)-X'(0)  
-       4x  = 4(X)s  
-s^2X(s)-sX(0)-X'(0) + 4(X)s=0  
-s^2X(s)-5s+ 4(X)s=0  
-X(s)[s^2+4] = 5s  
-X(s)=(5s)/(S^2+4)  
-5L^-1{s/s^2+2^2}  
-5Cos(2t)  
-MATLAB:  
-![MATLAB](images/plantilla/Clase2(1).JPG)
+💡Ejemplo Sencillo de la Transformada de Laplace
+
+Dada la función:
+
+$$\[f(t) = e^{-3t}, \quad t \geq 0\]$$
+
+Aplicamos la definición de la Transformada de Laplace:
+
+$$\[F(s) = \int_0^{\infty} e^{-3t} e^{-st} dt\]$$
+
+Reescribimos la ecuación:
+
+$$\[F(s) = \int_0^{\infty} e^{-(s+3)t} dt\]$$
+
+Usamos la propiedad de la integral:
+
+$$\[\int_0^{\infty} e^{-at} dt = \frac{1}{a}, \quad \text{para } a > 0\]$$
+
+Donde $$\( a = s + 3 \)$$, entonces:
+
+$$\[F(s) = \frac{1}{s + 3}, \quad \text{para } s > -3\]$$
+
+**Resultado:**
+
+$$\[\mathcal{L} \{ e^{-3t} \} = \frac{1}{s + 3}\]$$
 
 
 
 ## 7. Ejercicios
-📚 Transformada de Laplace:  
-### Ejercicio 1: Transformada de Laplace de $$\( f(t) = t^2 e^{3t} \)$$
+📚 # Ejemplo: Propiedad de Linealidad de la Transformada de Laplace
 
-Calcular la transformada de Laplace de $$\( f(t) = t^2 e^{3t} \)$$.
+Dadas las funciones:
 
-$$\[\mathcal{L}\{f(t)\} = \int_0^\infty f(t) e^{-st} dt\]$$
+$$\[f(t) = \sin(t), \quad g(t) = \cos(t)\]$$
 
-Sabemos que:
+Queremos encontrar la Transformada de Laplace de:
 
-$$\[\mathcal{L}\{t^n e^{at}\} = \frac{n!}{(s - a)^{n+1}}, \quad \text{para} \quad \Re(s) > a\]$$
+$$\[h(t) = 3\sin(t) + 5\cos(t)\]$$
 
-Aplicamos con \( n = 2 \) y \( a = 3 \):
+Usamos la propiedad de linealidad:
 
-$$\[\mathcal{L}\{t^2 e^{3t}\} = \frac{2!}{(s - 3)^3}\]$$
-
-Por lo tanto:
-
-$$\[\mathcal{L}\{t^2 e^{3t}\} = \frac{2}{(s - 3)^3}\]$$
-
-📚 Transformada de laplace:  
-### Ejercicio 2: Transformada de Laplace de \( f(t) = \sin(2t) \)
-
-Calcular la transformada de Laplace de $$\( f(t) = \sin(2t) \)$$
+$$\\mathcal{L} \{ h(t) \} = 3 \mathcal{L} \{ \sin(t) \} + 5 \mathcal{L} \{ \cos(t) \}\$$
 
 Sabemos que:
 
-$$\[\mathcal{L}\{\sin(at)\} = \frac{a}{s^2 + a^2}\]$$
+$$\\mathcal{L} \{ \sin(t) \} = \frac{1}{s^2 + 1}, \quad \mathcal{L} \{ \cos(t) \} = \frac{s}{s^2 + 1}\$$
 
-Aplicamos con \( a = 2 \):
+Sustituyendo:
 
-$$\[\mathcal{L}\{\sin(2t)\} = \frac{2}{s^2 + 2^2}\]$$
+$$H(s) = 3 \cdot \frac{1}{s^2 + 1} + 5 \cdot \frac{s}{s^2 + 1}\$$
 
-Por lo tanto:
+$$H(s) = \frac{3 + 5s}{s^2 + 1}\$$
 
-$$\[\mathcal{L}\{\sin(2t)\} = \frac{2}{s^2 + 4}\]$$
+---
+
+## **Conclusión**
+Gracias a la propiedad de **linealidad**, podemos calcular la Transformada de Laplace de una combinación de funciones de forma sencilla, separando cada término y aplicando las transformadas individuales.
+
 
 
 ## 6. Conclusiones
