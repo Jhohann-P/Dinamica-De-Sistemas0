@@ -4,18 +4,210 @@ La descomposición en fracciones parciales se utiliza principalmente en la Trans
 
 
 ## 2. Definiciones   
->🔑*Modelos Dinamico:* Son aquellos sistemas que varian conforme al tiempo, que son analizables desde la perspectiva matemática
+>🔑*Transformada inversa de Laplace:* Se emplea para convertir funciones en el dominio de la frecuencia (s) al dominio del tiempo (t).  
   
->🔑*Sistema:* Conjunto de componentes interconectados que trabajan juntos para alcanzar un objetivo específico.
+>🔑*Resolución de ecuaciones diferenciales:* Ayuda a descomponer funciones para resolver ecuaciones diferenciales en sistemas dinámicos.  
       
->🔑*Sistema lineal:* Cumple con el principio de superposición, es decir, la respuesta a una combinación de entradas es la suma de las respuestas individuales.
+>🔑*Cálculo integral:* Permite resolver integrales complicadas de manera más sencilla al descomponerlas en términos más manejables.  
   
->🔑*Transformada de Laplace:* Método matemático que convierte ecuaciones diferenciales en ecuaciones algebraicas en el dominio de la frecuencia compleja.
+>🔑*Análisis de sistemas de control y circuitos eléctricos:* Se usa para encontrar la respuesta temporal de sistemas eléctricos y mecánicos modelados por ecuaciones diferenciales.
   
-## 3. Modelos dinámicos.
-Un modelo dinámico es una representación matemática o conceptual de un sistema que describe cómo sus variables cambian con el tiempo. A diferencia de los modelos estáticos, que representan relaciones en un estado fijo.
+## **Caso 1: Descomposición en Fracciones Parciales con Raíces Reales Distintas**
+
+Cuando el denominador \( Q(s) \) de una fracción racional tiene **raíces reales distintas**, la descomposición se hace expresando la fracción como una suma de términos simples con denominadores lineales.  
   
-Estos modelos son principales en diversas áreas como la ingeniería, la física, la biología, la economía y el control de sistemas, ya que permiten predecir y optimizar el desempeño de sistemas complejos.  
+**Forma General**    
+Si tenemos una función racional de la forma:  
+  
+$$G(s) = \frac{P(s)}{(s + p_1)(s + p_2) \dots (s + p_n)}$$  
+  
+donde $$\( p_1, p_2, \dots, p_n \)$$ son **raíces reales distintas**, entonces se puede descomponer en fracciones parciales como:  
+  
+$$G(s) = \frac{A}{s + p_1} + \frac{B}{s + p_2} + \dots + \frac{N}{s + p_n}$$  
+  
+donde $$\( A, B, \dots, N \)$$ son constantes que se deben determinar.  
+  
+
+
+**Ejemplo Resuelto**    
+Descomponer en fracciones parciales la siguiente función:  
+  
+$$G(s) = \frac{2s^2 - 4}{(s + 1)(s - 2)(s - 3)}$$  
+  
+**Paso 1: Plantear la ecuación de fracciones parciales**    
+Como los términos del denominador son raíces reales distintas, proponemos la siguiente descomposición:  
+  
+$$\frac{2s^2 - 4}{(s + 1)(s - 2)(s - 3)} = \frac{A}{s + 1} + \frac{B}{s - 2} + \frac{C}{s - 3}$$  
+  
+Multiplicamos todo por $$\( (s + 1)(s - 2)(s - 3) \)$$ para eliminar los denominadores:  
+  
+$$2s^2 - 4 = A(s - 2)(s - 3) + B(s + 1)(s - 3) + C(s + 1)(s - 2)$$
+
+
+
+**Paso 2: Hallar los coeficientes $$\( A, B, C \)$$**    
+Para encontrar \( A, B, C \), evaluamos la ecuación en valores estratégicos de \( s \).  
+  
+1. **Para $$\( s = -1 \)$$** (anula los términos con \( B \) y \( C \)):    
+   $$2(-1)^2 - 4 = A(-1 - 2)(-1 - 3)$$
+   
+   $$2 - 4 = A(-3)(-4)$$
+   
+   $$-2 = 12A\]$$
+   
+   $$A = -\frac{1}{6}$$
+     
+  
+2. **Para $$\( s = 2 \)$$** (anula los términos con $$\( A \) y \( C \))$$:  
+   $$2(2)^2 - 4 = B(2 + 1)(2 - 3)\$$
+   
+   $$8 - 4 = B(3)(-1)\$$
+   
+   $$4 = -3B\$$
+   
+   $$B = -\frac{4}{3}$$
+   
+
+3. **Para $$\( s = 3 \)$$** (anula los términos con $$\( A \) y \( B \))$$:  
+   $$2(3)^2 - 4 = C(3 + 1)(3 - 2)\$$
+   
+   $$18 - 4 = C(4)(1)$$  
+     
+   $$14 = 4C $$
+   
+   entonces: C = $$\frac{7}{2}$$  
+     
+
+
+**Paso 3: Escribir la solución final**    
+Reemplazamos los valores de $$\( A, B, C \)$$:
+
+$$\frac{2s^2 - 4}{(s + 1)(s - 2)(s - 3)} = \frac{-\frac{1}{6}}{s + 1} + \frac{-\frac{4}{3}}{s - 2} + \frac{\frac{7}{2}}{s - 3}$$  
+---
+  
+  
+## **Caso 2: Descomposición en Fracciones Parciales con Raíces Repetidas**  
+
+Cuando el denominador $$\( Q(s) \)$$ de una fracción racional tiene **raíces reales repetidas**, la descomposición cambia respecto al caso anterior.  
+
+## **Forma General**  
+Si el denominador tiene factores repetidos, es decir,
+
+
+$$G(s) = \frac{P(s)}{(s + p)^n}$$  
+
+
+donde $$\( (s + p)^n \)$$ es un **factor elevado a una potencia**, la descomposición se hace de la forma:
+
+\[
+G(s) = \frac{A}{s + p} + \frac{B}{(s + p)^2} + \frac{C}{(s + p)^3} + \dots + \frac{N}{(s + p)^n}
+\]
+
+donde \( A, B, C, \dots, N \) son constantes que se deben determinar.
+
+---
+
+## **Ejemplo Resuelto**  
+Descomponer en fracciones parciales la siguiente función:
+
+\[
+G(s) = \frac{2s^2 + 6s + 5}{(s + 2)(s + 1)^2}
+\]
+
+### **Paso 1: Plantear la ecuación de fracciones parciales**  
+Como el denominador tiene un factor lineal simple \( (s + 2) \) y un factor cuadrático repetido \( (s + 1)^2 \), la descomposición se plantea así:
+
+\[
+\frac{2s^2 + 6s + 5}{(s + 2)(s + 1)^2} = \frac{A}{s + 2} + \frac{B}{s + 1} + \frac{C}{(s + 1)^2}
+\]
+
+Multiplicamos todo por \( (s + 2)(s + 1)^2 \) para eliminar los denominadores:
+
+\[
+2s^2 + 6s + 5 = A(s + 1)^2 + B(s + 2)(s + 1) + C(s + 2)
+\]
+
+---
+
+### **Paso 2: Hallar los coeficientes \( A, B, C \)**  
+Para encontrar \( A, B, C \), evaluamos la ecuación en valores estratégicos de \( s \).
+
+1. **Para \( s = -2 \)** (anula los términos con \( B \) y \( C \)):  
+   \[
+   2(-2)^2 + 6(-2) + 5 = A(-2 + 1)^2
+   \]
+   \[
+   8 - 12 + 5 = A(1)
+   \]
+   \[
+   1 = A
+   \]
+
+2. **Para \( s = -1 \)** (anula los términos con \( A \) y \( C \)):  
+   \[
+   2(-1)^2 + 6(-1) + 5 = C(-1 + 2)
+   \]
+   \[
+   2 - 6 + 5 = C(1)
+   \]
+   \[
+   1 = C
+   \]
+
+3. **Para hallar \( B \)**, expandimos la ecuación original:
+
+   \[
+   2s^2 + 6s + 5 = A(s^2 + 2s + 1) + B(s^2 + 3s + 2) + C(s + 2)
+   \]
+
+   Sustituyendo \( A = 1 \) y \( C = 1 \):
+
+   \[
+   2s^2 + 6s + 5 = (s^2 + 2s + 1) + B(s^2 + 3s + 2) + (s + 2)
+   \]
+
+   Agrupando términos:
+
+   \[
+   2s^2 + 6s + 5 = s^2 + 2s + 1 + B s^2 + 3B s + 2B + s + 2
+   \]
+
+   \[
+   2s^2 + 6s + 5 = (1 + B)s^2 + (2 + 3B + 1)s + (1 + 2B + 2)
+   \]
+
+   Comparando coeficientes con \( 2s^2 + 6s + 5 \):
+
+   1. Para \( s^2 \):  
+      \[
+      1 + B = 2 \quad \Rightarrow \quad B = 1
+      \]
+
+   2. Para \( s \):  
+      \[
+      2 + 3(1) + 1 = 6  \quad \text{(Cumple)}
+      \]
+
+   3. Para términos constantes:  
+      \[
+      1 + 2(1) + 2 = 5  \quad \text{(Cumple)}
+      \]
+
+---
+
+### **Paso 3: Escribir la solución final**  
+Reemplazamos los valores de \( A, B, C \):
+
+\[
+\frac{2s^2 + 6s + 5}{(s + 2)(s + 1)^2} = \frac{1}{s + 2} + \frac{1}{s + 1} + \frac{1}{(s + 1)^2}
+\]
+
+---
+
+## **Conclusión**  
+Hemos descompuesto la fracción original en términos más simples. Esta forma es útil, por ejemplo, para calcular la **transformada inversa de Laplace** o resolver integrales de forma más sencilla.
+
+
   
 ### 4. Derivada de una función  
   
