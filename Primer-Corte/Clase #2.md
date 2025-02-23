@@ -1,8 +1,6 @@
-# Transformada de Laplace
-## 1. Transformada de Laplace en Dinámica de Sistemas 
-La dinámica de sistemas estudia la evolución de los sistemas en el tiempo, modelando su comportamiento mediante ecuaciones diferenciales. Un sistema se define como un conjunto de componentes interconectados que trabajan para alcanzar un objetivo. Si la salida depende de entradas pasadas, se dice que es un sistema dinámico; de lo contrario, es estático.
-
-En este contexto, se utilizan modelos dinámicos basados en ecuaciones diferenciales para describir la evolución de las variables del sistema en función del tiempo. Existen sistemas lineales, que cumplen con el principio de superposición, y sistemas no lineales, que requieren técnicas de aproximación para su análisis.
+# Descomposición en fracciones parciales
+## 1. Fracciones parciales
+La descomposición en fracciones parciales se utiliza principalmente en la Transformada de Laplace y en la resolución de ecuaciones diferenciales, ya que permite expresar una fracción racional compleja como una suma de fracciones más simples. Esto facilita la aplicación de la transformada inversa de Laplace y la resolución de integrales en cálculo. En general, se usa para:
 
 
 ## 2. Definiciones   
