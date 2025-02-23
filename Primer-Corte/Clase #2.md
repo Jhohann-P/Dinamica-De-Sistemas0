@@ -83,14 +83,14 @@ Para encontrar \( A, B, C \), evaluamos la ecuación en valores estratégicos de
 Reemplazamos los valores de $$\( A, B, C \)$$:
 
 $$\frac{2s^2 - 4}{(s + 1)(s - 2)(s - 3)} = \frac{-\frac{1}{6}}{s + 1} + \frac{-\frac{4}{3}}{s - 2} + \frac{\frac{7}{2}}{s - 3}$$  
----
+
   
-  
+
 ## **Caso 2: Descomposición en Fracciones Parciales con Raíces Repetidas**  
 
 Cuando el denominador $$\( Q(s) \)$$ de una fracción racional tiene **raíces reales repetidas**, la descomposición cambia respecto al caso anterior.  
 
-## **Forma General**  
+**Forma General**  
 Si el denominador tiene factores repetidos, es decir,
 
 
@@ -99,113 +99,204 @@ $$G(s) = \frac{P(s)}{(s + p)^n}$$
 
 donde $$\( (s + p)^n \)$$ es un **factor elevado a una potencia**, la descomposición se hace de la forma:
 
-\[
-G(s) = \frac{A}{s + p} + \frac{B}{(s + p)^2} + \frac{C}{(s + p)^3} + \dots + \frac{N}{(s + p)^n}
-\]
+$$G(s) = \frac{A}{s + p} + \frac{B}{(s + p)^2} + \frac{C}{(s + p)^3} + \dots + \frac{N}{(s + p)^n}$$
 
-donde \( A, B, C, \dots, N \) son constantes que se deben determinar.
+donde $$\( A, B, C, \dots, N \)$$ son constantes que se deben determinar.
 
----
 
-## **Ejemplo Resuelto**  
+
+**Ejemplo Resuelto**  
 Descomponer en fracciones parciales la siguiente función:
 
-\[
-G(s) = \frac{2s^2 + 6s + 5}{(s + 2)(s + 1)^2}
-\]
+$$G(s) = \frac{2s^2 + 6s + 5}{(s + 2)(s + 1)^2}$$  
 
-### **Paso 1: Plantear la ecuación de fracciones parciales**  
-Como el denominador tiene un factor lineal simple \( (s + 2) \) y un factor cuadrático repetido \( (s + 1)^2 \), la descomposición se plantea así:
+**Paso 1: Plantear la ecuación de fracciones parciales**  
+Como el denominador tiene un factor lineal simple \( (s + 2) \) y un factor cuadrático repetido \( (s + 1)^2 \), la descomposición se plantea así:  
+  
+$$\frac{2s^2 + 6s + 5}{(s + 2)(s + 1)^2} = \frac{A}{s + 2} + \frac{B}{s + 1} + \frac{C}{(s + 1)^2}$$  
 
-\[
-\frac{2s^2 + 6s + 5}{(s + 2)(s + 1)^2} = \frac{A}{s + 2} + \frac{B}{s + 1} + \frac{C}{(s + 1)^2}
-\]
+Multiplicamos todo por $$\( (s + 2)(s + 1)^2 \)$$ para eliminar los denominadores:  
 
-Multiplicamos todo por \( (s + 2)(s + 1)^2 \) para eliminar los denominadores:
+$$2s^2 + 6s + 5 = A(s + 1)^2 + B(s + 2)(s + 1) + C(s + 2)$$  
+  
+  
+  
+**Paso 2: Hallar los coeficientes \( A, B, C \)**    
+Para encontrar $$\( A, B, C \)$$, evaluamos la ecuación en valores estratégicos de $$\( s \)$$.    
+    
+1. **Para \( s = -2 \)** (anula los términos con \( B \) y \( C \)):    
+ 
+   $$2(-2)^2 + 6(-2) + 5 = A(-2 + 1)^2$$  
+     
+   $$8 - 12 + 5 = A(1)$$  
+     
+   $$1 = A$$  
 
-\[
-2s^2 + 6s + 5 = A(s + 1)^2 + B(s + 2)(s + 1) + C(s + 2)
-\]
+3. **Para $$\( s = -1 \)$$** (anula los términos con $$\( A \) y \( C \))$$:
+   
+   $$2(-1)^2 + 6(-1) + 5 = C(-1 + 2)$$  
+     
+   $$2 - 6 + 5 = C(1)$$  
+    
+   $$1 = C$$    
+  
+5. **Para hallar $$\( B \)$$**, expandimos la ecuación original:
 
----
+   $$2s^2 + 6s + 5 = A(s^2 + 2s + 1) + B(s^2 + 3s + 2) + C(s + 2)$$  
+  
+   Sustituyendo \( A = 1 \) y \( C = 1 \):    
+  
+   $$2s^2 + 6s + 5 = (s^2 + 2s + 1) + B(s^2 + 3s + 2) + (s + 2)$$  
 
-### **Paso 2: Hallar los coeficientes \( A, B, C \)**  
-Para encontrar \( A, B, C \), evaluamos la ecuación en valores estratégicos de \( s \).
+   Agrupando términos:  
+  
+   $$2s^2 + 6s + 5 = s^2 + 2s + 1 + B s^2 + 3B s + 2B + s + 2$$  
+  
+   $$2s^2 + 6s + 5 = (1 + B)s^2 + (2 + 3B + 1)s + (1 + 2B + 2)$$  
+    
+   Comparando coeficientes con $$\( 2s^2 + 6s + 5 \)$$:  
+  
+   1. Para $$\( s^2 \)$$:    
+      $$1 + B = 2 \quad \Rightarrow \quad B = 1$$  
+    
+   2. Para $$\( s \)$$:    
+      $$2 + 3(1) + 1 = 6  \quad \text{(Cumple)}$$  
+    
+   3. Para términos constantes:    
+      $$1 + 2(1) + 2 = 5  \quad \text{(Cumple)}$$  
+  
 
-1. **Para \( s = -2 \)** (anula los términos con \( B \) y \( C \)):  
-   \[
-   2(-2)^2 + 6(-2) + 5 = A(-2 + 1)^2
-   \]
-   \[
-   8 - 12 + 5 = A(1)
-   \]
-   \[
-   1 = A
-   \]
+**Paso 3: Escribir la solución final**    
+Reemplazamos los valores de \( A, B, C \):  
+  
+$$\frac{2s^2 + 6s + 5}{(s + 2)(s + 1)^2} = \frac{1}{s + 2} + \frac{1}{s + 1} + \frac{1}{(s + 1)^2}$$  
 
-2. **Para \( s = -1 \)** (anula los términos con \( A \) y \( C \)):  
-   \[
-   2(-1)^2 + 6(-1) + 5 = C(-1 + 2)
-   \]
-   \[
-   2 - 6 + 5 = C(1)
-   \]
-   \[
-   1 = C
-   \]
 
-3. **Para hallar \( B \)**, expandimos la ecuación original:
+## **Caso 3: Descomposición en Fracciones Parciales con Raíces Complejas Conjugadas** 
 
-   \[
-   2s^2 + 6s + 5 = A(s^2 + 2s + 1) + B(s^2 + 3s + 2) + C(s + 2)
-   \]
+Cuando el denominador \( Q(s) \) de una fracción racional tiene **raíces complejas conjugadas**, la descomposición debe tener en cuenta los términos cuadráticos irreducibles.
 
-   Sustituyendo \( A = 1 \) y \( C = 1 \):
+**Forma General**  
+Si el denominador tiene factores cuadráticos irreducibles de la forma \( s^2 + bs + c \), la descomposición se realiza de la forma:
+  
+$$G(s) = \frac{P(s)}{(s^2 + b_1s + c_1)(s^2 + b_2s + c_2) \dots (s^2 + b_n s + c_n)}$$  
+  
+La descomposición en fracciones parciales se expresa como:  
+  
+$$G(s) = \frac{A s + B}{s^2 + b_1 s + c_1} + \frac{C s + D}{s^2 + b_2 s + c_2} + \dots$$  
 
-   \[
-   2s^2 + 6s + 5 = (s^2 + 2s + 1) + B(s^2 + 3s + 2) + (s + 2)
-   \]
+donde $$\( A, B, C, D, \dots \)$$ son constantes que se deben determinar.
 
-   Agrupando términos:
+**Ejemplo Resuelto**  
+Descomponer en fracciones parciales la siguiente función:  
+  
+$$G(s) = \frac{s^2 + 2s + 3}{(s^2 + 2s + 2)(s^2 + 2s + 5)}$$  
+  
+**Paso 1: Plantear la ecuación de fracciones parciales**  
+Como el denominador tiene dos factores cuadráticos irreducibles, la descomposición se plantea así:  
+  
+$$\frac{s^2 + 2s + 3}{(s^2 + 2s + 2)(s^2 + 2s + 5)} = \frac{A s + B}{s^2 + 2s + 2} + \frac{C s + D}{s^2 + 2s + 5}$$
 
-   \[
-   2s^2 + 6s + 5 = s^2 + 2s + 1 + B s^2 + 3B s + 2B + s + 2
-   \]
+Multiplicamos todo por $$\( (s^2 + 2s + 2)(s^2 + 2s + 5) \)$$ para eliminar los denominadores:
 
-   \[
-   2s^2 + 6s + 5 = (1 + B)s^2 + (2 + 3B + 1)s + (1 + 2B + 2)
-   \]
+$$s^2 + 2s + 3 = (A s + B)(s^2 + 2s + 5) + (C s + D)(s^2 + 2s + 2)$$
+  
+  
+**Paso 2: Expandir los productos**    
+Expandimos cada término:  
+  
+$$(A s + B)(s^2 + 2s + 5) = A s^3 + 2A s^2 + 5A s + B s^2 + 2B s + 5B$$  
+  
+$$(C s + D)(s^2 + 2s + 2) = C s^3 + 2C s^2 + 2C s + D s^2 + 2D s + 2D$$  
+  
+Sumamos todos los términos:    
+  
+$$(A s^3 + 2A s^2 + 5A s + B s^2 + 2B s + 5B) + (C s^3 + 2C s^2 + 2C s + D s^2 + 2D s + 2D)$$  
 
-   Comparando coeficientes con \( 2s^2 + 6s + 5 \):
+Agrupamos por potencias de \( s \):  
 
-   1. Para \( s^2 \):  
-      \[
-      1 + B = 2 \quad \Rightarrow \quad B = 1
-      \]
+$$(A + C)s^3 + (2A + B + 2C + D)s^2 + (5A + 2B + 2C + 2D)s + (5B + 2D)$$  
+  
+Esto debe ser igual a la ecuación original:  
+  
+$$s^2 + 2s + 3$$  
+  
 
-   2. Para \( s \):  
-      \[
-      2 + 3(1) + 1 = 6  \quad \text{(Cumple)}
-      \]
 
-   3. Para términos constantes:  
-      \[
-      1 + 2(1) + 2 = 5  \quad \text{(Cumple)}
-      \]
+**Paso 3: Igualar coeficientes**    
+Comparando coeficientes:  
+  
+1. **Para $$\( s^3 \)$$:**
+    
+   $$A + C = 0 \quad \Rightarrow \quad C = -A$$
 
----
+2. **Para $$\( s^2 \)$$:**  
+     
+   $$2A + B + 2C + D = 1$$    
+  
+3. **Para $$\( s^1 \)$$:**  
+    
+   $$5A + 2B + 2C + 2D = 2$$    
+  
+4. **Para términos constantes:**  
+     
+  $$5B + 2D = 3$$  
 
-### **Paso 3: Escribir la solución final**  
-Reemplazamos los valores de \( A, B, C \):
 
-\[
-\frac{2s^2 + 6s + 5}{(s + 2)(s + 1)^2} = \frac{1}{s + 2} + \frac{1}{s + 1} + \frac{1}{(s + 1)^2}
-\]
+**Paso 4: Resolver el sistema de ecuaciones**  
+Sustituyendo $$\( C = -A \)$$ en la segunda ecuación:  
 
----
+$$2A + B + 2(-A) + D = 1$$  
 
-## **Conclusión**  
-Hemos descompuesto la fracción original en términos más simples. Esta forma es útil, por ejemplo, para calcular la **transformada inversa de Laplace** o resolver integrales de forma más sencilla.
+$$2A - 2A + B + D = 1$$  
+
+$$B + D = 1$$  
+
+Sustituyendo $$\( C = -A \)$$ en la tercera ecuación:  
+
+$$5A + 2B + 2(-A) + 2D = 2$$  
+
+$$3A + 2B + 2D = 2$$  
+  
+El sistema queda:  
+  
+1. $$\( A + C = 0 \)$$   
+2. $$\( B + D = 1 \)$$    
+3. $$\( 3A + 2B + 2D = 2 \)$$    
+4. $$\( 5B + 2D = 3 \)$$    
+
+Resolviendo paso a paso:
+  
+- De $$\( B + D = 1 \Rightarrow D = 1 - B \)$$
+    
+- Sustituyéndolo en $$\( 5B + 2D = 3 \)$$:  
+  
+  $$5B + 2(1 - B) = 3$ $  
+  
+  $$5B + 2 - 2B = 3$$  
+  
+  $$3B = 1 \quad \Rightarrow \quad B = \frac{1}{3}$$  
+  
+  $$D = 1 - \frac{1}{3} = \frac{2}{3}$$  
+  
+Sustituyendo $$\( B = \frac{1}{3} \) y \( D = \frac{2}{3} \) en la ecuación \( 3A + 2B + 2D = 2 \)$$:
+
+$$3A + 2\left(\frac{1}{3}\right) + 2\left(\frac{2}{3}\right) = 2$$  
+  
+$$3A + \frac{2}{3} + \frac{4}{3} = 2$$  
+  
+$$3A + 2 = 2$$  
+  
+$$3A = 0 \quad \Rightarrow \quad A = 0$$  
+  
+De $$\( A + C = 0 \)$$, obtenemos $$\( C = 0 \)$$.
+  
+  
+**Paso 5: Escribir la solución final**    
+Reemplazamos los valores de \( A, B, C, D \):  
+
+$$\frac{s^2 + 2s + 3}{(s^2 + 2s + 2)(s^2 + 2s + 5)} = \frac{\frac{1}{3}}{s^2 + 2s + 2} + \frac{\frac{2}{3}}{s^2 + 2s + 5}$$  
+  
 
 
   
