@@ -272,7 +272,7 @@ Resolviendo paso a paso:
     
 - Sustituyéndolo en $$\( 5B + 2D = 3 \)$$:  
   
-  $$5B + 2(1 - B) = 3$ $  
+  $$5B + 2(1 - B) = 3$$  
   
   $$5B + 2 - 2B = 3$$  
   
@@ -343,7 +343,7 @@ $$5s + 4 = A(s + 2) + B(s + 1)$$
   
 $$\frac{5s + 4}{(s + 1)(s + 2)} = \frac{-1}{s + 1} + \frac{6}{s + 2}$$  
 
-
+-----
 
 📚 # Ejemplo 2: Caso de Raíces Repetidas**  
   
