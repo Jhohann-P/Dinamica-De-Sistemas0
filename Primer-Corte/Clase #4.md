@@ -37,10 +37,16 @@ $$ x(t) = (2a + b)e^{-t} - (a + b)e^{-2t}, \quad (t \geq 0) $$
 
 📚 # Ejemplo 1
 
-$$\ddot{x} + 2\dot{x} + 3x = 0,$$ 
+$$\ddot{x} + 2\dot{x} - 3x = 0,$$ 
 $$x(0) = -1,   \dot{x}(0) = 3$$
 Aplicamos la transformada de LaPlace
-$$ \left[ s^2 X(s) + s - 3 \right] + 2 \left[ s X(s) + 1\right] + 3X(s) = 0 $$
+$$ \left[ s^2 X(s) + s - 3 \right] + 2 \left[ s X(s) + 1\right] - 3X(s) = 0 $$
+
+📚 # Ejemplo 2
+
+$$\ddot{x} - 8\dot{x} - 9x = 0,$$ 
+$$x(0) = 0,   \dot{x}(0) = 4$$
+$$ \left[ s^2 X(s) - 4 \right] + 9 [ s X(s)] - 9X(s) = 0 $$
 
 
 
