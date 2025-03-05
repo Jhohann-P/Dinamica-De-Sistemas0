@@ -12,4 +12,11 @@ Estas ecuaciones permiten comprender y predecir el comportamiento de un sistema,
 >🔑*Variable de Estado*: Es una magnitud que describe el estado actual de un sistema, como la posición, la velocidad o la temperatura, y cuya evolución está gobernada por ecuaciones diferenciales.
   
 >🔑*Solución de una Ecuación Diferencial*: Es la función que satisface la ecuación diferencial para un conjunto de condiciones iniciales, determinando cómo evoluciona el sistema en el tiempo.
+  ## 3. Ejemplos con ecuaciones diferenciales
   
+$$  x + 3 \dot{x} + 2x = 0 $$
+$$ f''(x) $$
+
+$$f(x) = x^2\$$  
+
+
