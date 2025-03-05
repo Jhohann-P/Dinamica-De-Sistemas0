@@ -14,8 +14,8 @@ Estas ecuaciones permiten comprender y predecir el comportamiento de un sistema,
 >🔑*Solución de una Ecuación Diferencial*: Es la función que satisface la ecuación diferencial para un conjunto de condiciones iniciales, determinando cómo evoluciona el sistema en el tiempo.
   ## 3. Ejemplos con ecuaciones diferenciales
   
-$$  x + 3 \dot{x} + 2x = 0 $$
-$$ f''(x) $$
+$$x + 3 \dot{x} + 2x = 0$$
+$$f''(x)$$
 
 $$f(x) = x^2\$$  
 
