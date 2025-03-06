@@ -39,14 +39,63 @@ $$ x(t) = (2a + b)e^{-t} - (a + b)e^{-2t}, \quad (t \geq 0) $$
 
 $$\ddot{x} + 2\dot{x} - 3x = 0,$$ 
 $$x(0) = -1,   \dot{x}(0) = 3$$
-Aplicamos la transformada de LaPlace
+$$\left[s^2 X(s) - s X(0) - \dot{x}(0)\right] + 2 \left[s X(s) - X(0)\right] - 3 X(s) = 0$$
+$$\left[s^2 X(s) - s \left( -1 \right) - 3 \right] + 2 \left[ s X(s) - \left( -1 \right) \right] - 3 X(s) = 0$$
 $$ \left[ s^2 X(s) + s - 3 \right] + 2 \left[ s X(s) + 1\right] - 3X(s) = 0 $$
+$$s^2 X(s) + s - 3 + 2 s X(s) + 2 - 3 X(s) = 0$$
+$$X(s) \left[ s^2 + 2s - 3 \right] + s - 1 = 0$$
+$$X(s) = \frac{-s + 1}{s^2 + 2s - 3}$$
+$$X(s) = \frac{-s + 1}{(s + 3)(s - 1)}$$
+Realizamos fracciones parciales
+$$-s + 1 = \frac{A}{s + 3} + \frac{B}{s - 1}$$
+$$-s + 1 = A(s - 1) + B(s + 3)$$
+Cuando s = 1
+$$-1 + 1 = A(1 - 1) + B(1 + 3)$$
+$$0 = B(4)$$
+$$B = \frac{0}{4}$$
+$$B = 0$$
+Cuando s = -3
+$$-(-3) + 1 = A(-3 - 1) + B(-3 + 3)$$
+$$4 = A(-4)$$
+$$A = \frac{4}{-4}$$
+$$A = -1$$
+Aplicamos la transformada de LaPlace
+$$L^{-1}\left[\frac{-1}{s - 3}\right]$$
+$$-L^{-1}\left[\frac{1}{s - 3}\right] = -e^{-3t}$$
+
+
+
+
+
 
 📚 # Ejemplo 2
 
 $$\ddot{x} - 8\dot{x} - 9x = 0,$$ 
 $$x(0) = 0,   \dot{x}(0) = 4$$
-$$ \left[ s^2 X(s) - 4 \right] + 9 [ s X(s)] - 9X(s) = 0 $$
+$$\left[s^2 X(s) - s X(0) - \dot{x}(0)\right] -8 \left[s X(s) - X(0)\right] - 9 X(s) = 0$$
+$$\left[s^2 X(s) - s \left( 0 \right) - 4 \right] - 8 \left[ s X(s) - \left( 0 \right) \right] - 9 X(s) = 0$$
+$$ \left[ s^2 X(s) - 4 \right] - 8 [ s X(s)] - 9X(s) = 0 $$
+$$X(s) \left[ s^2 - 8s - 9 \right] - 4 = 0$$
+$$X(s) = \frac{4}{s^2 - 8s - 9}$$
+$$X(s) = \frac{4}{(s - 9)(s + 1)}$$
+Realizamos fracciones parciales
+$$4 = \frac{A}{s - 9} + \frac{B}{s + 1}$$
+$$4 = A(s + 1) + B(s - 9)$$
+Cuando s = -1
+$$4 = A(-1 + 1) + B(- 1 - 9)$$
+$$4 = B(-10)$$
+$$B = \frac{4}{-10}$$
+$$B = -\frac{2}{5}$$
+Cuando s = 9
+$$4 = A(9 + 1) + B(9 - 9)$$
+$$4 = A(10)$$
+$$A = \frac{4}{10}$$
+$$A = \frac{2}{5}$$
+Aplicamos la transformada de LaPlace
+$$L^{-1}\left[\frac{\frac{2}{5}}{s - 9} + \frac{\frac{2}{-5}}{s + 1}\right]$$
+$$\frac{2}{5} L^{-1}\left[\frac{1}{s - 9}\right] - \frac{2}{5} L^{-1}\left[\frac{1}{s + 1}\right]$$
+$$\frac{2}{5} e^{9t} - \frac{2}{5} e^{-t}$$
+
 
 
 
