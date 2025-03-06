@@ -31,7 +31,7 @@ $$ x(s) = \frac{2a + b}{s+1} - \frac{a + b}{s+2} $$
 Aplicando transformada inversa desde las tablas para volver al dominio del tiempo
 $$ x(t) = \mathcal{L}^{-1} \left[ X(s) \right] $$
 $$ x(t) = \mathcal{L}^{-1} \left[ \frac{2a + b}{s+1} \right] - \mathcal{L}^{-1} \left[ \frac{a + b}{s+2} \right] $$
-$$ x(t) = (2a + b)e^{-t} - (a + b)e^{-2t}, \quad (t \geq 0) $$
+$$ x(t) = (2a + b)e^{-t} - (a + b)e^{-2t}, \quad (t \geq 0)$$
 
   ## 4. Ejercicios
 
@@ -60,13 +60,9 @@ $$4 = A(-4)$$
 $$A = \frac{4}{-4}$$
 $$A = -1$$
 Aplicamos la transformada de LaPlace
-$$L^{-1}\left[\frac{-1}{s - 3}\right]$$
-$$-L^{-1}\left[\frac{1}{s - 3}\right] = -e^{-3t}$$
-
-
-
-
-
+$$ x(t) =L^{-1}\left[\frac{-1}{s - 3}\right]$$
+$$ x(t) =-L^{-1}\left[\frac{1}{s - 3}\right]$$
+$$ x(t) =-e^{-3t}$$
 
 📚 # Ejemplo 2
 
@@ -92,9 +88,9 @@ $$4 = A(10)$$
 $$A = \frac{4}{10}$$
 $$A = \frac{2}{5}$$
 Aplicamos la transformada de LaPlace
-$$L^{-1}\left[\frac{\frac{2}{5}}{s - 9} + \frac{\frac{2}{-5}}{s + 1}\right]$$
-$$\frac{2}{5} L^{-1}\left[\frac{1}{s - 9}\right] - \frac{2}{5} L^{-1}\left[\frac{1}{s + 1}\right]$$
-$$\frac{2}{5} e^{9t} - \frac{2}{5} e^{-t}$$
+$$ x(t) =L^{-1}\left[\frac{\frac{2}{5}}{s - 9} + \frac{\frac{2}{-5}}{s + 1}\right]$$
+$$ x(t) =\frac{2}{5} L^{-1}\left[\frac{1}{s - 9}\right] - \frac{2}{5} L^{-1}\left[\frac{1}{s + 1}\right]$$
+$$ x(t) =\frac{2}{5} e^{9t} - \frac{2}{5} e^{-t}$$
 
 
 
