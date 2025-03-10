@@ -21,281 +21,251 @@ Estos modelos son principales en diversas áreas como la ingeniería, la física
   
 ### 4. Derivada de una función  
   
-La derivada de una función $$\( f(x) \)$$ mide la razón de cambio instantánea de la función con respecto a la variable independiente $$( x \)$$. Matemáticamente, se define como:  
-  
-$$f'(x) = \lim_{{h \to 0}} \frac{f(x + h) - f(x)}{h}\$$
+# Clase 5
 
-Esto representa la pendiente de la recta tangente a la función en un punto dado.    
-    
-     
- **Ejemplo 1: Derivada de una función cuadrática**
-Dada la función:
-  
-$$f(x) = x^2\$$  
-  
-Su derivada es:  
-  
-$$f'(x) = \frac{d}{dx} x^2 = 2x\$$
+## Factorización
 
-**Cálculo en puntos específicos:**
-- $$\ f'(2) = 2(2) = 4 \$$
-- $$\ f'(3) = 2(3) = 6 \$$
-- $$\ f'(0) = 2(0) = 0 \$$
+Comenzamos a factorizar todos los términos.
 
+Factorizamos:
 
-### 4.1. Modelos de ecuaciones Diferenciales.  
-**Modelos de Ecuaciones Diferenciales**  
-  
-Las ecuaciones diferenciales describen el comportamiento de sistemas dinámicos mediante la relación entre una función y sus derivadas. Son fundamentales en el estudio de sistemas físicos, control de procesos y modelado matemático.  
-      
-Una ecuación diferencial ordinaria (EDO) tiene la forma:  
-  
-$$a_n \frac{d^n F}{dt^n} + a_{n-1} \frac{d^{n-1} F}{dt^{n-1}} + \dots + a_1 \frac{dF}{dt} + a_0 F = u(t)$$  
+$$
+S^5 + 5S^4 + 10S^3 + 10S^2 + 9S + 9
+$$
 
-Donde:
-- $$\ F(t) \$$ es la salida del sistema.  
-- $$\ u(t) \$$ es la entrada del sistema.  
-- $$\ a_n, a_{n-1}, \dots, a_0 \$$ son coeficientes constantes o funciones de $$\( t \)$$.  
-  
-  
-### 4.2 Influencia de parámetros
-Los parámetros de un sistema determinan su respuesta ante cambios en las condiciones iniciales o entradas externas. Estos comportamientos pueden ser:
+$$
+(S+1)(S^4 + 4S^3 + 6S^2 + 6S + 9)
+$$
 
-Comportamiento Sinusoidal: El sistema oscila de manera regular sin pérdida de energía, común en circuitos eléctricos sin pérdidas y sistemas mecánicos ideales.  
-Decaimiento Exponencial: La respuesta disminuye gradualmente debido al amortiguamiento, hasta que el sistema alcanza el equilibrio, típico en circuitos con resistencias altas y sistemas con amortiguadores.  
-Combinación de Oscilación y Decaimiento: Se observa cuando el sistema oscila inicialmente, pero la amplitud de las oscilaciones disminuye progresivamente hasta estabilizarse, común en sistemas con amortiguamiento moderado.  
+$$
+(S+1)(S^2 + 2S + 3)(S^2 + 2S + 3)
+$$
 
+La factorización sería:
 
+$$
+(S+1)(S^2 + 2S + 3)^2
+$$
 
-### 4.3. Transformada de laplace
-Es un cambio de función de variable real a una función de variable compleja. La transformada de laplace muestra las señales 
-senosiudales y exponenciales  
-$$x(t) - X(s)$$  
-- Transformada inversa  
-$$X(s) - x(t)$$  
-- Transformada de una función   
-$$l{f(t)} = F(s)$$  
-- Transformada de la derivada  
-$$L{f′(t)}=sL{f(t)}−f(0)$$  
-L denota la Transformada de Laplace.  
-𝑠 es la variable compleja de la transformada de Laplace.  
-𝑓(0) es el valor de la función en 𝑡=0.  
+Como resultado:
 
-#### 4.2. Descomposición en fracciones parciales.
-# **Descomposición en Fracciones Parciales**
+Factorizamos:
 
-Dada la siguiente fracción:  
+$$
+S^6 + 6S^5 + 15S^4 + 22S^3 + 26S^2 + 24S + 18
+$$
 
-$$\[\frac{2s^2 - 4}{(s+1)(s-2)(s-3)} = \frac{A}{s+1} + \frac{B}{s-2} + \frac{C}{s-3}\]$$  
+$$
+(S+2)(S^5 + 4S^4 + 7S^3 + 8S^2 + 10S + 9)
+$$
 
-Multiplicamos por el denominador común para cancelar fracciones:  
+$$
+(S+2)(S+3+i)(S+3-i)(S+4+i)(S+4-i)
+$$
 
-$$\[2s^2 - 4 = A(s-2)(s-3) + B(s+1)(s-3) + C(s+1)(s-2)\]$$
+La factorización sería:
 
-Paso 2: Sustituimos valores para encontrar \( A, B, C \)**
+$$
+(S+2)(S+3+i)(S+3-i)(S+4+i)(S+4-i)
+$$
 
-Para $$\( s = 2 \)$$:  
+Como resultado:
 
-$$\[2(4) - 4 = B(2+1)(2-3)\]$$  
+Reescribimos nuevamente todas las ecuaciones:
 
-$$\[8 - 4 = B(3)(-1)\]$$
+$$
+\frac{S+1}{(S+2)(S+3+i)(S+3-i)(S+4+i)(S+4-i)}
+$$
 
-$$\[4 = -3B\]$$
+Ahora como fracción parcial:
 
-$$\[B = -\frac{4}{3}\]$$
+$$
+\frac{A}{S+2} + \frac{B}{S+3+i} + \frac{C}{S+3-i} + \frac{D}{S+4+i} + \frac{E}{S+4-i}
+$$
 
-Para $$\( s = 3 \)$$:
+Escribiendo como ecuación:
 
+$$
+S+1 = A(S+3+i)(S+3-i)(S+4+i)(S+4-i) + B(S+2)(S+3-i)(S+4+i)(S+4-i) + C(S+2)(S+3+i)(S+4+i)(S+4-i)
+$$
 
-$$\[2(9) - 4 = C(4)(1)\]$$
+$$
++ D(S+2)(S+3+i)(S+3-i)(S+4-i) + E(S+2)(S+3+i)(S+3-i)(S+4+i)
+$$
 
-$$\[18 - 4 = 4C\]$$
+Cuando \( S=1 \), todas se cancelan menos \( C \):
 
-$$\[14 = 4C\]$$
+$$
+1+1 = C(1+2)(1+4+i)(1+4-i)
+$$
 
-$$\[C = \frac{7}{2}\]$$
+$$
+2 = C(3)(2^2+1)(2^2+1)
+$$
 
+$$
+2 = C(3)(5)(5)
+$$
 
+$$
+2 = C(75)
+$$
 
-Para $$\( s = -1 \)$$:
+$$
+C = \frac{2}{75}
+$$
 
-$$\[2(-1)^2 - 4 = A(-1-2)(-1-3)\]$$
+Cuando \( S=-2 \), todas se cancelan menos \( B \):
 
-$$\[2 - 4 = A(-3)(-4)\]$$
+$$
+-2+1 = B(-2+3-i)(-2+4+i)(-2+4-i)
+$$
 
-$$\[-2 = 12A\]$$
+$$
+-1 = B(1-i)(2+i)(2-i)
+$$
 
-$$\[A = -\frac{1}{6}\]$$
+$$
+-1 = B(1-1-2i+2i)(4-1)
+$$
 
+$$
+-1 = B(3)(3)
+$$
 
-Sustituyendo los valores de \( A, B, C \):
+$$
+B = -\frac{1}{9}
+$$
 
-$$\[\frac{2s^2 - 4}{(s+1)(s-2)(s-3)} = \frac{-1/6}{s+1} + \frac{-4/3}{s-2} + \frac{7/2}{s-3}\]$$
+Cuando \( S=-3-i \), todas se cancelan menos \( D \):
 
+$$
+-3-i+1 = D(-3-i+2)(-3-i+4+i)
+$$
 
+$$
+-2-i = D(-1-i)(1)
+$$
 
-## 5. Ejemplos
-💡Ejemplo Sencillo de la Transformada de Laplace  
+$$
+D = \frac{-2-i}{-1-i}
+$$
 
-Dada la función:  
+Cuando \( S=-3+i \), todas se cancelan menos \( E \):
 
-$$\[f(t) = e^{-3t}, \quad t \geq 0\]$$  
+$$
+-3+i+1 = E(-3+i+2)(-3+i+4-i)
+$$
 
-Aplicamos la definición de la Transformada de Laplace:  
+$$
+-2+i = E(-1+i)(1)
+$$
 
-$$\[F(s) = \int_0^{\infty} e^{-3t} e^{-st} dt\]$$  
+$$
+E = \frac{-2+i}{-1+i}
+$$
 
-Reescribimos la ecuación:  
+Cuando \( S=-4-i \), todas se cancelan menos \( F \):
 
-$$\[F(s) = \int_0^{\infty} e^{-(s+3)t} dt\]$$  
+$$
+-4-i+1 = F(-4-i+2)(-4-i+3+i)
+$$
 
-Usamos la propiedad de la integral:  
+$$
+-3-i = F(-2-i)(-1)
+$$
 
-$$\[\int_0^{\infty} e^{-at} dt = \frac{1}{a}, \quad \text{para } a > 0\]$$  
+$$
+F = \frac{-3-i}{-2-i}
+$$
 
-Donde $$\( a = s + 3 \)$$, entonces:  
+Cuando \( S=-4+i \), todas se cancelan menos \( G \):
 
-$$\[F(s) = \frac{1}{s + 3}, \quad \text{para } s > -3\]$$  
+$$
+-4+i+1 = G(-4+i+2)(-4+i+3-i)
+$$
 
-Resultado:  
+$$
+-3+i = G(-2+i)(-1)
+$$
 
-$$\[\mathcal{L} \{ e^{-3t} \} = \frac{1}{s + 3}\]$$  
+$$
+G = \frac{-3+i}{-2+i}
+$$
 
+Para hallar \( A \), decimos que \( s=0 \):
 
+$$
+0+1 = A(0+3+i)(0+3-i)(0+4+i)(0+4-i) + B(0+2)(0+3-i)(0+4+i)(0+4-i)
+$$
 
-## 6. Ejercicios
-📚 # Ejemplo 1
+$$
++ C(0+2)(0+3+i)(0+4+i)(0+4-i) + D(0+2)(0+3+i)(0+3-i)(0+4-i) + E(0+2)(0+3+i)(0+3-i)(0+4+i)
+$$
 
-Dada la siguiente fracción racional:  
+Reemplazando cada término:
 
-$$\frac{3s^2 + 5s - 2}{(s+2)(s-1)(s-4)} = \frac{A}{s+2} + \frac{B}{s-1} + \frac{C}{s-4}$$  
+$$
+1 = A(3+i)(3-i)(4+i)(4-i) + B(2)(3-i)(4+i)(4-i) + C(2)(3+i)(4+i)(4-i)
+$$
 
-    
+$$
++ D(2)(3+i)(3-i)(4-i) + E(2)(3+i)(3-i)(4+i)
+$$
 
+$$
+1 = A(3^2- i^2)(4^2 - i^2) + B(2)(3-i)(16 - i^2) + C(2)(3+i)(16 - i^2)
+$$
 
-Multiplicamos ambos lados por el denominador común para cancelar las fracciones:  
+$$
++ D(2)(3^2-i^2)(4-i) + E(2)(3^2-i^2)(4+i)
+$$
 
-$$3s^2 + 5s - 2 = A(s-1)(s-4) + B(s+2)(s-4) + C(s+2)(s-1)$$  
+Reduciendo sería:
 
+$$
+1 = A(9+1)(16+1) + B(2)(3-i)(16+1) + C(2)(3+i)(16+1)
+$$
 
+$$
++ D(2)(9+1)(4-i) + E(2)(9+1)(4+i)
+$$
 
-Paso 2: Sustitución de valores para encontrar \( A, B, C \)  
+$$
+1 = A(10)(17) + B(2)(3-i)(17) + C(2)(3+i)(17)
+$$
 
-Para $$\( s = -2 \)$$:  
+$$
++ D(2)(10)(4-i) + E(2)(10)(4+i)
+$$
 
-$$3(-2)^2 + 5(-2) - 2 = A(-2-1)(-2-4)$$  
+$$
+1 = 170A + 34B(3-i) + 34C(3+i) + 20D(4-i) + 20E(4+i)
+$$
 
-$$3(4) + (-10) - 2 = A(-3)(-6)$$  
+Reemplazando:
 
-$$12 - 10 - 2 = A(18)$$  
+$$
+1 = 170A + 34(3B - Bi) + 34(3C + Ci) + 20(4D - Di) + 20(4E + Ei)
+$$
 
-$$0 = 18A$$  
+$$
+1 = 170A + 102B - 34Bi + 102C + 34Ci + 80D - 20Di + 80E + 20Ei
+$$
 
-$$A = 0$$  
+$$
+1 = 170A + 102B + 102C + 80D + 80E + (-34B + 34C - 20D + 20E)i
+$$
 
+Entonces:
 
+$$
+170A + 102B + 102C + 80D + 80E = 1
+$$
 
-Para $$\( s = 1 \)$$:  
-
-$$3(1)^2 + 5(1) - 2 = B(1+2)(1-4)$$  
-
-$$3(1) + 5(1) - 2 = B(3)(-3)$$  
-
-$$3 + 5 - 2 = -9B$$  
-
-$$6 = -9B$$  
-
-$$B = -\frac{2}{3}$$  
-
-
-
-Para $$\( s = 4 \)$$:  
-
-$$3(4)^2 + 5(4) - 2 = C(4+2)(4-1)$$  
-
-$$3(16) + 20 - 2 = C(6)(3)$$  
-
-$$48 + 20 - 2 = 18C$$  
-
-$$66 = 18C$$  
-
-$$C = \frac{11}{3}$$  
-
-
-
-Sustituyendo los valores de $$\( A, B, C \)$$:  
-
-$$\frac{3s^2 + 5s - 2}{(s+2)(s-1)(s-4)} = \frac{0}{s+2} + \frac{-2/3}{s-1} + \frac{11/3}{s-4}$$  
-
-Simplificando:  
-
-$$\frac{3s^2 + 5s - 2}{(s+2)(s-1)(s-4)} = -\frac{2}{3(s-1)} + \frac{11}{3(s-4)}$$  
-
----
-
-📚 # Ejemplo 2:
-
-Dada la siguiente fracción racional:
-
-$$\frac{4s^2 + 7s + 5}{(s+3)(s-2)(s-5)} = \frac{A}{s+3} + \frac{B}{s-2} + \frac{C}{s-5}$$  
-
-
-Multiplicamos ambos lados por el denominador común para cancelar las fracciones:  
-  
-$$4s^2 + 7s + 5 = A(s-2)(s-5) + B(s+3)(s-5) + C(s+3)(s-2)$$  
-
-
-Paso 2: Sustitución de valores para encontrar \( A, B, C \)**  
-
-Para $$\( s = -3 \)$$:  
-  
-$$4(-3)^2 + 7(-3) + 5 = A(-3-2)(-3-5)$$  
-
-$$4(9) - 21 + 5 = A(-5)(-8)$$  
-
-$$36 - 21 + 5 = A(40)$$  
-
-$$20 = 40A$$  
-
-$$A = \frac{1}{2}$$  
-
-Para $$\( s = 2 \)$$:  
-  
-$$4(2)^2 + 7(2) + 5 = B(2+3)(2-5)$$  
-
-$$4(4) + 14 + 5 = B(5)(-3)$$  
-
-$$16 + 14 + 5 = -15B$$  
-
-$$35 = -15B$$  
-
-$$B = -\frac{7}{3}$$  
-
-
-Para $$\( s = 5 \)$$:
-
-$$4(5)^2 + 7(5) + 5 = C(5+3)(5-2)$$  
-
-$$4(25) + 35 + 5 = C(8)(3)$$  
-
-$$100 + 35 + 5 = 24C$$  
-
-$$140 = 24C$$  
-
-$$C = \frac{35}{6}$$  
-
-
-
-Resultado Final
-Sustituyendo los valores de \( A, B, C \):  
-
-$$\frac{4s^2 + 7s + 5}{(s+3)(s-2)(s-5)} = \frac{1/2}{s+3} + \frac{-7/3}{s-2} + \frac{35/6}{s-5}$$  
-
-Simplificando:
-
-$$\frac{4s^2 + 7s + 5}{(s+3)(s-2)(s-5)} = \frac{1}{2(s+3)} - \frac{7}{3(s-2)} + \frac{35}{6(s-5)}$$  
-
-
+$$
+-34B + 34C - 20D + 20E = 0
+$$
 
 
 ## **Conclusión**
