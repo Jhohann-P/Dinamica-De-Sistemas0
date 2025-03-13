@@ -1,72 +1,101 @@
 # Ecuaciones Diferenciales
 
-## 1. Ecuaciones diferenciales en dinámica de sistemas
-Las ecuaciones diferenciales en dinámica de sistemas describen cómo evolucionan las variables de un sistema a lo largo del tiempo en función de condiciones iniciales y parámetros. Son fundamentales para modelar fenómenos en diversas disciplinas como la física, la biología, la economía y la ingeniería.  
+## 1. Introducción a las Ecuaciones Diferenciales en Dinámica de Sistemas
+Las ecuaciones diferenciales en dinámica de sistemas describen cómo evolucionan las variables de un sistema a lo largo del tiempo en función de condiciones iniciales y parámetros. Son fundamentales para modelar fenómenos en diversas disciplinas como la física, la biología, la economía y la ingeniería.
 
-Estas ecuaciones permiten comprender y predecir el comportamiento de un sistema, facilitando su optimización y ajuste mediante métodos analíticos o computacionales como MATLAB y Python.
 
-## 2. Definiciones   
->🔑*Ecuación Diferencial*: Es una ecuación matemática que relaciona una función con sus derivadas, describiendo cómo cambia una variable con respecto al tiempo u otra variable independiente.
+
+
+## 2. Definiciones Claves   
+
+>🔑 *Ecuación Diferencial*: Es una ecuación matemática que relaciona una función con sus derivadas, describiendo cómo cambia una variable con respecto al tiempo u otra variable independiente.
   
->🔑*Dinámica de Sistemas*: Es el estudio del comportamiento de sistemas complejos a lo largo del tiempo mediante ecuaciones diferenciales, permitiendo modelar y predecir su evolución.
+>🔑 *Dinámica de Sistemas*: Es el estudio del comportamiento de sistemas complejos a lo largo del tiempo mediante ecuaciones diferenciales, permitiendo modelar y predecir su evolución.
       
->🔑*Variable de Estado*: Es una magnitud que describe el estado actual de un sistema, como la posición, la velocidad o la temperatura, y cuya evolución está gobernada por ecuaciones diferenciales.
+>🔑 *Variable de Estado*: Es una magnitud que describe el estado actual de un sistema, como la posición, la velocidad o la temperatura, y cuya evolución está gobernada por ecuaciones diferenciales.
   
->🔑*Solución de una Ecuación Diferencial*: Es la función que satisface la ecuación diferencial para un conjunto de condiciones iniciales, determinando cómo evoluciona el sistema en el tiempo.
+>🔑 *Solución de una Ecuación Diferencial*: Es la función que satisface la ecuación diferencial para un conjunto de condiciones iniciales, determinando cómo evoluciona el sistema en el tiempo.
 
-## 3. Ejemplos con ecuaciones diferenciales
 
-📚 # Ejemplo 1
+>🔑 *Homogeneidad*: Una ecuación diferencial es homogénea si no tiene términos independientes de la función desconocida y sus derivadas. Si contiene términos adicionales, se dice que es no homogénea.
 
-$$\ddot{x} + 4\dot{x} + 4x = 0,$$  
-$$x(0) = 2,   \dot{x}(0) = -3$$
+>🔑 *Linealidad*: Una ecuación diferencial es lineal si la función desconocida y sus derivadas aparecen en forma lineal. De lo contrario, es no lineal.
+
+
+
+## 3. Métodos de Resolución
+
+Existen diferentes enfoques para resolver ecuaciones diferenciales:
+
+### 3.1. Métodos Analíticos
+- **Separación de Variables**: Se usa en ecuaciones diferenciales de primer orden que pueden reescribirse como la multiplicación de dos funciones separadas.
+- **Factor Integrante**: Método utilizado para ecuaciones diferenciales lineales de primer orden.
+- **Transformada de Laplace**: Convierte la ecuación diferencial en una ecuación algebraica en el dominio de Laplace, facilitando su resolución.
+
+### 3.2. Métodos Numéricos
+Cuando no es posible obtener una solución exacta, se pueden emplear métodos numéricos como:
+- **Método de Euler**
+- **Método de Diferencias Finitas**
+
+
+## 4. Fracciones Parciales en Transformadas de Laplace
+
+El método de fracciones parciales se utiliza para descomponer funciones racionales en términos más simples, permitiendo calcular la transformada inversa de Laplace.
+
+### 4.1. Forma General
+Si tenemos una función racional:
+$$F(s) = \frac{P(s)}{Q(s)} $$
+donde \( Q(s) \) es un polinomio factorizable, podemos descomponerla en fracciones parciales:
+$$\frac{A}{s - a} + \frac{B}{s - b} $$
+
+Esto permite encontrar la solución en el dominio del tiempo utilizando la transformada inversa de Laplace.
+
+### 4.2. Ejemplo de Fracciones Parciales
+Dada la función en el dominio de Laplace:
+$$X(s) = \frac{5s + 7}{(s + 2)(s + 3)} $$
+Queremos expresarla como:
+$$X(s) = \frac{A}{s + 2} + \frac{B}{s + 3} $$
+Multiplicamos ambos lados por \((s + 2)(s + 3)\):
+$$5s + 7 = A(s + 3) + B(s + 2) $$
+Evaluando en \( s = -2 \) y \( s = -3 \), encontramos \( A \) y \( B \).
+
+---
+
+## 5. Ejemplos de Ecuaciones Diferenciales
+
+📚 **Ejemplo 1**
+
+$$\ddot{x} + 4\dot{x} + 4x = 0,$$
+$$x(0) = 1, \quad \dot{x}(0) = -2 $$
 
 Aplicamos la transformada de Laplace:
-$$ \left[ s^2 X(s) - s x(0) - \dot{x}(0) \right] + 4 \left[ s X(s) - x(0) \right] + 4X(s) = 0 $$
+$$(s^2 X(s) - s x(0) - \dot{x}(0)) + 4(s X(s) - x(0)) + 4X(s) = 0 $$
+Reemplazamos valores:
+$$(s^2 X(s) - s(1) - (-2)) + 4(s X(s) - 1) + 4X(s) = 0 $$
+Despejamos \( X(s) \):
+$$X(s) = \frac{s + 2}{(s + 2)^2} $$
+Aplicamos fracciones parciales y transformada inversa de Laplace para obtener:
+$$x(t) = (1 + 2t)e^{-2t} $$
 
-Reemplazamos las condiciones iniciales:
-$$ [s^{2}X(s) - 2s + 3] + 4[sX(s) - 2] + 4X(s) = 0 $$
+📚 **Ejemplo 2**
 
-Despejamos X(s):
-$$ (s^2 + 4s + 4)X(s) = 2s - 3 + 8 - 4X(s) $$
-$$ X(s)(s + 2)^2 = 2s + 5 $$
-$$ X(s) = \frac{2s + 5}{(s + 2)^2} $$
-
-Aplicamos transformada inversa:
-$$ x(t) = \mathcal{L}^{-1} \left[ X(s) \right] $$
-$$ x(t) = (2t + 5)e^{-2t}, \quad (t \geq 0)$$
-
-📚 # Ejemplo 2
-
-$$\ddot{x} - 5\dot{x} + 6x = 0,$$  
-$$x(0) = 3,   \dot{x}(0) = -2$$
+$$\ddot{x} - 6\dot{x} + 9x = 0,$$
+$$x(0) = 3, \quad \dot{x}(0) = -5 $$
 
 Aplicamos la transformada de Laplace:
-$$ \left[ s^2 X(s) - s x(0) - \dot{x}(0) \right] - 5 \left[ s X(s) - x(0) \right] + 6X(s) = 0 $$
+$$(s^2 X(s) - s x(0) - \dot{x}(0)) - 6(s X(s) - x(0)) + 9X(s) = 0 $$
+Reemplazamos valores:
+$$(s^2 X(s) - 3s + 5) - 6(s X(s) - 3) + 9X(s) = 0 $$
+Despejamos \( X(s) \):
+$$X(s) = \frac{3s - 5}{(s - 3)^2} $$
+Aplicamos fracciones parciales y transformada inversa de Laplace para obtener:
+$$x(t) = (3 + 5t)e^{3t} $$
 
-Reemplazamos las condiciones iniciales:
-$$ [s^{2}X(s) - 3s + 2] - 5[sX(s) - 3] + 6X(s) = 0 $$
+---
 
-Despejamos X(s):
-$$ (s^2 - 5s + 6)X(s) = 3s - 2 + 15 - 6X(s) $$
-$$ X(s)(s - 2)(s - 3) = 3s + 13 $$
-$$ X(s) = \frac{3s + 13}{(s - 2)(s - 3)} $$
+## 6. Conclusión
 
-Realizamos fracciones parciales:
-$$ 3s + 13 = A(s - 3) + B(s - 2) $$
-Cuando s = 3:
-$$ 3(3) + 13 = A(3 - 3) + B(3 - 2) $$
-$$ 9 + 13 = B(1) $$
-$$ B = 22 $$
-Cuando s = 2:
-$$ 3(2) + 13 = A(2 - 3) + B(2 - 2) $$
-$$ 6 + 13 = A(-1) $$
-$$ A = -19 $$
+Las ecuaciones diferenciales son herramientas fundamentales para modelar el comportamiento de sistemas dinámicos. La transformada de Laplace facilita su resolución al convertirlas en ecuaciones algebraicas, simplificando el análisis. Además, el uso de fracciones parciales permite descomponer funciones en términos más manejables para la transformada inversa. Estas técnicas son esenciales en ingeniería y física para el análisis de sistemas mecánicos, eléctricos y de control.
 
-Aplicamos la transformada inversa:
-$$ x(t) = \mathcal{L}^{-1} \left[ \frac{-19}{s - 3} + \frac{22}{s - 2} \right] $$
-$$ x(t) = -19 e^{3t} + 22 e^{2t} $$
 
-## **Conclusión**
-Las ecuaciones diferenciales son esenciales en la dinámica de sistemas, ya que describen cómo evolucionan las variables en el tiempo. La transformada de Laplace facilita su resolución al convertirlas en ecuaciones algebraicas, permitiendo obtener soluciones más fácilmente. Esto es clave en ingeniería y física para analizar sistemas eléctricos, mecánicos y de control. En general, estas ecuaciones son fundamentales para modelar y predecir el comportamiento de sistemas dinámicos.
 
