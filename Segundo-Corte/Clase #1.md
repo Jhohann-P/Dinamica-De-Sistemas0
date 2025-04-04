@@ -36,59 +36,59 @@ X(s)(s^2 + 4) = \frac{5}{s} + 5s
 $$
 
 $$
-X(s) = \frac{5s^2 + 5}{s(s^2 + 4)}
+X(s) = \frac{5s^2 + 2}{s(s^2 + 4)}
 $$
 
 Aplicando fracciones parciales:
 
 $$
-\frac{5s^2 + 5}{s(s^2 + 4)} = \frac{A}{s} + \frac{Bs + C}{s^2 + 4}
+\frac{5s^2 + 2}{s(s^2 + 4)} = \frac{A}{s} + \frac{Bs + C}{s^2 + 4}
 $$
 
-Multiplicando ambos lados por \( s(s^2 + 4) \):
+Multiplicando ambos lados por $$\( s(s^2 + 4) \):$$
 
 $$
-5s^2 + 5 = A(s^2 + 4) + (Bs + C)(s)
+5s^2 + 2 = A(s^2 + 2) + (Bs + C)(s)
 $$
 
 $$
-5s^2 + 5 = As^2 + 4A + Bs^2 + Cs
+5s^2 + 2 = As^2 + 4A + Bs^2 + Cs
 $$
 
 Agrupando términos:
 
 $$
-5s^2 + 5 = (A + B)s^2 + Cs + 4A
+5s^2 + 2 = (A + B)s^2 + Cs + 4A
 $$
 
 Igualando coeficientes:
 
 - \( A + B = 5 \)
 - \( C = 0 \)
-- \( 4A = 5 \Rightarrow A = \frac{5}{4} \)
+- $$\( 4A = 2 \Rightarrow A = \frac{1}{2} \)$$
 
 Entonces:
 
-$$
-B = 5 - A = 5 - \frac{5}{4} = \frac{15}{4}
-$$
+$$S= \frac{1}{2} + B$$
+$$\frac{10}{2} - \frac{1}{2} = B$$
+$$B = \frac{9}{2}$$
 
 Sustituyendo en las fracciones parciales:
 
 $$
-X(s) = \frac{5}{4s} + \frac{15s}{4(s^2 + 4)}
+X(s) = \frac{\frac{1}{2}}{s} + \frac{\frac{9}{2}s}{s^2+4}
 $$
 
 Aplicando la transformada inversa de Laplace:
 
 $$
-x(t) = \frac{5}{4} \mathcal{L}^{-1} \left( \frac{1}{s} \right) + \frac{15}{4} \mathcal{L}^{-1} \left( \frac{s}{s^2 + 4} \right)
+x(t) = \frac{1}{2} \mathcal{L}^{-1} \left( \frac{1}{s} \right) + \frac{9}{2} \mathcal{L}^{-1} \left( \frac{s}{s^2 + 4} \right)
 $$
 
 
 Entonces:
 
-$$x(t) = \frac{5}{4} + \frac{15}{4} \cos(2t)$$
+$$x(t) = \frac{1}{2} + \frac{9}{2} \cos(2t)$$
 
   
 
