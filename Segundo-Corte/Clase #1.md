@@ -14,7 +14,7 @@ En este contexto, se utilizan modelos dinámicos basados en ecuaciones diferenci
   
 >🔑*Transformada de Laplace:* Método matemático que convierte ecuaciones diferenciales en ecuaciones algebraicas en el dominio de la frecuencia compleja.
   
-## 3. Ejercicio #1.
+## 3. Ejercicio de parcial #1.
 $$
 x'' + 4x = 5 \quad\quad x(0) = 5 \quad;\quad x'(0) = 0
 $$
@@ -82,16 +82,45 @@ $$
 Aplicando la transformada inversa de Laplace:
 
 $$
-x(t) = \frac{1}{2} \mathcal{L}^{-1} \left( \frac{1}{s} \right) + \frac{9}{2} \mathcal{L}^{-1} \left( \frac{s}{s^2 + 4} \right)
+x(s) = \frac{1}{2} \mathcal{L}^{-1} \left( \frac{1}{s} \right) + \frac{9}{2} \mathcal{L}^{-1} \left( \frac{s}{s^2 + 4} \right)
 $$
 
 
 Entonces:
 
-$$x(t) = \frac{1}{2} + \frac{9}{2} \cos(2t)$$
+$$x(s) = \frac{1}{2} + \frac{9}{2} \cos(2t)$$
 
-  
+## 4. Ejercicio de parcial #2.
+$$
+F(s) = \frac{5(s + 2)}{s^2(s^2 - 4s + 8)}
+$$
 
+Verificamos si trae raiz imaginaria: 
+
+$$\frac{-b\pm \sqrt{b^2-4ac}}{2a}$$
+
+$$\frac{4\pm \sqrt{16-4(1)(8)}}{2}$$
+
+$$\frac{4\pm \sqrt{16-32}}{2}$$
+
+Raices imaginarias
+
+$$\frac{4\pm \sqrt{-16}}{2}$$
+
+$$\frac{4\pm \sqrt{16i}}{2}$$
+
+$$\frac{2\pm \sqrt{4i}}{2}$$
+
+Donde:
+$$2\pm 2i$$
+
+Realizando sustitución de la ecuación original con fracciones parciales:
+
+$$5(s+2) = \frac{A}{s^2} + \frac{B}{s} + \frac{Cs+D}{s^2-4s+8}$$
+
+Realizando sustitución:
+
+$$5(s+2) = 
 ## **Conclusión**
 La descomposición en fracciones parciales es una herramienta útil para simplificar expresiones racionales y facilitar su manipulación en distintos cálculos. En el contexto de la Transformada de Laplace, permite encontrar la transformada inversa de manera más sencilla, dividiendo expresiones complejas en términos más simples.  
 
