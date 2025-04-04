@@ -630,7 +630,7 @@ $$= \frac{60}{17} e^{\frac{5}{2}t}- \frac{60}{17} e^{2t} \cos(2t)+ \left( -\frac
 $$= \frac{60}{17} e^{\frac{5}{2}t}- \frac{60}{17} e^{2t} \cos(2t)+ \frac{36}{17} e^{2t} \sin(2t)$$
 
 ## **Conclusión**
-La descomposición en fracciones parciales es una herramienta útil para simplificar expresiones racionales y facilitar su manipulación en distintos cálculos. En el contexto de la Transformada de Laplace, permite encontrar la transformada inversa de manera más sencilla, dividiendo expresiones complejas en términos más simples.  
+La descomposición en fracciones parciales es una herramienta útil para simplificar expresiones racionales y facilitar su manipulación en distintos cálculos.
 
 
 
