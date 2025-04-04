@@ -285,7 +285,135 @@ $$
 = \frac{5}{4} + \frac{5}{4}t - \frac{5}{4}e^{2t} \cos(2t) + \frac{5}{8}e^{2t} \sin(2t)
 $$
 
-## 2. Parcial #2
+---
+
+## 4. Parcial #2
+### Primer ejercicio parcial  2
+
+Dada la ecuación diferencial:
+
+$$
+2x'' + 2x' + x = 1 \quad \text{con condiciones iniciales} \quad x(0) = 0, \quad x'(0) = 2
+$$
+
+Aplicamos la Transformada de Laplace:
+
+$$
+2(s^2 X(s) - sX(0) - x'(0)) + 2(sX(s) - X(0)) + X(s) = \frac{1}{s}
+$$
+
+Sustituimos las condiciones iniciales:
+
+$$
+2(s^2 X(s) - 2) + 2sX(s) + X(s) = \frac{1}{s}
+$$
+
+Distribuimos:
+
+$$
+2s^2 X(s) - 4 + 2sX(s) + X(s) = \frac{1}{s}
+$$
+
+Agrupamos los términos con \( X(s) \):
+
+$$
+(2s^2 + 2s + 1) X(s) = \frac{1}{s} + 4
+$$
+
+Reescribimos el lado derecho:
+
+$$
+(2s^2 + 2s + 1) X(s) = \frac{1 + 4s}{s}
+$$
+
+Despejamos \( X(s) \):
+
+$$
+X(s) = \frac{1 + 4s}{s(2s^2 + 2s + 1)}
+$$
+
+
+### Fracciones parciales
+
+Queremos escribir:
+
+$$
+\frac{1 + 4s}{s(2s^2 + 2s + 1)} = \frac{A}{s} + \frac{Bs + C}{2s^2 + 2s + 1}
+$$
+
+Multiplicamos ambos lados por el denominador común:
+
+$$
+1 + 4s = A(2s^2 + 2s + 1) + (Bs + C)s
+$$
+
+Usamos \( s = 0 \):
+
+$$
+1 = A(1) \Rightarrow A = 1
+$$
+
+Expandimos el lado derecho:
+
+$$
+1 + 4s = A(2s^2 + 2s + 1) + Bs^2 + Cs
+$$
+
+Agrupamos por potencias de \( s \):
+
+$$
+1 + 4s = (2A + B)s^2 + (2A + C)s + A
+$$
+
+Comparando coeficientes:
+
+- $$\( A = 1 \)$$
+- $$\( 2A + B = 0 \Rightarrow B = -2 \)$$
+- $$\( 2A + C = 4 \Rightarrow C = 2 \)$$
+
+Entonces:
+
+$$
+\frac{1 + 4s}{s(2s^2 + 2s + 1)} = \frac{1}{s} + \frac{-2s + 2}{2s^2 + 2s + 1}
+$$
+
+
+
+### Simplificamos
+
+Dividimos el segundo término entre 2:
+
+$$
+X(s) = \frac{1}{s} - \frac{s}{s^2 + s + \frac{1}{2}} + \frac{1}{s^2 + s + \frac{1}{2}}
+$$
+
+
+
+### Transformada Inversa
+
+Completamos el cuadrado:
+
+$$
+s^2 + s + \frac{1}{2} = \left( s + \frac{1}{2} \right)^2 + \frac{1}{4}
+$$
+
+Entonces:
+
+$$
+X(s) = \frac{1}{s} - \frac{s}{\left( s + \frac{1}{2} \right)^2 + \left( \frac{1}{2} \right)^2} + \frac{3}{\left( s + \frac{1}{2} \right)^2 + \left( \frac{1}{2} \right)^2}
+$$
+
+Aplicamos la transformada inversa:
+
+- $$\( \mathcal{L}^{-1}\left( \frac{1}{s} \right) = 1 \)$$
+- $$\( \mathcal{L}^{-1}\left( \frac{s + a}{(s + a)^2 + b^2} \right) = e^{-a t} \cos(bt) \)$$
+- $$\( \mathcal{L}^{-1}\left( \frac{b}{(s + a)^2 + b^2} \right) = e^{-a t} \sin(bt) \)$$
+
+Resultado:
+
+$$
+X(t) = 1 + e^{-t/2} \left( -\cos\left( \frac{1}{2} t \right) + 3 \sin\left( \frac{1}{2} t \right) \right)
+$$
 
 ## **Conclusión**
 La descomposición en fracciones parciales es una herramienta útil para simplificar expresiones racionales y facilitar su manipulación en distintos cálculos. En el contexto de la Transformada de Laplace, permite encontrar la transformada inversa de manera más sencilla, dividiendo expresiones complejas en términos más simples.  
