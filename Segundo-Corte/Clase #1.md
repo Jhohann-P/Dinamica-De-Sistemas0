@@ -418,6 +418,217 @@ $$
 
 ### Segundo ejercicio parcial  2
 
+$$\frac{6s}{(s-\frac{s}{2})(s^2-4s+8)}$$
+
+### Paso 1: Forma de la descomposición
+
+Como el denominador tiene:
+
+- un factor lineal: $$\( s - \frac{5}{2} \)$$
+- un trinomio cuadrático irreducible: $$\( s^2 - 4s + 8 \)$$
+
+La descomposición en fracciones parciales será:
+
+$$
+\frac{6s}{(s - \frac{5}{2})(s^2 - 4s + 8)} = \frac{A}{s - \frac{5}{2}} + \frac{Bs + C}{s^2 - 4s + 8}
+$$
+
+
+
+### Paso 2: Multiplicamos ambos lados por el denominador común
+
+Multiplicamos ambos lados por $$\( (s - \frac{5}{2})(s^2 - 4s + 8) \)$$:
+
+$$
+6s = A(s^2 - 4s + 8) + (Bs + C)(s - \frac{5}{2})
+$$
+
+
+
+### Paso 3: Expandimos ambos términos
+
+Expandiendo el primer término:
+
+$$
+A(s^2 - 4s + 8) = As^2 - 4As + 8A
+$$
+
+Expandiendo el segundo término:
+
+$$
+(Bs + C)(s - \frac{5}{2}) = Bs^2 - \frac{5}{2}Bs + Cs - \frac{5}{2}C
+$$
+
+Agrupamos todo:
+
+$$
+6s = (A + B)s^2 + (-4A + C - \frac{5}{2}B)s + (8A - \frac{5}{2}C)
+$$
+
+
+
+### Paso 4: Igualamos coeficientes
+
+Comparando con el lado izquierdo \( 6s \):
+
+- Coeficiente de $$\( s^2 \): \( A + B = 0 \)$$
+- Coeficiente de $$\( s \): \( -4A + C - \frac{5}{2}B = 6 \)$$
+- Término independiente: $$\( 8A - \frac{5}{2}C = 0 \)$$
+
+
+### Paso 5: Sistema de ecuaciones
+
+De la primera ecuación:
+
+$$
+A + B = 0 \Rightarrow B = -A
+$$
+
+Sustituimos en las otras ecuaciones:
+
+**Segunda ecuación:**
+
+$$
+-4A + C - \frac{5}{2}(-A) = 6
+$$
+
+$$
+-4A + C + \frac{5}{2}A = 6
+$$
+
+$$
+(-4 + \frac{5}{2})A + C = 6 \Rightarrow -\frac{3}{2}A + C = 6 \quad (1)
+$$
+
+**Tercera ecuación:**
+
+$$
+8A - \frac{5}{2}C = 0 \Rightarrow \frac{5}{2}C = 8A \Rightarrow C = \frac{16}{5}A \quad (2)
+$$
+
+Sustituyendo (2) en (1):
+
+$$
+-\frac{3}{2}A + \frac{16}{5}A = 6
+$$
+
+$$
+\left( -\frac{3}{2} + \frac{16}{5} \right)A = 6
+$$
+
+$$
+\frac{-15 + 32}{10}A = 6 \Rightarrow \frac{17}{10}A = 6
+$$
+
+$$
+A = \frac{60}{17}
+$$
+
+Luego:
+
+$$
+B = -A = -\frac{60}{17}
+$$
+
+$$
+C = \frac{16}{5}A = \frac{16}{5} \cdot \frac{60}{17} = \frac{960}{85} = \frac{192}{17}
+$$
+
+
+$$
+\frac{6s}{(s - \frac{5}{2})(s^2 - 4s + 8)} = \frac{60}{17} \cdot \frac{1}{s - \frac{5}{2}} - \frac{60s}{17(s^2 - 4s + 8)} + \frac{192}{17(s^2 - 4s + 8)}
+$$
+
+### Transformada Inversa de Laplace
+
+Dada la función:
+
+$$
+\frac{60}{17} \cdot \frac{1}{s - \frac{5}{2}} - \frac{60s}{17(s^2 - 4s + 8)} + \frac{192}{17(s^2 - 4s + 8)}
+$$
+
+Aplicamos la transformada inversa de Laplace a cada término.
+
+
+
+### 1. Primer término
+
+Sabemos que:
+
+$$
+\mathcal{L}^{-1}\left( \frac{1}{s - a} \right) = e^{at}
+$$
+
+Entonces:
+
+$$
+\mathcal{L}^{-1}\left( \frac{60}{17} \cdot \frac{1}{s - \frac{5}{2}} \right) = \frac{60}{17} e^{\frac{5}{2}t}
+$$
+
+
+### 2. Segundo y tercer término
+
+Completamos el trinomio:
+
+$$
+s^2 - 4s + 8 = (s - 2)^2 + 4
+$$
+
+Entonces:
+
+$$
+\frac{60s}{17((s - 2)^2 + 4)} = \frac{60}{17} \cdot \frac{s}{(s - 2)^2 + 4}
+$$
+
+Como:
+
+$$
+s = (s - 2) + 2
+$$
+
+Entonces:
+
+$$
+\frac{s}{(s - 2)^2 + 4} = \frac{s - 2}{(s - 2)^2 + 4} + \frac{2}{(s - 2)^2 + 4}
+$$
+
+Usamos las transformadas conocidas:
+
+$$
+\mathcal{L}^{-1}\left( \frac{s - a}{(s - a)^2 + b^2} \right) = e^{at} \cos(bt)
+$$
+
+$$
+\mathcal{L}^{-1}\left( \frac{b}{(s - a)^2 + b^2} \right) = e^{at} \sin(bt)
+$$
+
+Aplicando esto:
+
+$$
+\mathcal{L}^{-1}\left( \frac{60s}{17((s - 2)^2 + 4)} \right) =
+\frac{60}{17} \left( e^{2t} \cos(2t) + e^{2t} \sin(2t) \right)
+$$
+
+
+
+### 3. Tercer término
+
+$$
+\mathcal{L}^{-1}\left( \frac{192}{17((s - 2)^2 + 4)} \right) = \frac{192}{17} \cdot \frac{1}{2} e^{2t} \sin(2t) = \frac{96}{17} e^{2t} \sin(2t)
+$$
+
+
+
+### Resultado final
+
+Juntamos los tres términos:
+
+$$\mathcal{L}^{-1}\left(\frac{60}{17} \cdot \frac{1}{s - \frac{5}{2}} - \frac{60s}{17(s^2 - 4s + 8)} + \frac{192}{17(s^2 - 4s + 8)}\right)$$
+
+$$= \frac{60}{17} e^{\frac{5}{2}t}- \frac{60}{17} e^{2t} \cos(2t)+ \left( -\frac{60}{17} + \frac{96}{17} \right) e^{2t} \sin(2t)$$
+
+$$= \frac{60}{17} e^{\frac{5}{2}t}- \frac{60}{17} e^{2t} \cos(2t)+ \frac{36}{17} e^{2t} \sin(2t)$$
+
 ## **Conclusión**
 La descomposición en fracciones parciales es una herramienta útil para simplificar expresiones racionales y facilitar su manipulación en distintos cálculos. En el contexto de la Transformada de Laplace, permite encontrar la transformada inversa de manera más sencilla, dividiendo expresiones complejas en términos más simples.  
 
