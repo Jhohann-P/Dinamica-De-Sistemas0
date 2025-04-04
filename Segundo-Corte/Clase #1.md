@@ -124,13 +124,13 @@ Realizando sustitución:
 
 $$5(s+2) = A(s^2-4s+8)+ B(s)(s^2-4s+8)+cs+d(s^2)$$
 
-## Fracciones parciales de:
+#### Fracciones parciales de:
 
 $$
 \frac{5(s+2)}{s^2(s^2 - 4s + 8)}
 $$
 
-### Forma general de la descomposición:
+#### Forma general de la descomposición:
 
 $$
 \frac{5(s+2)}{s^2(s^2 - 4s + 8)} = \frac{A}{s} + \frac{B}{s^2} + \frac{Cs + D}{s^2 - 4s + 8}
@@ -142,7 +142,7 @@ $$
 5(s + 2) = A s(s^2 - 4s + 8) + B(s^2 - 4s + 8) + (Cs + D)s^2
 $$
 
-### Expandimos cada término:
+#### Expandimos cada término:
 
 **1.** $$\( A s(s^2 - 4s + 8) = A(s^3 - 4s^2 + 8s) \)$$
 
@@ -162,7 +162,7 @@ $$
 5s + 10
 $$
 
-### Igualando coeficientes:
+#### Igualando coeficientes:
 
 $$
 \begin{aligned}
@@ -173,7 +173,7 @@ s^0: &\quad 8B = 10
 \end{aligned}
 $$
 
-### Resolviendo el sistema:
+#### Resolviendo el sistema:
 
 De la última ecuación:
 
@@ -205,7 +205,7 @@ $$
 
 
 
-### Resultado final:
+#### Resultado final:
 
 Los coeficientes son:
 
@@ -288,7 +288,7 @@ $$
 ---
 
 ## 4. Parcial #2
-### Primer ejercicio parcial  2
+### Primer ejercicio parcial  #2
 
 Dada la ecuación diferencial:
 
@@ -333,7 +333,7 @@ X(s) = \frac{1 + 4s}{s(2s^2 + 2s + 1)}
 $$
 
 
-### Fracciones parciales
+#### Fracciones parciales
 
 Queremos escribir:
 
@@ -379,7 +379,7 @@ $$
 
 
 
-### Simplificamos
+#### Simplificamos
 
 Dividimos el segundo término entre 2:
 
@@ -389,7 +389,7 @@ $$
 
 
 
-### Transformada Inversa
+#### Transformada Inversa
 
 Completamos el cuadrado:
 
@@ -420,7 +420,7 @@ $$
 
 $$\frac{6s}{(s-\frac{s}{2})(s^2-4s+8)}$$
 
-### Paso 1: Forma de la descomposición
+#### Paso 1: Forma de la descomposición
 
 Como el denominador tiene:
 
@@ -435,7 +435,7 @@ $$
 
 
 
-### Paso 2: Multiplicamos ambos lados por el denominador común
+#### Paso 2: Multiplicamos ambos lados por el denominador común
 
 Multiplicamos ambos lados por $$\( (s - \frac{5}{2})(s^2 - 4s + 8) \)$$:
 
@@ -445,7 +445,7 @@ $$
 
 
 
-### Paso 3: Expandimos ambos términos
+#### Paso 3: Expandimos ambos términos
 
 Expandiendo el primer término:
 
@@ -467,7 +467,7 @@ $$
 
 
 
-### Paso 4: Igualamos coeficientes
+#### Paso 4: Igualamos coeficientes
 
 Comparando con el lado izquierdo \( 6s \):
 
@@ -476,7 +476,7 @@ Comparando con el lado izquierdo \( 6s \):
 - Término independiente: $$\( 8A - \frac{5}{2}C = 0 \)$$
 
 
-### Paso 5: Sistema de ecuaciones
+#### Paso 5: Sistema de ecuaciones
 
 De la primera ecuación:
 
@@ -539,7 +539,7 @@ $$
 \frac{6s}{(s - \frac{5}{2})(s^2 - 4s + 8)} = \frac{60}{17} \cdot \frac{1}{s - \frac{5}{2}} - \frac{60s}{17(s^2 - 4s + 8)} + \frac{192}{17(s^2 - 4s + 8)}
 $$
 
-### Transformada Inversa de Laplace
+#### Transformada Inversa de Laplace
 
 Dada la función:
 
@@ -551,7 +551,7 @@ Aplicamos la transformada inversa de Laplace a cada término.
 
 
 
-### 1. Primer término
+#### 1. Primer término
 
 Sabemos que:
 
@@ -566,7 +566,7 @@ $$
 $$
 
 
-### 2. Segundo y tercer término
+#### 2. Segundo y tercer término
 
 Completamos el trinomio:
 
@@ -611,7 +611,7 @@ $$
 
 
 
-### 3. Tercer término
+#### 3. Tercer término
 
 $$
 \mathcal{L}^{-1}\left( \frac{192}{17((s - 2)^2 + 4)} \right) = \frac{192}{17} \cdot \frac{1}{2} e^{2t} \sin(2t) = \frac{96}{17} e^{2t} \sin(2t)
@@ -619,7 +619,7 @@ $$
 
 
 
-### Resultado final
+#### Resultado final
 
 Juntamos los tres términos:
 
