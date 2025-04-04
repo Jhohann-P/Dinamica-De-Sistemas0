@@ -415,6 +415,9 @@ $$
 X(t) = 1 + e^{-t/2} \left( -\cos\left( \frac{1}{2} t \right) + 3 \sin\left( \frac{1}{2} t \right) \right)
 $$
 
+
+### Segundo ejercicio parcial  2
+
 ## **Conclusión**
 La descomposición en fracciones parciales es una herramienta útil para simplificar expresiones racionales y facilitar su manipulación en distintos cálculos. En el contexto de la Transformada de Laplace, permite encontrar la transformada inversa de manera más sencilla, dividiendo expresiones complejas en términos más simples.  
 
