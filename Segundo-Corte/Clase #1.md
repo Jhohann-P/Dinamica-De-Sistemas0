@@ -1,20 +1,20 @@
 # Correcion del parcial
 ## 1. Transformada de Laplace y Fracciones parciales en Dinámica de Sistemas 
-La dinámica de sistemas estudia la evolución de los sistemas en el tiempo, modelando su comportamiento mediante ecuaciones diferenciales. Un sistema se define como un conjunto de componentes interconectados que trabajan para alcanzar un objetivo. Si la salida depende de entradas pasadas, se dice que es un sistema dinámico; de lo contrario, es estático.
+En Dinámica de Sistemas, la Transformada de Laplace se utiliza para transformar ecuaciones diferenciales del dominio del tiempo al dominio de la frecuencia (espacio s), donde es más fácil analizarlas y resolverlas algebraicamente.
 
-En este contexto, se utilizan modelos dinámicos basados en ecuaciones diferenciales para describir la evolución de las variables del sistema en función del tiempo. Existen sistemas lineales, que cumplen con el principio de superposición, y sistemas no lineales, que requieren técnicas de aproximación para su análisis.
+Una vez obtenida la función de transferencia o la solución en el dominio de Laplace, se aplica la descomposición en fracciones parciales para simplificar la expresión. Esto permite utilizar tablas de transformadas inversas y regresar al dominio del tiempo con una expresión analítica clara de la respuesta del sistema.
 
 
 ## 2. Definiciones   
->🔑*Modelos Dinamico:* Son aquellos sistemas que varian conforme al tiempo, que son analizables desde la perspectiva matemática
   
 >🔑*Sistema:* Conjunto de componentes interconectados que trabajan juntos para alcanzar un objetivo específico.
       
->🔑*Sistema lineal:* Cumple con el principio de superposición, es decir, la respuesta a una combinación de entradas es la suma de las respuestas individuales.
+>🔑*Fracciones Parciales:* Es una técnica algebraica que permite descomponer una fracción racional (cociente de dos polinomios) en una suma de fracciones más simples, lo cual facilita operaciones como la integración o la transformada inversa de Laplace.
   
 >🔑*Transformada de Laplace:* Método matemático que convierte ecuaciones diferenciales en ecuaciones algebraicas en el dominio de la frecuencia compleja.
   
-## 3. Ejercicio de parcial #1.
+## 3. Parcial #1.
+### Primer ejercicio del parcial #1
 $$
 x'' + 4x = 5 \quad\quad x(0) = 5 \quad;\quad x'(0) = 0
 $$
@@ -90,7 +90,7 @@ Entonces:
 
 $$x(s) = \frac{1}{2} + \frac{9}{2} \cos(2t)$$
 
-## 4. Ejercicio de parcial #2.
+### Segundo ejercicio del parcial #1.
 $$
 F(s) = \frac{5(s + 2)}{s^2(s^2 - 4s + 8)}
 $$
@@ -278,7 +278,6 @@ $$
 $$
 
 
-
 **Resultado final:**
 
 $$
@@ -286,6 +285,7 @@ $$
 = \frac{5}{4} + \frac{5}{4}t - \frac{5}{4}e^{2t} \cos(2t) + \frac{5}{8}e^{2t} \sin(2t)
 $$
 
+## 2. Parcial #2
 
 ## **Conclusión**
 La descomposición en fracciones parciales es una herramienta útil para simplificar expresiones racionales y facilitar su manipulación en distintos cálculos. En el contexto de la Transformada de Laplace, permite encontrar la transformada inversa de manera más sencilla, dividiendo expresiones complejas en términos más simples.  
