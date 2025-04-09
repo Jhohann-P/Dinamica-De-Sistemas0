@@ -129,165 +129,19 @@ La fricción por rodamiento aparece cuando un objeto rueda sobre una superficie,
 
 
 ## 5. Ejemplos
-💡Ejemplo Sencillo de la Transformada de Laplace  
 
-Dada la función:  
-
-$$\[f(t) = e^{-3t}, \quad t \geq 0\]$$  
-
-Aplicamos la definición de la Transformada de Laplace:  
-
-$$\[F(s) = \int_0^{\infty} e^{-3t} e^{-st} dt\]$$  
-
-Reescribimos la ecuación:  
-
-$$\[F(s) = \int_0^{\infty} e^{-(s+3)t} dt\]$$  
-
-Usamos la propiedad de la integral:  
-
-$$\[\int_0^{\infty} e^{-at} dt = \frac{1}{a}, \quad \text{para } a > 0\]$$  
-
-Donde $$\( a = s + 3 \)$$, entonces:  
-
-$$\[F(s) = \frac{1}{s + 3}, \quad \text{para } s > -3\]$$  
-
-Resultado:  
-
-$$\[\mathcal{L} \{ e^{-3t} \} = \frac{1}{s + 3}\]$$  
 
 
 
 ## 6. Ejercicios
 📚 # Ejemplo 1
 
-Dada la siguiente fracción racional:  
-
-$$\frac{3s^2 + 5s - 2}{(s+2)(s-1)(s-4)} = \frac{A}{s+2} + \frac{B}{s-1} + \frac{C}{s-4}$$  
-
-    
-
-
-Multiplicamos ambos lados por el denominador común para cancelar las fracciones:  
-
-$$3s^2 + 5s - 2 = A(s-1)(s-4) + B(s+2)(s-4) + C(s+2)(s-1)$$  
-
-
-
-Paso 2: Sustitución de valores para encontrar \( A, B, C \)  
-
-Para $$\( s = -2 \)$$:  
-
-$$3(-2)^2 + 5(-2) - 2 = A(-2-1)(-2-4)$$  
-
-$$3(4) + (-10) - 2 = A(-3)(-6)$$  
-
-$$12 - 10 - 2 = A(18)$$  
-
-$$0 = 18A$$  
-
-$$A = 0$$  
-
-
-
-Para $$\( s = 1 \)$$:  
-
-$$3(1)^2 + 5(1) - 2 = B(1+2)(1-4)$$  
-
-$$3(1) + 5(1) - 2 = B(3)(-3)$$  
-
-$$3 + 5 - 2 = -9B$$  
-
-$$6 = -9B$$  
-
-$$B = -\frac{2}{3}$$  
-
-
-
-Para $$\( s = 4 \)$$:  
-
-$$3(4)^2 + 5(4) - 2 = C(4+2)(4-1)$$  
-
-$$3(16) + 20 - 2 = C(6)(3)$$  
-
-$$48 + 20 - 2 = 18C$$  
-
-$$66 = 18C$$  
-
-$$C = \frac{11}{3}$$  
-
-
-
-Sustituyendo los valores de $$\( A, B, C \)$$:  
-
-$$\frac{3s^2 + 5s - 2}{(s+2)(s-1)(s-4)} = \frac{0}{s+2} + \frac{-2/3}{s-1} + \frac{11/3}{s-4}$$  
-
-Simplificando:  
-
-$$\frac{3s^2 + 5s - 2}{(s+2)(s-1)(s-4)} = -\frac{2}{3(s-1)} + \frac{11}{3(s-4)}$$  
 
 ---
 
 📚 # Ejemplo 2:
 
-Dada la siguiente fracción racional:
 
-$$\frac{4s^2 + 7s + 5}{(s+3)(s-2)(s-5)} = \frac{A}{s+3} + \frac{B}{s-2} + \frac{C}{s-5}$$  
-
-
-Multiplicamos ambos lados por el denominador común para cancelar las fracciones:  
-  
-$$4s^2 + 7s + 5 = A(s-2)(s-5) + B(s+3)(s-5) + C(s+3)(s-2)$$  
-
-
-Paso 2: Sustitución de valores para encontrar \( A, B, C \)**  
-
-Para $$\( s = -3 \)$$:  
-  
-$$4(-3)^2 + 7(-3) + 5 = A(-3-2)(-3-5)$$  
-
-$$4(9) - 21 + 5 = A(-5)(-8)$$  
-
-$$36 - 21 + 5 = A(40)$$  
-
-$$20 = 40A$$  
-
-$$A = \frac{1}{2}$$  
-
-Para $$\( s = 2 \)$$:  
-  
-$$4(2)^2 + 7(2) + 5 = B(2+3)(2-5)$$  
-
-$$4(4) + 14 + 5 = B(5)(-3)$$  
-
-$$16 + 14 + 5 = -15B$$  
-
-$$35 = -15B$$  
-
-$$B = -\frac{7}{3}$$  
-
-
-Para $$\( s = 5 \)$$:
-
-$$4(5)^2 + 7(5) + 5 = C(5+3)(5-2)$$  
-
-$$4(25) + 35 + 5 = C(8)(3)$$  
-
-$$100 + 35 + 5 = 24C$$  
-
-$$140 = 24C$$  
-
-$$C = \frac{35}{6}$$  
-
-
-
-Resultado Final
-Sustituyendo los valores de \( A, B, C \):  
-
-$$\frac{4s^2 + 7s + 5}{(s+3)(s-2)(s-5)} = \frac{1/2}{s+3} + \frac{-7/3}{s-2} + \frac{35/6}{s-5}$$  
-
-Simplificando:
-
-$$\frac{4s^2 + 7s + 5}{(s+3)(s-2)(s-5)} = \frac{1}{2(s+3)} - \frac{7}{3(s-2)} + \frac{35}{6(s-5)}$$  
 
 
 
