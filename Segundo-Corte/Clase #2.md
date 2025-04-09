@@ -23,9 +23,6 @@ Un sistema dinámico es aquel cuyo estado cambia con el tiempo, influenciado por
 - **Lineales**: Su comportamiento puede analizarse mediante superposición. Ejemplo: sistemas eléctricos con resistencias, inductancias y capacitores lineales.  
 - **No lineales**: No cumplen el principio de superposición. Su análisis suele ser más complejo. Ejemplo: péndulo con grandes desplazamientos.  
 
-### Según la variación de parámetros
-- **Estacionarios (o invariantes en el tiempo)**: Sus parámetros no cambian con el tiempo.  
-- **No estacionarios (o variantes en el tiempo)**: Sus parámetros cambian con el tiempo.  
 
 ### Según la respuesta
 - **Estables**: Retornan a su estado de equilibrio ante perturbaciones.  
