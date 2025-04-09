@@ -69,7 +69,7 @@ b: Constante de fricción viscosa o coeficiente de amortiguamiento.
 $$\dot{x}_1, \dot{x}_2$$: Velocidades de los extremos del amortiguador.  
 
 Características del amortiguador:  
-Comportamiento lineal, proporcional a la velocidad de desplazamiento.  
+**Comportamiento lineal**, proporcional a la velocidad de desplazamiento.  
 Este principio también se utiliza para representar la fricción entre una masa y una superficie.  
 
 ## Sistema Masa-Resorte-Amortiguador (combinado)
@@ -293,4 +293,7 @@ $$\frac{4s^2 + 7s + 5}{(s+3)(s-2)(s-5)} = \frac{1}{2(s+3)} - \frac{7}{3(s-2)} + 
 
 
 ## **Conclusión**
-La descomposición en fracciones parciales es una herramienta útil para simplificar expresiones racionales y facilitar su manipulación en distintos cálculos. En el contexto de la Transformada de Laplace, permite encontrar la transformada inversa de manera más sencilla, dividiendo expresiones complejas en términos más simples.  
+El estudio de los sistemas dinámicos mecánicos, como el resorte, el amortiguador y las distintas formas de fricción, constituye una base fundamental para el análisis y modelado de sistemas físicos en ingeniería. Comprender cómo estas fuerzas interactúan permite establecer modelos precisos que describen el comportamiento real de estructuras, mecanismos y dispositivos sometidos a diversas condiciones de operación.
+
+
+Asimismo, el uso de herramientas como la Transformada de Laplace permite llevar estos modelos al dominio de la frecuencia, facilitando su análisis y solución mediante técnicas algebraicas, lo cual es especialmente útil en la formulación de sistemas de control y en la resolución de problemas complejos de ingeniería.
