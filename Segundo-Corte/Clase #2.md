@@ -1,9 +1,74 @@
-# Transformada de Laplace
-## 1. Transformada de Laplace en Dinámica de Sistemas 
-La dinámica de sistemas estudia la evolución de los sistemas en el tiempo, modelando su comportamiento mediante ecuaciones diferenciales. Un sistema se define como un conjunto de componentes interconectados que trabajan para alcanzar un objetivo. Si la salida depende de entradas pasadas, se dice que es un sistema dinámico; de lo contrario, es estático.
+# Sistemas Dinámicos
 
-En este contexto, se utilizan modelos dinámicos basados en ecuaciones diferenciales para describir la evolución de las variables del sistema en función del tiempo. Existen sistemas lineales, que cumplen con el principio de superposición, y sistemas no lineales, que requieren técnicas de aproximación para su análisis.
+Un **sistema dinámico** es un modelo matemático que describe cómo evoluciona un sistema físico, biológico, económico, etc., a lo largo del tiempo. Este comportamiento se expresa generalmente mediante ecuaciones diferenciales.
 
+Un sistema dinámico es aquel cuyo estado cambia con el tiempo, influenciado por condiciones iniciales y posibles entradas externas.
+
+## Clasificación de los Sistemas Dinámicos
+
+### Según la linealidad
+- **Lineales**: Su comportamiento puede analizarse mediante superposición. Ejemplo: sistemas eléctricos con resistencias, inductancias y capacitores lineales.
+- **No lineales**: No cumplen el principio de superposición. Su análisis suele ser más complejo. Ejemplo: péndulo con grandes desplazamientos.
+
+### Según la variación de parámetros
+- **Estacionarios (o invariantes en el tiempo)**: Sus parámetros no cambian con el tiempo.
+- **No estacionarios (o variantes en el tiempo)**: Sus parámetros cambian con el tiempo.
+
+### Según la respuesta
+- **Estables**: Retornan a su estado de equilibrio ante perturbaciones.
+- **Inestables**: Se alejan de su estado de equilibrio ante perturbaciones.
+
+## Ejemplos de Sistemas Dinámicos
+
+## Resorte
+
+Un **resorte** ideal se modela como un sistema lineal donde la fuerza aplicada es directamente proporcional al desplazamiento desde una posición de equilibrio. Este comportamiento se basa en la **Ley de Hooke**.
+
+### Ecuación del resorte:
+
+$$F = kx = k(x_1 - x_2)$$
+
+F: Fuerza ejercida por el resorte.
+
+k: Constante del resorte (rigidez).
+
+$$x_1, x_2$$: Posiciones de los extremos del resorte.
+
+Siempre se debe mantener el mismo marco de referencia.
+
+Tipos de resortes según rigidez:
+Resorte duro: Tiene una pendiente más pronunciada en la curva fuerza-desplazamiento.
+
+Resorte lineal: Tiene una relación lineal ideal entre fuerza y desplazamiento.
+
+Resorte suave: Tiene una pendiente menor, ofreciendo menos resistencia.
+
+Nota: Se asumen resortes lineales, donde la fuerza externa aplicada y el desplazamiento están relacionados por una constante de proporcionalidad.
+
+## Amortiguador
+
+Un amortiguador es un dispositivo que disipa energía en un sistema mecánico. Modela fuerzas resistivas proporcionales a la velocidad relativa entre sus extremos.
+
+### Ecuación del amortiguador
+$$F = b \dot{x} = b \left( \dot{x}_1 - \dot{x}_2 \right)$$
+
+F: Fuerza de amortiguamiento.
+
+b: Constante de fricción viscosa o coeficiente de amortiguamiento.
+
+$$\dot{x}_1, \dot{x}_2$$: Velocidades de los extremos del amortiguador.
+
+Características del amortiguador:
+Comportamiento lineal, proporcional a la velocidad de desplazamiento.
+
+Este principio también se utiliza para representar la fricción entre una masa y una superficie.
+
+Nota: La fuerza de amortiguamiento siempre actúa en dirección opuesta al movimiento relativo.
+
+## Sistema Masa-Resorte-Amortiguador (combinado)
+Al combinar un resorte y un amortiguador con una masa, se obtiene un sistema clásico utilizado para modelar vibraciones mecánicas.
+
+### Ecuación del sistema masa-resorte-amortiguador:
 
 ## 2. Definiciones   
 >🔑*Modelos Dinamico:* Son aquellos sistemas que varian conforme al tiempo, que son analizables desde la perspectiva matemática
