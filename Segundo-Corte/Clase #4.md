@@ -132,7 +132,7 @@ $\frac{e_i}{R_1} + \frac{R_2 C_2}{R_1} \frac{d e_0}{dt} + \frac{1}{2} e_0 + R_2 
 
 
 ## **Conclusión**
-Los circuitos RLC y los circuitos con amplificadores operacionales juegan un papel fundamental en el análisis y modelado de sistemas dinámicos eléctricos. Los circuitos RLC permiten representar sistemas de segundo orden donde se estudian fenómenos como la oscilación, el amortiguamiento y la resonancia, características clave en el comportamiento dinámico de muchos sistemas físicos. Por otro lado, los amplificadores operacionales, combinados con resistencias y capacitores, permiten construir integradores, derivadores y filtros, lo cual facilita la implementación de modelos diferenciales y el diseño de sistemas de control analógico. En conjunto, estos circuitos son herramientas esenciales para comprender, simular y controlar la dinámica de sistemas tanto eléctricos como mecánicos, térmicos o hidráulicos mediante analogías.
+Los circuitos RLC y los circuitos con amplificadores operacionales son importantes en el análisis y modelado de sistemas dinámicos eléctricos. Los circuitos RLC permiten representar sistemas de segundo orden donde se estudian fenómenos como la oscilación, el amortiguamiento y la resonancia, características clave en el comportamiento dinámico de muchos sistemas físicos. Por otro lado, los amplificadores operacionales, combinados con resistencias y capacitores, permiten construir integradores, derivadores y filtros, lo cual facilita la implementación de modelos diferenciales y el diseño de sistemas de control analógico. En conjunto, estos circuitos son herramientas importantes para comprender, simular y controlar la dinámica de sistemas tanto eléctricos como mecánicos, térmicos o hidráulicos mediante analogías.
 
 
 
