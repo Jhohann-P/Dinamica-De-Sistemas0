@@ -83,15 +83,56 @@ $\frac{e_i}{R_1} - \frac{-e_o}{R_2} - C \frac{d (-e_o)}{dt} = 0$
 
 $\frac{e_i}{R_1} = -\frac{e_o}{R_2} - C \frac{d (e_o)}{dt}$
 
+## 5. Ejercicios
+📚 # Ejemplo 1
+
+![image](https://github.com/user-attachments/assets/57cac3c2-e697-400c-9d18-064e91c4e033)
+
+![image](https://github.com/user-attachments/assets/601a9c37-42e0-45e7-93c3-c47b856b7caa)
+
+Aplicando ley de kirchoff de corrientes LKC
+
+$i_u - i_1 - i_c = 0$
+
+$i_u(t) - \frac{V_{AB}}{0.5} - 2 \frac{d y(t)}{dt} = 0$
+
+$V_{AB} = i_c \cdot (1 + y(t))$
+
+$V_{AB} = 2 \frac{d y(t)}{dt} + y(t)$
+
+$u(t) - \frac{2}{0.5} \frac{d y(t)}{dt} - \frac{1}{0.5} y(t) - 2 \frac{d y(t)}{dt} = 0$
+
+$u(t) - 6 \frac{d y(t)}{dt} - 2 y(t) = 0$
 
 
+---
+
+📚 # Ejemplo 2:
+
+![image](https://github.com/user-attachments/assets/739781b7-ddfe-414c-805b-aab2eae417c4)
+
+$I_1 + I_2 + I_3 = 0$
+
+$\frac{e_1 + e_x}{R_1} + c_1 \frac{d(0 - e_x)}{dt} + \frac{e_0 - e_x}{R_2} = 0$
+
+$- e_x = V_{R2} + e_0$
+
+$- e_x = R_2 \left(I_3\right) + e_0$
+
+$I_3 = C_2 \frac{d e_0}{dt}$
+
+$- e_x = R_2 \cdot C_2 \frac{d e_0}{dt} + e_0$
+
+$- \frac{d e_x}{dt} = R_2 \cdot C_2 \frac{d^2 e_0}{dt^2} + \frac{d e_0}{dt}$
+
+$\frac{e_i}{R_1} + \frac{R_2 C_2}{R_1} \frac{d e_0}{dt} + \frac{1}{2} e_0 + R_2 C_2 C_1 \frac{d^2 e_0}{dt^2} + \frac{d e_0}{dt} + \frac{e_0}{R_2} + C_2 \frac{d e_0}{dt} + \frac{e_0}{R_2}$
 
 
 
 
 
 ## **Conclusión**
-La descomposición en fracciones parciales es una herramienta útil para simplificar expresiones racionales y facilitar su manipulación en distintos cálculos.
+Los circuitos RLC y los circuitos con amplificadores operacionales juegan un papel fundamental en el análisis y modelado de sistemas dinámicos eléctricos. Los circuitos RLC permiten representar sistemas de segundo orden donde se estudian fenómenos como la oscilación, el amortiguamiento y la resonancia, características clave en el comportamiento dinámico de muchos sistemas físicos. Por otro lado, los amplificadores operacionales, combinados con resistencias y capacitores, permiten construir integradores, derivadores y filtros, lo cual facilita la implementación de modelos diferenciales y el diseño de sistemas de control analógico. En conjunto, estos circuitos son herramientas esenciales para comprender, simular y controlar la dinámica de sistemas tanto eléctricos como mecánicos, térmicos o hidráulicos mediante analogías.
 
 
 
