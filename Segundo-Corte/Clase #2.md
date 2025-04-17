@@ -19,12 +19,9 @@ Un sistema dinámico es aquel cuyo estado cambia con el tiempo, influenciado por
 
 ## 3 Clasificación de los Sistemas Dinámicos
 
-### Según la linealidad
 - **Lineales**: Su comportamiento puede analizarse mediante superposición. Ejemplo: sistemas eléctricos con resistencias, inductancias y capacitores lineales.  
 - **No lineales**: No cumplen el principio de superposición. Su análisis suele ser más complejo. Ejemplo: péndulo con grandes desplazamientos.  
 
-
-### Según la respuesta
 - **Estables**: Retornan a su estado de equilibrio ante perturbaciones.  
 - **Inestables**: Se alejan de su estado de equilibrio ante perturbaciones.  
 
@@ -129,19 +126,145 @@ La fricción por rodamiento aparece cuando un objeto rueda sobre una superficie,
 
 
 ## 5. Ejemplos
+![image](https://github.com/user-attachments/assets/37ce6630-56b2-4009-ba83-f0f72627126e)
 
+
+
+- $$\( F(t) \)$$: Fuerza externa aplicada hacia la derecha.
+- $$\( F_r = -k x \)$$: Fuerza del resorte, que se opone al desplazamiento.
+- $$\( F_c = -b \dot{x} \)$$: Fuerza del amortiguador (resistencia viscosa), que se opone a la velocidad.
+
+
+Entonces, aplicando la Segunda Ley de Newton en la dirección del movimiento:
+
+$$
+\sum F = m \ddot{x}(t)
+$$
+
+$$
+F(t) - b \dot{x}(t) - k x(t) = m \ddot{x}(t)
+$$
+
+
+Reorganizando términos:
+
+$$
+m \ddot{x}(t) + b \dot{x}(t) + k x(t) = F(t)
+$$
+
+Esta es la ecuación del sistema masa-resorte-amortiguador clásico, donde:
+
+- $$\( \ddot{x} \)$$: Aceleración
+- $$\( \dot{x} \)$$: Velocidad
+- $$\( x \)$$: Desplazamiento
+- $$\( m \)$$: Masa
+- $$\( b \)$$: Coeficiente de amortiguamiento
+- $$\( k \)$$: Constante del resorte
+
+
+- $$\( x_1 = x(t) \)$$: Posición
+- $$\( x_2 = \dot{x}(t) \)$$: Velocidad
+
+Entonces el sistema se puede representar como:
+
+$$
+\dot{x}_1 = x_2
+$$
+$$
+\dot{x}_2 = \frac{1}{m} \left( F(t) - b x_2 - k x_1 \right)
+$$
 
 
 
 ## 6. Ejercicios
 📚 # Ejemplo 1
+![image](https://github.com/user-attachments/assets/bf960432-9c6c-4ed3-a562-194761de6ea9)
+
+Para una masa \( m \) desplazándose horizontalmente, se tienen tres fuerzas actuando sobre ella:
+
+### Fuerzas que actúan:
+- $$\( F(t) \)$$: Fuerza externa aplicada hacia la derecha.  
+- $$\( F_r = -kx \)$$: Fuerza del resorte, que se opone al desplazamiento.  
+- $$\( F_c = -c\dot{x} \)$$: Fuerza del amortiguador (resistencia viscosa), que se opone a la velocidad.
 
 
----
+
+$$
+\sum F = m \ddot{x}(t)
+$$
+
+$$
+F(t) - c \dot{x}(t) - k x(t) = m \ddot{x}(t)
+$$
+
+
+
+Reorganizando términos:
+
+$$
+m \ddot{x}(t) + c \dot{x}(t) + k x(t) = F(t)
+$$
+
+Esta es la ecuación del sistema masa-resorte-amortiguador clásico, donde:
+
+- $$\( \ddot{x} \)$$: Aceleración  
+- $$\( \dot{x} \)$$: Velocidad  
+- $$\( x \)$$: Desplazamiento  
+- $$\( m \)$$: Masa  
+- $$\( c \)$$: Coeficiente de amortiguamiento  
+- $$\( k \)$$: Constante del resorte  
+
+
+
+### Variables de estado:
+
+$$
+x_1 = x(t) \quad \text{(posición)}, \quad x_2 = \dot{x}(t) \quad \text{(velocidad)}
+$$
+
+Entonces:
+
+$$
+\dot{x}_1 = x_2
+$$
+
+$$
+\dot{x}_2 = \frac{1}{m} \left( F(t) - c x_2 - k x_1 \right)
+$$
+
 
 📚 # Ejemplo 2:
 
+-![image](https://github.com/user-attachments/assets/59874cab-91d8-4d49-8f99-9ed23d5d9cd7)
 
+
+Tenemos un sistema con dos masas $$\( m_1 \), \( m_2 \)$$ y tres resortes $$\( k_1 \), \( k_2 \), \( k_3 \)$$
+
+- $$\( x_1(t) \): desplazamiento de la masa \( m_1 \)$$
+- $$\( x_2(t) \): desplazamiento de la masa \( m_2 \)$$
+
+
+
+### Para $$\( m_1 \)$$:
+- $$\( -k_1 x_1 \)$$: resorte conectado a la pared izquierda
+- $$\( -k_2(x_1 - x_2) \)$$: resorte entre $$\( m_1 \)$$ y $$\( m_2 \)$$
+
+### Para \( m_2 \):
+- $$\( -k_2(x_2 - x_1) \)$$: resorte entre $$\( m_2 \)$$ y $$\( m_1 \)$$
+- $$\( -k_3 x_2 \)$$: resorte conectado a la pared derecha
+
+
+### Para la masa \( m_1 \):
+
+$$
+m_1 \ddot{x}_1 + (k_1 + k_2)x_1 - k_2 x_2 = 0
+$$
+
+### Para la masa $$\( m_2 \)$$:
+
+$$
+m_2 \ddot{x}_2 - k_2 x_1 + (k_2 + k_3)x_2 = 0
+$$
 
 
 
