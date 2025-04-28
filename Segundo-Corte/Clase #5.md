@@ -1,291 +1,84 @@
-# Correcion del parcial
-## 1. Transformada de Laplace y Fracciones parciales en Dinámica de Sistemas 
-En Dinámica de Sistemas, la Transformada de Laplace se utiliza para transformar ecuaciones diferenciales del dominio del tiempo al dominio de la frecuencia (espacio s), donde es más fácil analizarlas y resolverlas algebraicamente.
+# Introducción a Amplificadores en Dinámica de Sistemas
+## 1. Tipos de Amplificadores
+### Amplificador Inversor
 
-Una vez obtenida la función de transferencia o la solución en el dominio de Laplace, se aplica la descomposición en fracciones parciales para simplificar la expresión. Esto permite utilizar tablas de transformadas inversas y regresar al dominio del tiempo con una expresión analítica clara de la respuesta del sistema.
+- **Descripción**: Toma una señal de entrada, **la amplifica** y **la invierte** (cambia su signo).
+- **Comportamiento**: Si la entrada es positiva, la salida será negativa, y viceversa.
+- **Ganancia**: 
+  $$A_v = -\frac{R_f}{R_{in}}$$
+  Donde:
+  - $$\( R_f \)$$ = Resistencia de realimentación.
+  - $$\( R_{in} \)$$ = Resistencia de entrada.
+
+### Amplificador No Inversor
+
+- **Descripción**: Amplifica la señal **sin invertirla**.
+- **Comportamiento**: Si la entrada es positiva, la salida también será positiva, solo que amplificada.
+- **Ganancia**:
+$$A_v = 1 + \frac{R_f}{R_{in}}$$
 
 
 ## 2. Definiciones   
-  
+>🔑*Amplificador:* Dispositivo que aumenta la magnitud de una señal de entrada sin alterar significativamente su forma.
+
+>🔑*Amplificador Inversor:* Tipo de amplificador que invierte la fase de la señal de entrada mientras la amplifica.
+
+>🔑*Amplificador No Inversor:* Amplificador que incrementa la magnitud de la señal de entrada manteniendo su misma fase.
+
+>🔑*Ganancia:* Relación entre la señal de salida y la señal de entrada de un sistema, que indica cuánto se ha amplificado o atenuado la señal.
+
+>🔑Amplificador Operacional (Op-Amp): Componente electrónico altamente versátil utilizado para amplificar señales, realizar operaciones matemáticas y construir sistemas de control.
+
 >🔑*Sistema:* Conjunto de componentes interconectados que trabajan juntos para alcanzar un objetivo específico.
       
->🔑*Fracciones Parciales:* Es una técnica algebraica que permite descomponer una fracción racional (cociente de dos polinomios) en una suma de fracciones más simples, lo cual facilita operaciones como la integración o la transformada inversa de Laplace.
   
->🔑*Transformada de Laplace:* Método matemático que convierte ecuaciones diferenciales en ecuaciones algebraicas en el dominio de la frecuencia compleja.
-  
-## 3. Parcial #1.
-### Primer ejercicio del parcial #1
-$$
-x'' + 4x = 5 \quad\quad x(0) = 5 \quad;\quad x'(0) = 0
-$$
+## 3. Ejercicio 1.
+### Amplificador no inversor
 
-Aplicamos transformada de Laplace:
+![image](https://github.com/user-attachments/assets/2266b393-86ff-40e0-bc79-ff18525992cc)
 
-$$
-s^2X(s) - sX(0) - X'(0) + 4X(s) = \frac{5}{s}
-$$
+$$i_1 - i_2 = 0$$
 
-Reescribiendo y cancelando términos:
+$$\frac{e_o - e_i}{R_2} - \frac{e_i}{R_1} = 0$$
 
-$$
-s^2X(s) - 5s + 4X(s) = \frac{5}{s}
-$$
+$$\frac{e_o}{R_2} = e_i \left( \frac{1}{R_2} + \frac{1}{R_1} \right)$$
 
-$$
-X(s)(s^2 + 4) = \frac{5}{s} + 5s
-$$
+$$e_o = e_i \left( 1 + \frac{R_2}{R_1} \right)$$
 
-$$
-X(s) = \frac{5s^2 + 2}{s(s^2 + 4)}
-$$
+### Con elementos almacenadores de energía
 
-Aplicando fracciones parciales:
-
-$$
-\frac{5s^2 + 2}{s(s^2 + 4)} = \frac{A}{s} + \frac{Bs + C}{s^2 + 4}
-$$
-
-Multiplicando ambos lados por $$\( s(s^2 + 4) \):$$
-
-$$
-5s^2 + 2 = A(s^2 + 2) + (Bs + C)(s)
-$$
-
-$$
-5s^2 + 2 = As^2 + 4A + Bs^2 + Cs
-$$
-
-Agrupando términos:
-
-$$
-5s^2 + 2 = (A + B)s^2 + Cs + 4A
-$$
-
-Igualando coeficientes:
-
-- \( A + B = 5 \)
-- \( C = 0 \)
-- $$\( 4A = 2 \Rightarrow A = \frac{1}{2} \)$$
-
-Entonces:
-
-$$S= \frac{1}{2} + B$$
-$$\frac{10}{2} - \frac{1}{2} = B$$
-$$B = \frac{9}{2}$$
-
-Sustituyendo en las fracciones parciales:
-
-$$
-X(s) = \frac{\frac{1}{2}}{s} + \frac{\frac{9}{2}s}{s^2+4}
-$$
-
-Aplicando la transformada inversa de Laplace:
-
-$$
-x(s) = \frac{1}{2} \mathcal{L}^{-1} \left( \frac{1}{s} \right) + \frac{9}{2} \mathcal{L}^{-1} \left( \frac{s}{s^2 + 4} \right)
-$$
+![image](https://github.com/user-attachments/assets/3a1f64a1-f2e4-48e3-a404-01ca1168a69f)
 
 
-Entonces:
+$$i_1 - i_2 - i_3 = 0$$
 
-$$x(s) = \frac{1}{2} + \frac{9}{2} \cos(2t)$$
+$$\frac{e_i - e'}{R_1} - \frac{e' - e_o}{R_2} - C \frac{d(e' - e_o)}{dt} = 0$$
 
-### Segundo ejercicio del parcial #1.
-$$
-F(s) = \frac{5(s + 2)}{s^2(s^2 - 4s + 8)}
-$$
+$$e' = 0$$
 
-Verificamos si trae raiz imaginaria: 
+$$\frac{e_i}{R_1} - \frac{e_o}{R_2} - C \frac{d(-e_o)}{dt} = 0$$
 
-$$\frac{-b\pm \sqrt{b^2-4ac}}{2a}$$
-
-$$\frac{4\pm \sqrt{16-4(1)(8)}}{2}$$
-
-$$\frac{4\pm \sqrt{16-32}}{2}$$
-
-Raices imaginarias
-
-$$\frac{4\pm \sqrt{-16}}{2}$$
-
-$$\frac{4\pm \sqrt{16i}}{2}$$
-
-$$\frac{2\pm \sqrt{4i}}{2}$$
-
-Donde:
-$$2\pm 2i$$
-
-$$F(s) = \frac{5(s + 2)}{s^2(s^2 - 4s + 8)}$$
-
-Realizando sustitución de la ecuación original con fracciones parciales:
-
-$$5(s+2) = \frac{A}{s^2} + \frac{B}{s} + \frac{Cs+D}{s^2-4s+8}$$   
-
-Realizando sustitución:
-
-$$5(s+2) = A(s^2-4s+8)+ B(s)(s^2-4s+8)+cs+d(s^2)$$
+$$\frac{e_i}{R_1} = -\frac{e_o}{R_2} - C \frac{d(e_o)}{dt}$$
 
 #### Fracciones parciales de:
 
-$$
-\frac{5(s+2)}{s^2(s^2 - 4s + 8)}
-$$
+
 
 #### Forma general de la descomposición:
 
-$$
-\frac{5(s+2)}{s^2(s^2 - 4s + 8)} = \frac{A}{s} + \frac{B}{s^2} + \frac{Cs + D}{s^2 - 4s + 8}
-$$
-
-Multiplicamos ambos lados por el denominador común $$\( s^2(s^2 - 4s + 8) \)$$:
-
-$$
-5(s + 2) = A s(s^2 - 4s + 8) + B(s^2 - 4s + 8) + (Cs + D)s^2
-$$
 
 #### Expandimos cada término:
 
-**1.** $$\( A s(s^2 - 4s + 8) = A(s^3 - 4s^2 + 8s) \)$$
-
-**2.** $$\( B(s^2 - 4s + 8) = B s^2 - 4B s + 8B \)$$
-
-**3.** $$\( (Cs + D)s^2 = Cs^3 + Ds^2 \)$$
-
-Sumamos todos los términos del lado derecho:
-
-$$
-(A + C)s^3 + (-4A + B + D)s^2 + (8A - 4B)s + 8B
-$$
-
-Igualamos con el lado izquierdo:
-
-$$
-5s + 10
-$$
 
 #### Igualando coeficientes:
 
-$$
-\begin{aligned}
-s^3: &\quad A + C = 0 \\
-s^2: &\quad -4A + B + D = 0 \\
-s^1: &\quad 8A - 4B = 5 \\
-s^0: &\quad 8B = 10
-\end{aligned}
-$$
 
 #### Resolviendo el sistema:
 
-De la última ecuación:
-
-$$
-8B = 10 \Rightarrow B = \frac{5}{4}
-$$
-
-Luego:
-
-$$
-8A - 4B = 5 \Rightarrow 8A - 4\cdot\frac{5}{4} = 5 \Rightarrow 8A - 5 = 5 \Rightarrow A = \frac{10}{8} = \frac{5}{4}
-$$
-
-Ahora:
-
-$$
-A + C = 0 \Rightarrow C = -\frac{5}{4}
-$$
-
-Y finalmente:
-
-$$
--4A + B + D = 0 \Rightarrow -4\cdot\frac{5}{4} + \frac{5}{4} + D = 0 \Rightarrow -5 + \frac{5}{4} + D = 0
-$$
-
-$$
-D = 5 - \frac{5}{4} = \frac{15}{4}
-$$
 
 
 
 #### Resultado final:
-
-Los coeficientes son:
-
-- $$\( A = \frac{5}{4} \)$$
-- $$\( B = \frac{5}{4} \)$$
-- $$\( C = -\frac{5}{4} \)$$
-- $$\( D = \frac{15}{4} \)$$
-
-
-
-Fracción parcial completa:
-
-$$
-\frac{5(s+2)}{s^2(s^2 - 4s + 8)} = \frac{5}{4s} + \frac{5}{4s^2} + \frac{-\frac{5}{4}s + \frac{15}{4}}{s^2 - 4s + 8}
-$$
-
-
-La función a transformar es:
-
-$$
-\frac{5}{4s} + \frac{5}{4s^2} + \frac{-\frac{5}{4}s + \frac{15}{4}}{s^2 - 4s + 8}
-$$
-
-
-
-**Paso 1: Primer término**
-
-$$
-\mathcal{L}^{-1}\left(\frac{5}{4s}\right) = \frac{5}{4}
-$$
-
-
-
-**Paso 2: Segundo término**
-
-$$
-\mathcal{L}^{-1}\left(\frac{5}{4s^2}\right) = \frac{5}{4}t
-$$
-
-
-**Paso 3: Tercer término**
-
-Completemos el trinomio:
-
-$$
-s^2 - 4s + 8 = (s - 2)^2 + 4
-$$
-
-Reescribimos el numerador:
-
-$$
-\frac{-\frac{5}{4}s + \frac{15}{4}}{(s - 2)^2 + 4}
-= \frac{-\frac{5}{4}(s - 2) + \frac{5}{4}}{(s - 2)^2 + 4}
-$$
-
-Separando:
-
-$$
-\frac{-\frac{5}{4}(s - 2)}{(s - 2)^2 + 4} + \frac{\frac{5}{4}}{(s - 2)^2 + 4}
-$$
-
-Aplicando la transformada inversa:
-
-$$
-\mathcal{L}^{-1}\left(\frac{-\frac{5}{4}(s - 2)}{(s - 2)^2 + 4}\right) = -\frac{5}{4}e^{2t} \cos(2t)
-$$
-
-$$
-\mathcal{L}^{-1}\left(\frac{\frac{5}{4}}{(s - 2)^2 + 4}\right) = \frac{5}{8}e^{2t} \sin(2t)
-$$
-
-
-**Resultado final:**
-
-$$
-\mathcal{L}^{-1}\left( \frac{5}{4s} + \frac{5}{4s^2} + \frac{-\frac{5}{4}s + \frac{15}{4}}{s^2 - 4s + 8} \right)
-= \frac{5}{4} + \frac{5}{4}t - \frac{5}{4}e^{2t} \cos(2t) + \frac{5}{8}e^{2t} \sin(2t)
-$$
-
----
 
 ## 4. Parcial #2
 ### Primer ejercicio parcial  #2
