@@ -157,9 +157,5 @@ $$v_0 = \left( 1 + \frac{R_2}{R_1} \right) v_1$$
 
 
 ## **Conclusión**
-La descomposición en fracciones parciales es una herramienta útil para simplificar expresiones racionales y facilitar su manipulación en distintos cálculos.
 
-
-
-
-
+Los amplificadores operacionales (Op-Amps) son importantes en los sistemas dinámicos ya que nos ayudan a amplificar, filtrar y procesar señales con precisión. Las configuraciones **inversora** y **no inversora** permiten adaptar su comportamiento según lo que necesitamos, mientras que las propiedades ideales (ganancia infinita, impedancia de entrada infinita, etc.) simplifican su análisis y diseño. Su uso los hace indispensables en aplicaciones de circuitos básicos hasta sistemas de control.
