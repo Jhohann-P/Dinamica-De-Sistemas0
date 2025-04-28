@@ -62,11 +62,41 @@ $$\frac{e_i}{R_1} = -\frac{e_o}{R_2} - C \frac{d(e_o)}{dt}$$
 
 
 
+## 4. Propiedades Ideales del Amplificador Operacional
 
-## 4. Parcial #2
+- Ganancia de voltaje infinita.
+- Impedancia de entrada infinita.
+- Impedancia de salida cero.
+- Ancho de banda infinito.
+- Respuesta instantánea (sin retardo).
 
+### Realimentación en Amplificadores
 
-## 6. Ejercicios
+- **Realimentación negativa:** 
+  - Se toma parte de la salida y se regresa a la entrada inversora.
+  - Estabiliza el circuito y define la ganancia de manera precisa.
+- **Realimentación positiva:** 
+  - Se toma parte de la salida y se regresa a la entrada no inversora.
+  - Se utiliza para crear osciladores y comparadores.
+
+### **Idealidad en los Amplificadores Operacionales**
+
+**Ganancia de Lazo Abierto Infinita** $$(\(A_{OL} \to \infty\))$$:
+ - En la práctica, se asume que una diferencia de voltaje infinitesimal entre las entradas (+ y −) produce un voltaje de salida finito.
+
+**Impedancia de Entrada Infinita**:
+  - No consume corriente desde la fuente de entrada $$(\(i_+ = i_- = 0\))$$.
+
+**Impedancia de Salida Cero**:
+ - Puede entregar corriente ilimitada a la carga sin afectar el voltaje de salida.
+
+**Ancho de Banda Infinito**:
+ - Respuesta plana para todas las frecuencias (sin retrasos ni atenuación).
+
+**Cero Ruido y Deriva**:
+  - No introduce errores por temperatura o variaciones de fabricación.
+
+## 5. Ejercicios
 
 📚 # Ejemplo 1
 
