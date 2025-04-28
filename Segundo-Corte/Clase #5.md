@@ -60,42 +60,10 @@ $$\frac{e_i}{R_1} - \frac{e_o}{R_2} - C \frac{d(-e_o)}{dt} = 0$$
 
 $$\frac{e_i}{R_1} = -\frac{e_o}{R_2} - C \frac{d(e_o)}{dt}$$
 
-#### Fracciones parciales de:
 
 
-
-#### Forma general de la descomposición:
-
-
-#### Expandimos cada término:
-
-
-#### Igualando coeficientes:
-
-
-#### Resolviendo el sistema:
-
-
-
-
-#### Resultado final:
 
 ## 4. Parcial #2
-### Primer ejercicio parcial  #2
-
-
-
-
-#### Simplificamos
-
-
-#### Transformada Inversa
-
-
-### Segundo ejercicio parcial  2
-
-
-#### Paso 1: Forma de la descomposición
 
 
 ## 6. Ejercicios
