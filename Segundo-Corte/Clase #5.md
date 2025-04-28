@@ -83,344 +83,80 @@ $$\frac{e_i}{R_1} = -\frac{e_o}{R_2} - C \frac{d(e_o)}{dt}$$
 ## 4. Parcial #2
 ### Primer ejercicio parcial  #2
 
-Dada la ecuación diferencial:
-
-$$
-2x'' + 2x' + x = 1 \quad \text{con condiciones iniciales} \quad x(0) = 0, \quad x'(0) = 2
-$$
-
-Aplicamos la Transformada de Laplace:
-
-$$
-2(s^2 X(s) - sX(0) - x'(0)) + 2(sX(s) - X(0)) + X(s) = \frac{1}{s}
-$$
-
-Sustituimos las condiciones iniciales:
-
-$$
-2(s^2 X(s) - 2) + 2sX(s) + X(s) = \frac{1}{s}
-$$
-
-Distribuimos:
-
-$$
-2s^2 X(s) - 4 + 2sX(s) + X(s) = \frac{1}{s}
-$$
-
-Agrupamos los términos con \( X(s) \):
-
-$$
-(2s^2 + 2s + 1) X(s) = \frac{1}{s} + 4
-$$
-
-Reescribimos el lado derecho:
-
-$$
-(2s^2 + 2s + 1) X(s) = \frac{1 + 4s}{s}
-$$
-
-Despejamos \( X(s) \):
-
-$$
-X(s) = \frac{1 + 4s}{s(2s^2 + 2s + 1)}
-$$
-
-
-#### Fracciones parciales
-
-Queremos escribir:
-
-$$
-\frac{1 + 4s}{s(2s^2 + 2s + 1)} = \frac{A}{s} + \frac{Bs + C}{2s^2 + 2s + 1}
-$$
-
-Multiplicamos ambos lados por el denominador común:
-
-$$
-1 + 4s = A(2s^2 + 2s + 1) + (Bs + C)s
-$$
-
-Usamos \( s = 0 \):
-
-$$
-1 = A(1) \Rightarrow A = 1
-$$
-
-Expandimos el lado derecho:
-
-$$
-1 + 4s = A(2s^2 + 2s + 1) + Bs^2 + Cs
-$$
-
-Agrupamos por potencias de \( s \):
-
-$$
-1 + 4s = (2A + B)s^2 + (2A + C)s + A
-$$
-
-Comparando coeficientes:
-
-- $$\( A = 1 \)$$
-- $$\( 2A + B = 0 \Rightarrow B = -2 \)$$
-- $$\( 2A + C = 4 \Rightarrow C = 2 \)$$
-
-Entonces:
-
-$$
-\frac{1 + 4s}{s(2s^2 + 2s + 1)} = \frac{1}{s} + \frac{-2s + 2}{2s^2 + 2s + 1}
-$$
 
 
 
 #### Simplificamos
 
-Dividimos el segundo término entre 2:
-
-$$
-X(s) = \frac{1}{s} - \frac{s}{s^2 + s + \frac{1}{2}} + \frac{1}{s^2 + s + \frac{1}{2}}
-$$
-
-
 
 #### Transformada Inversa
-
-Completamos el cuadrado:
-
-$$
-s^2 + s + \frac{1}{2} = \left( s + \frac{1}{2} \right)^2 + \frac{1}{4}
-$$
-
-Entonces:
-
-$$
-X(s) = \frac{1}{s} - \frac{s}{\left( s + \frac{1}{2} \right)^2 + \left( \frac{1}{2} \right)^2} + \frac{3}{\left( s + \frac{1}{2} \right)^2 + \left( \frac{1}{2} \right)^2}
-$$
-
-Aplicamos la transformada inversa:
-
-- $$\( \mathcal{L}^{-1}\left( \frac{1}{s} \right) = 1 \)$$
-- $$\( \mathcal{L}^{-1}\left( \frac{s + a}{(s + a)^2 + b^2} \right) = e^{-a t} \cos(bt) \)$$
-- $$\( \mathcal{L}^{-1}\left( \frac{b}{(s + a)^2 + b^2} \right) = e^{-a t} \sin(bt) \)$$
-
-Resultado:
-
-$$
-X(t) = 1 + e^{-t/2} \left( -\cos\left( \frac{1}{2} t \right) + 3 \sin\left( \frac{1}{2} t \right) \right)
-$$
 
 
 ### Segundo ejercicio parcial  2
 
-$$\frac{6s}{(s-\frac{s}{2})(s^2-4s+8)}$$
 
 #### Paso 1: Forma de la descomposición
 
-Como el denominador tiene:
 
-- un factor lineal: $$\( s - \frac{5}{2} \)$$
-- un trinomio cuadrático irreducible: $$\( s^2 - 4s + 8 \)$$
+## 6. Ejercicios
 
-La descomposición en fracciones parciales será:
+📚 # Ejemplo 1
 
-$$
-\frac{6s}{(s - \frac{5}{2})(s^2 - 4s + 8)} = \frac{A}{s - \frac{5}{2}} + \frac{Bs + C}{s^2 - 4s + 8}
-$$
 
+![image](https://github.com/user-attachments/assets/42b3b0f6-9e36-405b-8ee3-23c9672b3909)
 
+**Datos**
 
-#### Paso 2: Multiplicamos ambos lados por el denominador común
+- $$\( E_1 = 2.5V \)$$
+- $$\( R_1 = 470k\Omega \)$$
+- $$\( R_2 = 180k\Omega \)$$
+- $$\( R_L = 1k\Omega \)$$
 
-Multiplicamos ambos lados por $$\( (s - \frac{5}{2})(s^2 - 4s + 8) \)$$:
+**Fórmulas Utilizadas:**
 
-$$
-6s = A(s^2 - 4s + 8) + (Bs + C)(s - \frac{5}{2})
-$$
+- Amplificación del amplificador no inversor:
+  $$V_o = V_i \left( 1 + \frac{R_f}{R_i} \right)$$
 
+- Corriente:
+  $$I = \frac{V}{R}$$
 
+- Potencia:
+  $$P = V \times I$$
 
-#### Paso 3: Expandimos ambos términos
 
-Expandiendo el primer término:
+$$V_{RL} = 2.5 \left( 1 + \frac{470k\Omega}{180k\Omega} \right)$$
 
-$$
-A(s^2 - 4s + 8) = As^2 - 4As + 8A
-$$
+$$V_{RL} = 2.5 \left( 1 + 2.6 \right)$$
 
-Expandiendo el segundo término:
+$$V_{RL} = 2.5 \times 3.6$$
 
-$$
-(Bs + C)(s - \frac{5}{2}) = Bs^2 - \frac{5}{2}Bs + Cs - \frac{5}{2}C
-$$
+$$V_{RL} = 9V$$
 
-Agrupamos todo:
 
-$$
-6s = (A + B)s^2 + (-4A + C - \frac{5}{2}B)s + (8A - \frac{5}{2}C)
-$$
+$$I = \frac{V}{R}$$
 
+$$I = \frac{9V}{1k\Omega} = 9mA$$
 
+$$P_{RL} = V_{RL} \times I_{RL}$$
 
-#### Paso 4: Igualamos coeficientes
+$$P_{RL} = 9V \times 9mA$$
 
-Comparando con el lado izquierdo \( 6s \):
+$$P_{RL} = 0.081W = 81mW$$
 
-- Coeficiente de $$\( s^2 \): \( A + B = 0 \)$$
-- Coeficiente de $$\( s \): \( -4A + C - \frac{5}{2}B = 6 \)$$
-- Término independiente: $$\( 8A - \frac{5}{2}C = 0 \)$$
+---
 
+📚 # Ejemplo 2
 
-#### Paso 5: Sistema de ecuaciones
+![image](https://github.com/user-attachments/assets/1641d882-0897-4a0a-a4b9-e60f39b40a31)
 
-De la primera ecuación:
+$$\ i_1 = i_2 \$$
 
-$$
-A + B = 0 \Rightarrow B = -A
-$$
+$$\frac{v_i-0}{R_1}=\frac{v_0-v_1}{R_2}$$
 
-Sustituimos en las otras ecuaciones:
+$$\frac{v_0}{v_1} = \frac{R_1 + R_2}{R_1} = 1 + \frac{R_2}{R_1}$$
 
-**Segunda ecuación:**
+$$v_0 = \left( 1 + \frac{R_2}{R_1} \right) v_1$$
 
-$$
--4A + C - \frac{5}{2}(-A) = 6
-$$
-
-$$
--4A + C + \frac{5}{2}A = 6
-$$
-
-$$
-(-4 + \frac{5}{2})A + C = 6 \Rightarrow -\frac{3}{2}A + C = 6 \quad (1)
-$$
-
-**Tercera ecuación:**
-
-$$
-8A - \frac{5}{2}C = 0 \Rightarrow \frac{5}{2}C = 8A \Rightarrow C = \frac{16}{5}A \quad (2)
-$$
-
-Sustituyendo (2) en (1):
-
-$$
--\frac{3}{2}A + \frac{16}{5}A = 6
-$$
-
-$$
-\left( -\frac{3}{2} + \frac{16}{5} \right)A = 6
-$$
-
-$$
-\frac{-15 + 32}{10}A = 6 \Rightarrow \frac{17}{10}A = 6
-$$
-
-$$
-A = \frac{60}{17}
-$$
-
-Luego:
-
-$$
-B = -A = -\frac{60}{17}
-$$
-
-$$
-C = \frac{16}{5}A = \frac{16}{5} \cdot \frac{60}{17} = \frac{960}{85} = \frac{192}{17}
-$$
-
-
-$$
-\frac{6s}{(s - \frac{5}{2})(s^2 - 4s + 8)} = \frac{60}{17} \cdot \frac{1}{s - \frac{5}{2}} - \frac{60s}{17(s^2 - 4s + 8)} + \frac{192}{17(s^2 - 4s + 8)}
-$$
-
-#### Transformada Inversa de Laplace
-
-Dada la función:
-
-$$
-\frac{60}{17} \cdot \frac{1}{s - \frac{5}{2}} - \frac{60s}{17(s^2 - 4s + 8)} + \frac{192}{17(s^2 - 4s + 8)}
-$$
-
-Aplicamos la transformada inversa de Laplace a cada término.
-
-
-
-#### 1. Primer término
-
-Sabemos que:
-
-$$
-\mathcal{L}^{-1}\left( \frac{1}{s - a} \right) = e^{at}
-$$
-
-Entonces:
-
-$$
-\mathcal{L}^{-1}\left( \frac{60}{17} \cdot \frac{1}{s - \frac{5}{2}} \right) = \frac{60}{17} e^{\frac{5}{2}t}
-$$
-
-
-#### 2. Segundo y tercer término
-
-Completamos el trinomio:
-
-$$
-s^2 - 4s + 8 = (s - 2)^2 + 4
-$$
-
-Entonces:
-
-$$
-\frac{60s}{17((s - 2)^2 + 4)} = \frac{60}{17} \cdot \frac{s}{(s - 2)^2 + 4}
-$$
-
-Como:
-
-$$
-s = (s - 2) + 2
-$$
-
-Entonces:
-
-$$
-\frac{s}{(s - 2)^2 + 4} = \frac{s - 2}{(s - 2)^2 + 4} + \frac{2}{(s - 2)^2 + 4}
-$$
-
-Usamos las transformadas conocidas:
-
-$$
-\mathcal{L}^{-1}\left( \frac{s - a}{(s - a)^2 + b^2} \right) = e^{at} \cos(bt)
-$$
-
-$$
-\mathcal{L}^{-1}\left( \frac{b}{(s - a)^2 + b^2} \right) = e^{at} \sin(bt)
-$$
-
-Aplicando esto:
-
-$$
-\mathcal{L}^{-1}\left( \frac{60s}{17((s - 2)^2 + 4)} \right) =
-\frac{60}{17} \left( e^{2t} \cos(2t) + e^{2t} \sin(2t) \right)
-$$
-
-
-
-#### 3. Tercer término
-
-$$
-\mathcal{L}^{-1}\left( \frac{192}{17((s - 2)^2 + 4)} \right) = \frac{192}{17} \cdot \frac{1}{2} e^{2t} \sin(2t) = \frac{96}{17} e^{2t} \sin(2t)
-$$
-
-
-
-#### Resultado final
-
-Juntamos los tres términos:
-
-$$\mathcal{L}^{-1}\left(\frac{60}{17} \cdot \frac{1}{s - \frac{5}{2}} - \frac{60s}{17(s^2 - 4s + 8)} + \frac{192}{17(s^2 - 4s + 8)}\right)$$
-
-$$= \frac{60}{17} e^{\frac{5}{2}t}- \frac{60}{17} e^{2t} \cos(2t)+ \left( -\frac{60}{17} + \frac{96}{17} \right) e^{2t} \sin(2t)$$
-
-$$= \frac{60}{17} e^{\frac{5}{2}t}- \frac{60}{17} e^{2t} \cos(2t)+ \frac{36}{17} e^{2t} \sin(2t)$$
 
 ## **Conclusión**
 La descomposición en fracciones parciales es una herramienta útil para simplificar expresiones racionales y facilitar su manipulación en distintos cálculos.
