@@ -127,7 +127,12 @@ $- \frac{d e_x}{dt} = R_2 \cdot C_2 \frac{d^2 e_0}{dt^2} + \frac{d e_0}{dt}$
 
 $\frac{e_i}{R_1} + \frac{R_2 C_2}{R_1} \frac{d e_0}{dt} + \frac{1}{2} e_0 + R_2 C_2 C_1 \frac{d^2 e_0}{dt^2} + \frac{d e_0}{dt} + \frac{e_0}{R_2} + C_2 \frac{d e_0}{dt} + \frac{e_0}{R_2}$
 
+## 6. Ejercicios
+📚 # Ejercicio #1
 
+---
+
+📚 # Ejercicio #2
 
 
 
