@@ -122,9 +122,17 @@ $m_2 y_2'' + k(x_2 - x_1) = u$
 
 ![image](https://github.com/user-attachments/assets/b20aa98f-9a10-4f34-a116-fb44ac9cb672)
 
+$k_2 = -k_2 (x_1 - x_2)$
+
+$m_1 \ddot{x}_1 = -b_1 \dot{x}_1 - k_1 x_1 - k_2 (x_1 - x_2) + u$
+
 $m_1 x_1'' + b_1 x_1 + k_1 x_1 + k_2 (x_1 - x_2) = u$
 
-$m_2 x_2'' + k_2 (x_2 - x_1) = 0$
+$-k_2 (x_2 - x_1)$
+
+$m_2 \ddot{x}_2 = -k_2 (x_2 - x_1)$
+
+$m_2 x_2'' + k_2 (x_2 - x_1) = 0$ 
 
 
 
