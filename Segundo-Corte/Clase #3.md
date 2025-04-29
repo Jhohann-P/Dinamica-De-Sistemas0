@@ -120,6 +120,13 @@ $m_2 y_2'' + k(x_2 - x_1) = u$
 
 📚 # Ejemplo 2:
 
+![image](https://github.com/user-attachments/assets/b20aa98f-9a10-4f34-a116-fb44ac9cb672)
+
+$m_1 x_1'' + b_1 x_1 + k_1 x_1 + k_2 (x_1 - x_2) = u$
+
+$m_2 x_2'' + k_2 (x_2 - x_1) = 0$
+
+
 
 ## **Conclusión**
 En dinámica de sistemas, los sistemas mecánicos se pueden analizar mediante conceptos de trabajo, energía y potencia. Estos principios permiten comprender cómo las fuerzas afectan el movimiento y la energía de los cuerpos. El uso de modelos energéticos, como la conservación de la energía, facilita la obtención de ecuaciones de movimiento, especialmente en sistemas conservativos donde no hay pérdida de energía. Sin embargo, cuando existen elementos como amortiguadores, parte de la energía se disipa en forma de calor, lo que debe considerarse en el análisis. En conjunto, estos enfoques proporcionan una base sólida para entender y predecir el comportamiento dinámico de sistemas mecánicos complejos.
