@@ -130,9 +130,30 @@ $\frac{e_i}{R_1} + \frac{R_2 C_2}{R_1} \frac{d e_0}{dt} + \frac{1}{2} e_0 + R_2 
 ## 6. Ejercicios
 📚 # Ejercicio #1
 
+![image](https://github.com/user-attachments/assets/d6d55236-79f0-4c3a-a8ac-1898a8ea6836)
+
+$x(t) = R\,i(t) + L \frac{di}{dt} + \frac{1}{C} \int i(t)\,dt$
+
+$x(s) = R\,I(s) + sL\,I(s) + \frac{1}{Cs} I(s)$
+
+$y(s) = \frac{I(s)}{Cs}$
+
+$\frac{y(s)}{x(s)} = \frac{\frac{I(s)}{Cs}}{R I(s) + sL I(s) + \frac{I(s)}{Cs}}$
+
+$H(s) = \frac{\frac{1}{Cs}}{R + sL + \frac{1}{Cs}}$
+
 ---
 
 📚 # Ejercicio #2
+
+![image](https://github.com/user-attachments/assets/3fb41b9d-64a8-472b-b54b-7e7488bb35a2)
+
+
+$X_C = \frac{1}{C s}$
+
+$V_0 = \frac{1}{C s R_1}$
+
+$e_0 = \frac{Z_2}{Z_1} = \frac{R_2}{R_1 + \frac{1}{C s}}= -\frac{R_2}{\frac{1 + R_1 C s}{C s}}= \frac{R_2}{C s + R_1 C s^2}$
 
 
 
