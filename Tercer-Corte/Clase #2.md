@@ -157,7 +157,7 @@ $$G(s) = \frac{s^3 + 2s + 1}{s^2 + 4s + 5}$$
 - Grado del denominador: 2  
 - Como \( n > m \), la función es **impropia**.
   
------
+
 
 📚 # Ejemplo 2: 
 
@@ -185,7 +185,6 @@ $$G(s) = \frac{s^2 + 4s + 3}{s^2 + 2s + 1}$$
 $$(s + 1)^2 = 0 \implies s = -1 \quad \text{(polo doble)}$$
 
 
----
 
 📚 # Ejemplo 2: 
 
@@ -198,7 +197,7 @@ $$G(s) = \frac{5(s + 1)}{s(s + 3)(s + 4)}$$
 
   $$s = 0, \quad s = -3, \quad s = -4$$
 
----
+
 
 ## 3. Grado de la función de transferencia
 
