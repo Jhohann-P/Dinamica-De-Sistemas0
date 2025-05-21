@@ -1,7 +1,7 @@
 # Funciones de transferencia
 ## 1.  Introducción a la Función de Transferencia
 
-En la ingeniería de control, se utiliza una herramienta fundamental llamada **función de transferencia** para analizar sistemas dinámicos. Esta herramienta permite estudiar el comportamiento del sistema sin resolver directamente su ecuación diferencial.
+En el area de la ingeniería de control, se utiliza una herramienta fundamental llamada **función de transferencia** para analizar sistemas dinámicos. Esta herramienta permite estudiar el comportamiento del sistemasin resolver directamente su ecuacióndiferencial.
 
 Donde:
 - $$G(s)$$: función de transferencia del sistema
@@ -12,15 +12,15 @@ Donde:
 
 
 ## 2. Definiciones   
->🔑*Transformada inversa de Laplace:* Se emplea para convertir funciones en el dominio de la frecuencia (s) al dominio del tiempo (t).  
+>🔑*Transformada inversa de Laplace:* Se empleapara convertir funciones en el dominio de la frecuencia (s) al dominio del tiempo (t).  
   
-> 🔑 *Función de transferencia:*  Es la relación matemática entre la transformada de Laplace de la salida y la entrada de un sistema, considerando condiciones iniciales nulas. Se utiliza para analizar sistemas dinámicos en el dominio de la frecuencia.
+> 🔑 *Función de transferencia:*  Es la relación matemática ntre la transformada de Laplace de la salida y la entrada de un sistema, considerando condiciones iniciales nulas. Se utiliza para analizar sistemas dinámicos en el dominio de la frecuencia.
 
 > 🔑 *Polos y ceros:* Los polos son los valores de \( s \) que hacen que la función de transferencia tienda a infinito (raíces del denominador), mientras que los ceros son los valores que anulan la función (raíces del numerador). La ubicación de polos y ceros determina la estabilidad y respuesta del sistema.
 
 > 🔑 *Orden o grado de una función de transferencia:*  Corresponde al grado del polinomio característico (denominador). Indica la complejidad y el número de estados dinámicos del sistema.
 
-> 🔑 *Teorema del valor final:*  Método para encontrar el valor límite de la salida de un sistema cuando el tiempo tiende a infinito, usando transformadas de Laplace, siempre que el sistema sea estable.
+> 🔑 *Teorema del valor final:*  Método para encotrar el valor límite de la salida de un sistema cuando el tiempo tiende a infinito, usando transformadas de Laplace, siempre que el sistema sea estable.
 
 
 ### Clasificación de las funciones de transferencia
@@ -28,7 +28,7 @@ Donde:
 
 - Condición: $$\( n > m \)$$
 - El numerador tiene mayor grado que el denominador.
-- Este tipo de función **no es físicamente realizable** directamente, ya que implica un sistema no causal.
+- Este tipo de función **no es físicamente realizable** directamente, ya ue implica un sistema no causal.
 
 **Ejemplo:**
 
@@ -49,7 +49,7 @@ $$G(s) = \frac{s^2 + 1}{s + 1}$$
 
 $$G(s) = \frac{1}{s^2 + 1}$$
 
-- Numerador: grado 0  
+- Numeradorgrado 0  
 - Denominador: grado 2  
 **Clasificación**: Estrictamente propia
 
@@ -71,9 +71,9 @@ $$G(s) = \frac{s^2 - 1}{s^2 + 1}$$
 
 ### Polos y Ceros en Funciones de Transferencia
 
-#### ¿Qué son los polos y ceros?
+#### ¿Que son los polos y cros?
 
-Dada una función de transferencia en forma racional:
+Dada una funci+n de transferencia en forma racional:
 
 $$G(s) = \frac{N(s)}{D(s)} = \frac{(s - z_1)(s - z_2)\dots(s - z_n)}{(s - p_1)(s - p_2)\dots(s - p_m)}$$
 
@@ -117,9 +117,9 @@ El polo en $$\( s = 0 \)$$ implica que el sistema es **tipo 1** y tiene una **re
 
 ### Grado de una Función de Transferencia
 
-####  ¿Qué significa el orden de una función de transferencia?
+####  ¿Qu+e significa el orden de una función de transferencia?
 
-El orden de una función de transferencia está determinado por el grado del polinomio del denominador es decir, el **número más alto de la variable $$\( s \)$$ que aparece en el denominador.
+El orden de una función de transferencia estaa determinado por el grado del polinomio del denominador es decir, el **número más alto de la variable $$\( s \)$$ que aparece en el denominador.
 
 
 #### Ejemplo
@@ -134,7 +134,7 @@ $$G(s) = \frac{3s - 1}{s^2 + 3s + 2}$$
 Por lo tanto, se trata de una **función de segundo orden**.
 
 
-##  ¿Por qué importa el orden?
+##  ¿Por qué importa el ordenn?
 
 El orden de un sistema indica:
 
@@ -212,4 +212,4 @@ $$G(s) = \frac{7s + 2}{s^3 + 6s^2 + 11s + 6}$$
 
 
 ## **Conclusión**
-En resumen, la función de transferencia es una herramienta fundamental para analizar y diseñar sistemas de control, ya que simplifica el estudio de sistemas dinámicos en el dominio de la frecuencia. Conocer los polos, ceros y el orden del sistema ayuda a entender su comportamiento y estabilidad.  Además, el teorema del valor final es útil para predecir la respuesta a largo plazo sin resolver la ecuación diferencial completa.  Estas herramientas facilitan la modelación y el control de sistemas en ingeniería.
+En resumen, la función de transferenciaaes una herramienta fundamental para analizar y diseñar sistemas de control, ya que simplifica el estudio de sistemas dinámicos en el dominio de la frecuencia. Conocer los polos, ceros y el orden del sistema ayuda a entender su comportamiento y estabilidad.  Además, el teorema del valor final es útil para predecir la respuesta a largo plazosin resolver la ecuación diferencial completa.  Estas herramientas facilitan la modelación y el control de sistemas en ingenier+ia.
