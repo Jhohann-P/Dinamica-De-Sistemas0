@@ -16,7 +16,7 @@ Donde:
   
 > 🔑 *Funcin de transferencia:*  Es la relación matemática ntre la transformada de Laplace de la salida y la entrada de un sistema, considerando condiciones iniciales nulas. Se utiliza para analizar sistemas dinámicos en el dominio de la frecuencia.
 
-> 🔑 *Polos y ceros:* Los polos son los valores de \( s \) que hacen que la función de transferencia tienda a infinito (raíces del denominador), mientras que los ceros son los valores que anulan la función (raíces del numerador). La ubicación de polos y ceros determina la estabilidad y respuesta del sistema.
+> 🔑 *Polos y ceros:* Los polos son los valores de $$\( s \)$$ que hacen que la función de transferencia tienda a infinito (raíces del denominador), mientras que los ceros son los valores que anulan la función (raíces del numerador). La ubicación de polos y ceros determina la estabilidad y respuesta del sistema.
 
 > 🔑 *Orden o grado de una función de transferencia:*  Corresponde al grado del polinomio característico (denominador). Indica la complejidad y el número de estados dinámicos del sistema.
 
@@ -88,9 +88,9 @@ Donde:
 
 #### Importancia de los polos y ceros
 
-- Los **polos** determinan la **estabilidad** y la **dinámica** del sistema (como su velocidad de respuesta y si oscila o no).
-- Los **ceros** afectan la **forma de la respuesta** del sistema, pero no su estabilidad.
-- La posición de polos y ceros en el plano complejo $$\( s \)$$ es esencial para diseñar y analizar sistemas de control.
+- Los polos determinan la estabilida y la dinámica del sistema (como su velocidad de respuesta y si oscila o no).
+- Los ceros afectan la forma de la respuesta del sistema, pero no su estabilidad.
+- La posicón de polos y ceros en el plano complejo $$\( s \)$$ es esencial para diseñar y analizar sistemas de control.
 
 
 ##  Ejemplos
@@ -112,7 +112,7 @@ $$G(s) = \frac{5}{s(s + 2)}$$
 - **Ceros**: ninguno explícito (numerador es constante)  
 - **Polos**: $$\( s = 0 \), \( s = -2 \)$$
 
-El polo en $$\( s = 0 \)$$ implica que el sistema es **tipo 1** y tiene una **respuesta lenta al inicio**.
+El polo en $$\( s = 0 \)$$ implica que el sistema es tipo 1 y tiene una respuesta lenta al inicio.
 
 
 ### Grado de una Función de Transferencia
@@ -155,7 +155,7 @@ $$G(s) = \frac{s^3 + 2s + 1}{s^2 + 4s + 5}$$
 
 - Grado del numerador: 3  
 - Grado del denominador: 2  
-- Como \( n > m \), la función es **impropia**.
+- Como $$\( n > m \)$$, la función es impropia.
   
 
 
@@ -166,7 +166,7 @@ $$G(s) = \frac{s^3 + 2s + 1}{s^2 + 4s + 5}$$
 **Solución:**
 
 - Grado numerador: 1  
-- Grado denominador: 2  
+- Grado denominador:2  
 - Como \( n < m \), es **estrictamente propia** (también llamada propia).  
 
 ## 2. Polos y ceros
@@ -207,9 +207,9 @@ $$G(s) = \frac{7s + 2}{s^3 + 6s^2 + 11s + 6}$$
 
 **Solución:**
 
-- Grado del denominador: 3  
+- Grado del denominador:3  
 - Por lo tanto, la función es de **tercer orden**.
 
 
 ## **Conclusión**
-En resumen, la función de transferenciaaes una herramienta fundamental para analizar y diseñar sistemas de control, ya que simplifica el estudio de sistemas dinámicos en el dominio de la frecuencia. Conocer los polos, ceros y el orden del sistema ayuda a entender su comportamiento y estabilidad.  Además, el teorema del valor final es útil para predecir la respuesta a largo plazosin resolver la ecuación diferencial completa.  Estas herramientas facilitan la modelación y el control de sistemas en ingenier+ia.
+La función de transferenciaaes una herramienta fundamental para analizar y diseñar sistemas de control, ya que simplifica el estudio de sistemas dinámicos en el dominio de la frecuencia. Conocer los polos, ceros y el orden del sistema ayuda a entender su comportamiento y estabilidad.  Además, el teorema del valor final es útil para predecir la respuesta a largo plazosin resolver la ecuación diferencial completa.  Estas herramientas facilitan la modelación y el control de sistemas en ingenier+ia.
