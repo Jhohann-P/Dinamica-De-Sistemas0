@@ -1,20 +1,18 @@
 # Correcion del parcial
 ## 1. Transformada de Laplace y Fracciones parciales en Dinámica de Sistemas 
-En Dinámica de Sistemas, la Transformada de Laplace se utiliza para transformar ecuaciones diferenciales del dominio del tiempo al dominio de la frecuencia (espacio s), donde es más fácil analizarlas y resolverlas algebraicamente.``
 
-Una vez obtenida la función de transferencia o la solución en el dominio de Laplace, se aplica la descomposición en fracciones parciales para simplificar la expresión. Esto permite utilizar tablas de transformadas inversas y regresar al dominio del tiempo con una expresión analítica clara de la respuesta del sistema.
-
+Los sistemas dinámicos describen cómo cambian variables con el tiempo usando ecuaciones matemáticas, siendo fundamentales para modelar procesos en ingeniería y ciencia. Los sistemas electromecánicos combinan partes eléctricas y mecánicas para controlar movimientos, como en motores y actuadores. Los sistemas eléctricos estudian el comportamiento de voltajes, corrientes y componentes eléctricos en circuitos y redes de energía. Juntos, estos sistemas permiten diseñar y controlar tecnologías clave en la industria y la vida diaria.
 
 ## 2. Definiciones   
   
->🔑*Sistema:* Conjunto de componentes interconectados que trabajan juntos para alcanzar un objetivo específico.
+>🔑*Sistema dinamico:* Un sistema que describe la evolución de variables en el tiempo, generalmente modelado mediante ecuaciones diferenciales o en diferencias.
       
->🔑*Fracciones Parciales:* Es una técnica algebraica que permite descomponer una fracción racional (cociente de dos polinomios) en una suma de fracciones más simples, lo cual facilita operaciones como la integración o la transformada inversa de Laplace.
+>🔑*Sistema electromecánico:* Un sistema que integra componentes eléctricos y mecánicos para controlar y generar movimientos físicos.
   
->🔑*Transformada de Laplace:* Método matemático que convierte ecuaciones diferenciales en ecuaciones algebraicas en el dominio de la frecuencia compleja.
+>🔑*Sistema eléctrico:* Un conjunto de elementos y circuitos eléctricos que permiten la generación, transmisión y control de energía eléctrica.
   
-## 3. Parcial #2.
-### Primer ejercicio del parcial #1
+## 3. Solucion segundo parcial.
+### Primer ejercicio del parcial:
 
 ![image](https://github.com/user-attachments/assets/3395cfee-92fc-405a-8f88-cab69b7f2cd0)
 
@@ -30,7 +28,7 @@ $u - K(y - x) - B(y' - x') = 0$
 $K(y - x) + B(y' - x') = M y''$
 
 
-### Segundo ejercicio del parcial #1.
+### Segundo ejercicio del parcial:
 
 ![image](https://github.com/user-attachments/assets/3b44edb8-d573-471b-8f7d-35d35b1d5c82)
 
@@ -57,8 +55,7 @@ $e(t) = L i_1' + 200 i_1 + V_x$
 
 $i_C = 0.2 V_C$
 
-## 4. Parcial #2
-### Primer ejercicio parcial  #2
+### Tercer ejercicio del parcial:
 
 ![image](https://github.com/user-attachments/assets/eb5b9df1-c25f-42c0-b55d-792aa594eebe)
 
@@ -76,11 +73,8 @@ $F_{k1} - F_{w2} - F_{b3} = m_2 \omega m_2$
 
 $k_1 (y_3 - y_2) + m_2 g - b_3 (y_1' - y_2') = m_2 y_2''$
 
-### Segundo ejercicio parcial  2
-
-
 ## **Conclusión**
-La descomposición en fracciones parciales es una herramienta útil para simplificar expresiones racionales y facilitar su manipulación en distintos cálculos.
+Los sistemas dinámicos, electromecánicos y eléctricos son importantes en la ingeniería moderna. Su estudio y comprensión permiten modelar, analizar y controlar procesos complejos que integran movimientos físicos y señales eléctricas. Esto facilita el diseño de tecnologías eficientes y seguras, esenciales para el desarrollo industrial y tecnológico actual.
 
 
 
