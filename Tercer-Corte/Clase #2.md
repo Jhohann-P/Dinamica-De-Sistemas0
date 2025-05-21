@@ -1,7 +1,7 @@
 # Funciones de transferencia
 ## 1.  Introducción a la Función de Transferencia
 
-En el area de la ingeniería de control, se utiliza una herramienta fundamental llamada función de transferencia para analizar sistemas dinámicos. Esta herramientapermite estudiar el comportamiento del sistemasin resolver directamente su ecuacióndiferencial.
+En el area de la ingeniería de control, se utiliza una herramienta fundamental llamada función de transferencia para analizar sistemas dinámicos. Esta herramientapermite estudiar el comportamiento del sistema sin resolver directamente su ecuación diferencial.
 
 Donde:
 - $$G(s)$$: función de transferencia del sistema
