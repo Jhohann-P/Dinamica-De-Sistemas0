@@ -20,14 +20,14 @@ Una vez obtenida la función de transferencia o la solución en el dominio de La
 
 ![image](https://github.com/user-attachments/assets/fbe9358f-b649-4b5b-8fc4-0cce84b62e66)
 
-$ u - F_k - F_b = 0 $
+$u - F_k - F_b = 0$
 
-$ u - K(y - x) - B(y' - x') = 0 $
+$u - K(y - x) - B(y' - x') = 0$
 
 ![image](https://github.com/user-attachments/assets/dbf48ab6-a8c3-46eb-9e0c-d3eb9b441366)
 
 
-$ K(y - x) + B(y' - x') = M y'' $
+$K(y - x) + B(y' - x') = M y''$
 
 
 ### Segundo ejercicio del parcial #1.
@@ -37,25 +37,25 @@ $ K(y - x) + B(y' - x') = M y'' $
 ![image](https://github.com/user-attachments/assets/afd8ba4c-9fb4-49d7-8ae6-2e21fb8c152e)
 
 
-$ -e(t) + V_L + V_{200} + V_{50} = 0 $
+$-e(t) + V_L + V_{200} + V_{50} = 0$
 
-$ -e(t) + 2(i_1) + 200(i_1) + 50(i_1 - i_2) = 0 $
+$-e(t) + 2(i_1) + 200(i_1) + 50(i_1 - i_2) = 0$
 
-$ V_{50} + V_{20} + V_2 = 0 $
+$V_{50} + V_{20} + V_2 = 0$
 
-$ 50(i_2 - i_1) + 20i_2 + \frac{1}{C} \int i_2\, dt = 0 $
+$50(i_2 - i_1) + 20i_2 + \frac{1}{C} \int i_2\, dt = 0$
 
-$ i_1 - i_2 - i_3 = 0 $
+$i_1 - i_2 - i_3 = 0$
 
-$ i_1 - 0.2V_c - \frac{V_x}{50} = 0 $
+$i_1 - 0.2V_c - \frac{V_x}{50} = 0$
 
-$ V_x = 20 i_2 + V_c $
+$V_x = 20 i_2 + V_c$
 
-$ V_x = 4 V_c' + V_c $
+$V_x = 4 V_c' + V_c$
 
-$ e(t) = L i_1' + 200 i_1 + V_x $
+$e(t) = L i_1' + 200 i_1 + V_x$
 
-$ i_C = 0.2 V_C $
+$i_C = 0.2 V_C$
 
 ## 4. Parcial #2
 ### Primer ejercicio parcial  #2
