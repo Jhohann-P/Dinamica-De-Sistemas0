@@ -1,6 +1,21 @@
-# Descomposición en fracciones parciales
-## 1. Fracciones parciales
-La descomposición en fracciones parciales se utiliza principalmente en la Transformada de Laplace y en la resolución de ecuaciones diferenciales, ya que permite expresar una fracción racional compleja como una suma de fracciones más simples. Esto facilita la aplicación de la transformada inversa de Laplace y la resolución de integrales en cálculo. En general, se usa para:
+# Funciones de transferencia
+## 1.  Introducción a la Función de Transferencia
+
+En la ingeniería de control, se utiliza una herramienta fundamental llamada **función de transferencia** para analizar sistemas dinámicos. Esta herramienta permite estudiar el comportamiento del sistema sin resolver directamente su ecuación diferencial.
+
+Donde:
+- $$G(s)$$: función de transferencia del sistema
+- $$Y(s)$$: salida del sistema en el dominio de Laplace
+- $$U(s)$$: entrada del sistema en el dominio de Laplace
+- $$s$$: variable compleja usada en la transformada de Laplace
+
+
+
+## ¿Para qué sirve?
+
+- Simplifica el análisis de sistemas lineales.
+- Permite trabajar con bloques en lugar de ecuaciones diferenciales.
+- Es base para diseñar y ajustar controladores automáticos (como PID).
 
 
 ## 2. Definiciones   
@@ -12,80 +27,52 @@ La descomposición en fracciones parciales se utiliza principalmente en la Trans
   
 >🔑*Análisis de sistemas de control y circuitos eléctricos:* Se usa para encontrar la respuesta temporal de sistemas eléctricos y mecánicos modelados por ecuaciones diferenciales.
 
-# **3. Casos de descomposición de fracciones parciales**
-### **Caso 1: Descomposición en Fracciones Parciales con Raíces Reales Distintas**
 
-Cuando el denominador \( Q(s) \) de una fracción racional tiene **raíces reales distintas**, la descomposición se hace expresando la fracción como una suma de términos simples con denominadores lineales.  
-  
-**Forma General**    
-Si tenemos una función racional de la forma:  
-  
-$$G(s) = \frac{P(s)}{(s + p_1)(s + p_2) \dots (s + p_n)}$$  
-  
-donde $$\( p_1, p_2, \dots, p_n \)$$ son **raíces reales distintas**, entonces se puede descomponer en fracciones parciales como:  
-  
-$$G(s) = \frac{A}{s + p_1} + \frac{B}{s + p_2} + \dots + \frac{N}{s + p_n}$$  
-  
-donde $$\( A, B, \dots, N \)$$ son constantes que se deben determinar.  
-  
+### Clasificación de las funciones de transferencia
+#### 1. Función **Impropia**
 
+- Condición: \( n > m \)
+- El numerador tiene mayor grado que el denominador.
+- Este tipo de función **no es físicamente realizable** directamente, ya que implica un sistema no causal.
 
-**Ejemplo Resuelto**    
-Descomponer en fracciones parciales la siguiente función:  
-  
-$$G(s) = \frac{2s^2 - 4}{(s + 1)(s - 2)(s - 3)}$$  
-  
-**Paso 1: Plantear la ecuación de fracciones parciales**    
-Como los términos del denominador son raíces reales distintas, proponemos la siguiente descomposición:  
-  
-$$\frac{2s^2 - 4}{(s + 1)(s - 2)(s - 3)} = \frac{A}{s + 1} + \frac{B}{s - 2} + \frac{C}{s - 3}$$  
-  
-Multiplicamos todo por $$\( (s + 1)(s - 2)(s - 3) \)$$ para eliminar los denominadores:  
-  
-$$2s^2 - 4 = A(s - 2)(s - 3) + B(s + 1)(s - 3) + C(s + 1)(s - 2)$$
+**Ejemplo:**
+
+$$G(s) = \frac{s^2 + 1}{s + 1}$$
+
+- Numerador: grado 2  
+- Denominador: grado 1  
+**Clasificación**: Impropia
 
 
+####  2. Función **Estrictamente Propia**
 
-**Paso 2: Hallar los coeficientes $$\( A, B, C \)$$**    
-Para encontrar \( A, B, C \), evaluamos la ecuación en valores estratégicos de \( s \).  
-  
-1. **Para $$\( s = -1 \)$$** (anula los términos con \( B \) y \( C \)):    
-   $$2(-1)^2 - 4 = A(-1 - 2)(-1 - 3)$$
-   
-   $$2 - 4 = A(-3)(-4)$$
-   
-   $$-2 = 12A\]$$
-   
-   $$A = -\frac{1}{6}$$
-     
-  
-2. **Para $$\( s = 2 \)$$** (anula los términos con $$\( A \) y \( C \))$$:  
-   $$2(2)^2 - 4 = B(2 + 1)(2 - 3)\$$
-   
-   $$8 - 4 = B(3)(-1)\$$
-   
-   $$4 = -3B\$$
-   
-   $$B = -\frac{4}{3}$$
-   
+- Condición: \( n < m \)
+- El denominador tiene mayor grado que el numerador.
+- Este es el caso más común y **representa un sistema físicamente realizable y estable**.
 
-3. **Para $$\( s = 3 \)$$** (anula los términos con $$\( A \) y \( B \))$$:  
-   $$2(3)^2 - 4 = C(3 + 1)(3 - 2)\$$
-   
-   $$18 - 4 = C(4)(1)$$  
-     
-   $$14 = 4C $$
-   
-   entonces: C = $$\frac{7}{2}$$  
-     
+**Ejemplo:**
+
+$$G(s) = \frac{1}{s^2 + 1}$$
+
+- Numerador: grado 0  
+- Denominador: grado 2  
+**Clasificación**: Estrictamente propia
 
 
-**Paso 3: Escribir la solución final**    
-Reemplazamos los valores de $$\( A, B, C \)$$:
 
-$$\frac{2s^2 - 4}{(s + 1)(s - 2)(s - 3)} = \frac{-\frac{1}{6}}{s + 1} + \frac{-\frac{4}{3}}{s - 2} + \frac{\frac{7}{2}}{s - 3}$$  
+#### ⚖️ 3. Función **Bipropia** (o simplemente Propia)
 
-  
+- Condición: \( n = m \)
+- Numerador y denominador tienen el mismo grado.
+- El sistema es **realizable**, aunque puede tener un comportamiento especial a altas frecuencias.
+
+**Ejemplo:**
+
+$$G(s) = \frac{s^2 - 1}{s^2 + 1}$$
+
+- Numerador: grado 2  
+- Denominador: grado 2  
+**Clasificación**: Bipropia (propia)
 
 ### **Caso 2: Descomposición en Fracciones Parciales con Raíces Repetidas**  
 
