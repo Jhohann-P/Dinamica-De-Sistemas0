@@ -1,7 +1,7 @@
 # Funciones de transferencia
 ## 1.  Introducción a la Función de Transferencia
 
-En el area de la ingeniería de control, se utiliza una herramienta fundamental llamada **función de transferencia** para analizar sistemas dinámicos. Esta herramienta permite estudiar el comportamiento del sistemasin resolver directamente su ecuacióndiferencial.
+En el area de la ingeniería de control, se utiliza una herramienta fundamental llamada función de transferencia para analizar sistemas dinámicos. Esta herramientapermite estudiar el comportamiento del sistemasin resolver directamente su ecuacióndiferencial.
 
 Donde:
 - $$G(s)$$: función de transferencia del sistema
@@ -14,13 +14,13 @@ Donde:
 ## 2. Definiciones   
 >🔑*Transformada inversa de Laplace:* Se empleapara convertir funciones en el dominio de la frecuencia (s) al dominio del tiempo (t).  
   
-> 🔑 *Función de transferencia:*  Es la relación matemática ntre la transformada de Laplace de la salida y la entrada de un sistema, considerando condiciones iniciales nulas. Se utiliza para analizar sistemas dinámicos en el dominio de la frecuencia.
+> 🔑 *Funcin de transferencia:*  Es la relación matemática ntre la transformada de Laplace de la salida y la entrada de un sistema, considerando condiciones iniciales nulas. Se utiliza para analizar sistemas dinámicos en el dominio de la frecuencia.
 
 > 🔑 *Polos y ceros:* Los polos son los valores de \( s \) que hacen que la función de transferencia tienda a infinito (raíces del denominador), mientras que los ceros son los valores que anulan la función (raíces del numerador). La ubicación de polos y ceros determina la estabilidad y respuesta del sistema.
 
 > 🔑 *Orden o grado de una función de transferencia:*  Corresponde al grado del polinomio característico (denominador). Indica la complejidad y el número de estados dinámicos del sistema.
 
-> 🔑 *Teorema del valor final:*  Método para encotrar el valor límite de la salida de un sistema cuando el tiempo tiende a infinito, usando transformadas de Laplace, siempre que el sistema sea estable.
+> 🔑 *Teorema del valor final:*  Método para encotrar el valor límite de la salida de un sistema cuando el tiempo tiende ainfinito, usando transformadas de Laplace, siempre que el sistema sea estable.
 
 
 ### Clasificación de las funciones de transferencia
@@ -83,19 +83,19 @@ Donde:
 - $$\( p_1, p_2, \dots, p_m \)$$ son los **polos** del sistema.
 - $$\( N(s) \)$$: numerador, determina los ceros.
 - $$\( D(s) \)$$: denominador, determina los polos.
-- $$\( s \)$$: variable en el dominio de Laplace.
+- $$\( s \)$$: variable en eldominio de Laplace.
 
 
 #### Importancia de los polos y ceros
 
 - Los **polos** determinan la **estabilidad** y la **dinámica** del sistema (como su velocidad de respuesta y si oscila o no).
 - Los **ceros** afectan la **forma de la respuesta** del sistema, pero no su estabilidad.
-- La posición de polos y ceros en el plano complejo \( s \) es esencial para diseñar y analizar sistemas de control.
+- La posición de polos y ceros en el plano complejo $$\( s \)$$ es esencial para diseñar y analizar sistemas de control.
 
 
 ##  Ejemplos
 
-### Ejemplo 1: Sistema con 2 ceros y 2 polos
+### Ejemplo 1: Sistema con 2ceros y 2 polos
 
 $$G(s) = \frac{(s + 2)(s - 1)}{(s + 3)(s + 5)}$$
 
