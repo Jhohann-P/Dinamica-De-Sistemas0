@@ -13,15 +13,19 @@ Los diagramas de bloques son herramientas para comprobar y realizar un análisis
 
 
 ## 2. Definiciones   
->🔑*Transformada inversa de Laplace:* Se empleapara convertir funciones en el dominio de la frecuencia (s) al dominio del tiempo (t).  
-  
-> 🔑 *Funcin de transferencia:*  Es la relación matemática ntre la transformada de Laplace de la salida y la entrada de un sistema, considerando condiciones iniciales nulas. Se utiliza para analizar sistemas dinámicos en el dominio de la frecuencia.
+> 🔑 *Sistema dinámico:* Es aquel cuyo comportamiento cambia con el tiempo, y puede modelarse mediante ecuaciones diferenciales o funciones de transferencia.
 
-> 🔑 *Polos y ceros:* Los polos son los valores de $$\( s \)$$ que hacen que la función de transferencia tienda a infinito (raíces del denominador), mientras que los ceros son los valores que anulan la función (raíces del numerador). La ubicación de polos y ceros determina la estabilidad y respuesta del sistema.
+> 🔑 *Motor DC:* Dispositivo electromecánico que convierte energía eléctrica en movimiento rotacional.
 
-> 🔑 *Orden o grado de una función de transferencia:*  Corresponde al grado del polinomio característico (denominador). Indica la complejidad y el número de estados dinámicos del sistema.
+> 🔑 *Solenoide:* Actuador lineal electromecánico que genera una fuerza proporcional a la corriente en su bobina, provocando un desplazamiento mecánico.
 
-> 🔑 *Teorema del valor final:*  Método para encotrar el valor límite de la salida de un sistema cuando el tiempo tiende ainfinito, usando transformadas de Laplace, siempre que el sistema sea estable.
+> 🔑 *Tacómetro:* Sensor que convierte la velocidad angular de un eje en una señal de voltaje proporcional
+
+> 🔑 *Engranajes y poleas:* Elementos mecánicos que transmiten potencia y modifican el torque y velocidad angular en sistemas rotacionales. Alteran la inercia reflejada hacia el motor.
+
+> 🔑 *Sensor transmisor:* Dispositivo que mide una variable física y entrega una señal eléctrica proporcional (si es lineal) o relacionada de forma no lineal, según el tipo de sensor.
+
+> 🔑 *Diagrama de bloques:* Representación gráfica de un sistema, donde se muestran las relaciones funcionales entre los componentes mediante bloques interconectados con señales.
 
 
 ## 3. Modelos de sistemas más conocidos
