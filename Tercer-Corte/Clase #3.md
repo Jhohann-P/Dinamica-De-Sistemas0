@@ -61,178 +61,205 @@ $$\[X(s) = \frac{F_s(s)}{ms^2 + bs + k}\]$$
 
 $$V(s) → [1 / (Ls + r)] → [K_s] → [1 / (ms² + bs + k)] → X(s)$$
 
+---
 
-###  2. Función **Estrictamente Propia**
+###  2. Modelo de un Motor de Corriente Directa (Motor DC)
 
-- Condición: \( n < m \)
-- El denominador tiene mayor grado que el numerador.
-- Este es el caso más común y **representa un sistema físicamente realizable y estable**.
+- Un motor DC es un sistema electromecánico compuesto por:
 
-**Ejemplo:**
-
-$$G(s) = \frac{1}{s^2 + 1}$$
-
-- Numeradorgrado 0  
-- Denominador: grado 2  
-**Clasificación**: Estrictamente propia
+- **Embobinado:** Produce el campo magnético.
+- **Imán o campo:** Genera el flujo magnético.
+- **Eje y carga:** Parte mecánica que se mueve por el torque del motor.
 
 
+#### 1. Motor DC con Corriente de Campo
 
-#### 3. Función **Bipropia** (o simplemente Propia)
+- El **flujo magnético** $$\( \Phi \)$$ es proporcional a la **corriente de campo** $$\( i_f \)$$.
+- El **torque desarrollado** $$\( T \)$$ es proporcional al producto $$\( \Phi \cdot i_a \)$$, donde $$\( i_a \)$$ es la corriente de armadura:
 
-- Condición: \( n = m \)
-- Numerador y denominador tienen el mismo grado.
-- El sistema es **realizable**, aunque puede tener un comportamiento especial a altas frecuencias.
+  $$\[T = K_T \cdot \Phi \cdot i_a\]$$
 
-**Ejemplo:**
+- El **torque aplicado a la carga** considera la inercia \( J \) y fricción \( b \):
 
-$$G(s) = \frac{s^2 - 1}{s^2 + 1}$$
+  $$\[T = J \cdot \frac{d\omega}{dt} + b \cdot \omega\]$$
 
-- Numerador: grado 2  
-- Denominador: grado 2  
-**Clasificación**: Bipropia (propia)
 
-### Polos y Ceros en Funciones de Transferencia
 
-#### ¿Que son los polos y cros?
+#### 2. Motor DC con Corriente de Armadura
 
-Dada una funci+n de transferencia en forma racional:
+Si el flujo $$\( \Phi \)$$ se mantiene constante, el torque es directamente proporcional a la corriente de armadura:
 
-$$G(s) = \frac{N(s)}{D(s)} = \frac{(s - z_1)(s - z_2)\dots(s - z_n)}{(s - p_1)(s - p_2)\dots(s - p_m)}$$
+$$\[T = K_T \cdot i_a\]$$
+
+- La corriente de armadura se relaciona con el voltaje aplicado $$\( V_a \)$$, la resistencia $$\( R_a \)$$, la inductancia $$\( L_a \)$$, y el voltaje inducido $$\( e_b \)$$:
+
+  $$\[V_a = L_a \cdot \frac{di_a}{dt} + R_a \cdot i_a + e_b\]$$
+
+- El **voltaje inducido** (fuerza contraelectromotriz) es proporcional a la velocidad angular:
+
+  $$\[e_b = K_e \cdot \omega\]$$
+
+
+#### 3. Parte Mecánica
+
+La parte mecánica del motor se modela como un sistema rotacional clásico:
+
+$$\[T = J \cdot \frac{d\omega}{dt} + b \cdot \omega\]$$
+
+#### 4. Diagrama y Modelo de bloques 
+![image](https://github.com/user-attachments/assets/ef660411-3a83-4a2b-a8da-ebfb2706e97a)
+
+ **Entrada:** Voltaje aplicado a la armadura $$\( V_a(s) \)$$.
+- **Salida:** Posición angular del eje $$\( \Theta(s) \)$$.
+
+#### Componentes del sistema:
+
+1. **Bloque eléctrico (armadura):**
+   $$\[\frac{K_m}{sL_a + R_a}\]$$
+   Este bloque representa la dinámica del circuito eléctrico del motor, considerando la inductancia $$\( L_a \)$$, resistencia $$\( R_a \)$$ y constante de torque $$\( K_m \)$$.
+
+2. **Torque mecánico desarrollado:**  
+   $$\( T_m(s) \)$$, generado por el motor.
+
+3. **Torque de carga o perturbación:**  
+   $$\( T_p(s) \)$$, se resta del torque total aplicado.
+
+4. **Sistema mecánico rotacional:**  
+   $$\[ \frac{1}{Js + b}\]$$
+   Modela la dinámica del eje del motor, donde:
+   - $$\( J \)$$: inercia del rotor,
+   - $$\( b \)$$: coeficiente de fricción.
+
+5. **Integrador final:**  
+   $$\[\frac{1}{s}\]$$
+   Convierte la velocidad angular $$\( \omega(s) \)$$ en posición angular $$\( \Theta(s) \)$$.
+
+6. **Retroalimentación de velocidad:**  
+   El voltaje inducido (fuerza contraelectromotriz) está dado por:
+   $$\[e_b(s) = K_b \cdot \omega(s)\]$$
+   Se retroalimenta y se resta del voltaje de entrada.
+   
+---
+
+### 3. Elementos transmisores de energía
+
+### Engranajes y Poleas en Sistemas Dinámicos
+
+Los **engranajes** y **poleas** son elementos mecánicos utilizados para transmitir potencia y movimiento entre diferentes partes de un sistema.
+
+
+
+#### Función en el Modelado de Sistemas
+
+- Transfieren **energía mecánica** de un componente a otro (por ejemplo, del motor a la carga).
+- Afectan los parámetros dinámicos del sistema, como la **inercia equivalente** $$\( J \)$$ y la **constante de torque** $$\( K_m \)$$, cuando se consideran las relaciones de transmisión.
+
+
+#### Efecto de la Relación de Transmisión
+
+Para un sistema con una relación de transmisión $$\( \frac{N_1}{N_2} \)$$:
+
+- El ángulo de salida $$\( \theta_2 \)$$ y el de entrada $$\( \theta_1 \)$$ se relacionan como:
+  
+  $$\[\theta_2 = \frac{N_1}{N_2} \cdot \theta_1\]$$
+
+- La velocidad angular y el torque se transforman de forma inversa respecto a la relación de engranajes:
+  
+  $$\[\omega_2 = \frac{N_1}{N_2} \cdot \omega_1, \quad T_1 = \frac{N_2}{N_1} \cdot T_2\]$$
+
+- La **inercia reflejada** al eje del motor se calcula como:
+
+  $$\[J_{\text{eq}} = J_{\text{carga}} \cdot \left( \frac{N_2}{N_1} \right)^2\]$$
+
+
+#### Diagramas de Bloques
+
+#### Sistema con Engranajes o Poleas
+
+V → [Motor: θ₁] → (Relación N₁:N₂) → [Carga: θ₂]
 
 Donde:
+- $$\( \theta_1 \)$$: posición angular del motor
+- $$\( \theta_2 \)$$: posición angular de la carga
+- $$\( N_1/N_2 \)$$: relación de transmisión entre poleas o engranajes
 
-- $$\( z_1, z_2, \dots, z_n \)$$ son los **ceros** del sistema.
-- $$\( p_1, p_2, \dots, p_m \)$$ son los **polos** del sistema.
-- $$\( N(s) \)$$: numerador, determina los ceros.
-- $$\( D(s) \)$$: denominador, determina los polos.
-- $$\( s \)$$: variable en eldominio de Laplace.
+---
 
+### Tacómetros
 
-#### Importancia de los polos y ceros
-
-- Los polos determinan la estabilida y la dinámica del sistema (como su velocidad de respuesta y si oscila o no).
-- Los ceros afectan la forma de la respuesta del sistema, pero no su estabilidad.
-- La posicón de polos y ceros en el plano complejo $$\( s \)$$ es esencial para diseñar y analizar sistemas de control.
-
-
-##  Ejemplos
-
-### Ejemplo 1: Sistema con 2ceros y 2 polos
-
-$$G(s) = \frac{(s + 2)(s - 1)}{(s + 3)(s + 5)}$$
-
-- **Ceros**: $$\( s = -2 \), \( s = 1 \)  $$
-- **Polos**: $$\( s = -3 \), \( s = -5 \)$$
-
-Sistema **estable** (todos los polos tienen parte real negativa).
-
-
-### Ejemplo 2: Sistema con un polo en el origen
-
-$$G(s) = \frac{5}{s(s + 2)}$$
-
-- **Ceros**: ninguno explícito (numerador es constante)  
-- **Polos**: $$\( s = 0 \), \( s = -2 \)$$
-
-El polo en $$\( s = 0 \)$$ implica que el sistema es tipo 1 y tiene una respuesta lenta al inicio.
-
-
-### Grado de una Función de Transferencia
-
-####  ¿Qu+e significa el orden de una función de transferencia?
-
-El orden de una función de transferencia estaa determinado por el grado del polinomio del denominador es decir, el **número más alto de la variable $$\( s \)$$ que aparece en el denominador.
-
-
-#### Ejemplo
-
-Dada la siguiente función de transferencia:
-
-$$G(s) = \frac{3s - 1}{s^2 + 3s + 2}$$
-
-- El polinomio del denominador es $$\( s^2 + 3s + 2 \)$$
-- El grado más alto de $$\( s \) es 2$$
-
-Por lo tanto, se trata de una **función de segundo orden**.
-
-
-##  ¿Por qué importa el ordenn?
-
-El orden de un sistema indica:
-
-- El **número de elementos dinámicos** (como integradores o acumuladores)
-- La **complejidad** de su respuesta (rápida, lenta, oscilatoria, etc.)
-- El número de **variables de estado** necesarias para describirlo
-
-
-
-## 4. Ejercicios
-
-## 1. Clasificación de funciones de transferencia
-📚 # Ejemplo 1: 
-
-$$G(s) = \frac{s^3 + 2s + 1}{s^2 + 4s + 5}$$
-
-**Solución:**
-
-- Grado del numerador: 3  
-- Grado del denominador: 2  
-- Como $$\( n > m \)$$, la función es impropia.
+- Son dispositivos que convierten la **velocidad angular** \( \omega(t) \) en una **señal de voltaje** proporcional.
+- Modelo en Laplace:
   
+  $$\[V_{\text{taco}}(s) = K_t \cdot \omega(s)\]$$
 
 
-📚 # Ejemplo 2: 
+### Sensores Transmisores
 
-  $$G(s) = \frac{2s + 3}{s^2 + 5s + 6}$$
-
-**Solución:**
-
-- Grado numerador: 1  
-- Grado denominador:2  
-- Como \( n < m \), es **estrictamente propia** (también llamada propia).  
-
-## 2. Polos y ceros
-📚 # Ejemplo 1: 
-
-$$G(s) = \frac{s^2 + 4s + 3}{s^2 + 2s + 1}$$
-
-**Solución:**
-
-- Ceros: raíces de $$\( s^2 + 4s + 3 = 0 \)$$
+#### Lineales:
+- La salida es proporcional a la variable medida (PV):
   
-  $$s^2 + 4s + 3 = (s + 1)(s + 3) = 0 \implies s = -1, -3$$
+  $$\[\frac{TO(s)}{PV(s)} = K\]$$
 
-- Polos: raíces de $$\( s^2 + 2s + 1 = 0 \)$$  
+### No lineales:
+- La relación entre entrada y salida depende de la magnitud, no se puede expresar con una ganancia constante.
 
-$$(s + 1)^2 = 0 \implies s = -1 \quad \text{(polo doble)}$$
+---
+
+##  Ejemplos 
+
+### Ejemplo 1:  Modelo de un Solenoide
+
+Un solenoide recibe un voltaje de entrada \( V(s) \), y se desea conocer el desplazamiento del émbolo \( X(s) \).
+
+### Datos:
+- $$\( L = 0.5 \, H \)$$
+- $$\( R = 2 \, \Omega \)$$
+- $$\( K_s = 3 \, N/A \)$$
+- Sistema mecánico: $$\( m = 0.2 \, kg \)$$, $$\( b = 1 \, N \cdot s/m \)$$, $$\( k = 10 \, N/m \)$$
+
+### Solución:
+1. Función de transferencia eléctrica:
+   $$\[I(s) = \frac{V(s)}{Ls + R} = \frac{V(s)}{0.5s + 2}\]$$
+
+2. Fuerza generada:
+   $$\[F_s(s) = K_s \cdot I(s) = 3 \cdot \frac{V(s)}{0.5s + 2}\]$$
+
+3. Desplazamiento mecánico:
+   $$\[X(s) = \frac{F_s(s)}{ms^2 + bs + k} = \frac{3V(s)}{(0.5s + 2)(0.2s^2 + s + 10)}\]$$
+
+
+### Ejemplo 2: Motor DC
+
+Dado un motor DC con:
+- $$\( L_a = 0.1 \, H \)$$, $$\( R_a = 1 \, \Omega \)$$, $$\( K_b = 0.01 \)$$, $$\( J = 0.01 \)$$, $$\( b = 0.1 \)$$, $$\( K_m = 0.01 \)$$
+- Entrada: $$\( V_a(s) \)$$
+
+### Pregunta:
+Encuentra la función de transferencia $$\( \frac{\omega(s)}{V_a(s)} \)$$
+
+### Solución:
+
+1. Circuito eléctrico:
+   $$\[I(s) = \frac{V_a(s) - K_b \cdot \omega(s)}{sL_a + R_a}\]$$
+
+2. Torque:
+  $$\[T(s) = K_m \cdot I(s)\]$$
+
+3. Mecánica:
+   $$\[\omega(s) = \frac{T(s)}{Js + b}\]$$
+
+4. Sustituyendo y simplificando:
+   $$\[\frac{\omega(s)}{V_a(s)} = \frac{K_m}{(Js + b)(sL_a + R_a) + K_b K_m}\]$$
+
+   Reemplazando valores:
+   $$\[\frac{\omega(s)}{V_a(s)} = \frac{0.01}{(0.01s + 0.1)(0.1s + 1) + 0.0001}\]$$
 
 
 
-📚 # Ejemplo 2: 
-
-$$G(s) = \frac{5(s + 1)}{s(s + 3)(s + 4)}$$
-
-**Solución:**
-
-- Cero: raíz del numerador $$\( s + 1 = 0 \Rightarrow s = -1 \)$$  
-- Polos: raíces del denominador:  
-
-  $$s = 0, \quad s = -3, \quad s = -4$$
 
 
-
-## 3. Grado de la función de transferencia
-
-📚 # Ejemplo 1: 
-
-$$G(s) = \frac{7s + 2}{s^3 + 6s^2 + 11s + 6}$$
-
-**Solución:**
-
-- Grado del denominador:3  
-- Por lo tanto, la función es de **tercer orden**.
 
 
 ## **Conclusión**
-La función de transferenciaaes una herramienta fundamental para analizar y diseñar sistemas de control, ya que simplifica el estudio de sistemas dinámicos en el dominio de la frecuencia. Conocer los polos, ceros y el orden del sistema ayuda a entender su comportamiento y estabilidad.  Además, el teorema del valor final es útil para predecir la respuesta a largo plazosin resolver la ecuación diferencial completa.  Estas herramientas facilitan la modelación y el control de sistemas en ingenier+ia.
+El modelado con diagramas de bloques permite y ayuda a representar y analizar sistemas electromecánicos como motores, solenoides y sensores de forma clara con su debida estructura. Estos modelos simplifican el diseño de controles y ayudan a entender cómo interactúan las partes eléctricas y mecánicas en un sistema dinámico.
+
