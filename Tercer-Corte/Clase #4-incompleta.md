@@ -1,214 +1,133 @@
-# Funciones de transferencia
-## 1.  Introducción a la Función de Transferencia
+# Algebra de bloques
+Una herramienta fundamental para modelar y analizar la interacción entre sistemas dinámicos son los diagramas de bloques. Estas representaciones gráficas permiten visualizar de manera clara las relaciones entre diferentes componentes de un sistema y son especialmente útiles en el ámbito del Álgebra de Bloques.
 
-En el area de la ingeniería de control, se utiliza una herramienta fundamental llamada función de transferencia para analizar sistemas dinámicos. Esta herramientapermite estudiar el comportamiento del sistema sin resolver directamente su ecuación diferencial.
+## Fundamentos del Algebra de Bloques
+Los diagramas de bloques permiten:
+- Representar sistemas complejos mediante bloques interconectados
+- Simplificar sistemas mediante reglas algebraicas específicas
+- Analizar señales y sus transformaciones a través del sistema
 
-Donde:
-- $$G(s)$$: función de transferencia del sistema
-- $$Y(s)$$: salida del sistema en el dominio de Laplace
-- $$U(s)$$: entrada del sistema en el dominio de Laplace
-- $$s$$: variable compleja usada en la transformada de Laplace
+## 2. Definiciones
+> 🔑 *Diagrama de bloques:* Representación gráfica de un sistema dinámico donde los componentes se muestran como bloques interconectados por flechas que indican el flujo de señales. Permite visualizar y analizar la estructura del sistema.  
+
+> 🔑 *Función de transferencia de un bloque:* Relación matemática entre la transformada de Laplace de la señal de salida y la de entrada de un bloque individual
+
+> 🔑 *Punto de suma (comparador):* Elemento que realiza operaciones algebraicas (suma/resta) entre señales. Se representa con un círculo y símbolos +/- en sus entradas. Las señales deben tener mismas unidades.  
+
+> 🔑 *Punto de ramificación:* Nodo donde una señal se divide para dirigirse a múltiples bloques o puntos de suma simultáneamente. 
+
+> 🔑 *Álgebra de bloques:* Conjunto de reglas para simplificar diagramas complejos mediante operaciones como combinación de bloques en serie/paralelo o reducción de lazos de realimentación.  
+
+> 🔑 *Realimentación unitaria:* Configuración donde la señal de salida se retroalimenta directamente (sin bloques adicionales) al punto de suma.
 
 
+## 3.  Elementos de un diagrama de bloques
 
-## 2. Definiciones   
->🔑*Transformada inversa de Laplace:* Se empleapara convertir funciones en el dominio de la frecuencia (s) al dominio del tiempo (t).  
+### 1. Flechas (Señales)
+**Representación:**  
+→ *Direccionalidad:*  
+- Indican el flujo unidireccional de señales entre componentes  
+- La punta que apunta al bloque = Entrada* 
+- La punta que sale del bloque = Salida   
+
+**Características clave:**  
+- Modelan la propiedad unilateral de los sistemas de control  
+- Transportan información de variables físicas (tensión, presión, temperatura, etc.)
+
+![image](https://github.com/user-attachments/assets/e1837bcf-a14f-4eda-b65e-daa5010e0a8d)
+
+### 2. Punto de Suma (Comparador)
+
+Símbolo estándar:*
+○ (Círculo con cruce interior)  
+
+Funcionalidad:
+- Opera algebraicamente señales mediante:  
+  - Suma (+) 
+  - Resta (−)  
+- Configuración de signos:  
+  + → Señal a sumar
+  - → Señal a restar
+
+  ![image](https://github.com/user-attachments/assets/a4c36c98-7c17-4c29-a2cf-b16822586988)
   
-> 🔑 *Funcin de transferencia:*  Es la relación matemática ntre la transformada de Laplace de la salida y la entrada de un sistema, considerando condiciones iniciales nulas. Se utiliza para analizar sistemas dinámicos en el dominio de la frecuencia.
+---
 
-> 🔑 *Polos y ceros:* Los polos son los valores de $$\( s \)$$ que hacen que la función de transferencia tienda a infinito (raíces del denominador), mientras que los ceros son los valores que anulan la función (raíces del numerador). La ubicación de polos y ceros determina la estabilidad y respuesta del sistema.
+## 4. Interpretación Matemática de Bloques
+*Relación entrada-salida:**  
+Para un bloque con función de transferencia $$\( G(s) \)$$:
 
-> 🔑 *Orden o grado de una función de transferencia:*  Corresponde al grado del polinomio característico (denominador). Indica la complejidad y el número de estados dinámicos del sistema.
+$$\[Y(s) = U(s) \cdot G(s)\]$$
 
-> 🔑 *Teorema del valor final:*  Método para encotrar el valor límite de la salida de un sistema cuando el tiempo tiende ainfinito, usando transformadas de Laplace, siempre que el sistema sea estable.
+Donde:  
+- $$\( U(s) \)$$: Señal de entrada en dominio de Laplace  
+- $$\( G(s) \)$$: Función de transferencia del bloque  
+- $$\( Y(s) \)$$: Señal de resultado  
 
+**Ejemplo:**  
+Si $$\( G(s) = \frac{1}{s+2} \) y \( U(s) = \frac{1}{s} \)$$:  
 
-### Clasificación de las funciones de transferencia
-#### 1. Función **Impropia**
+$$\[Y(s) = \frac{1}{s} \cdot \frac{1}{s+2} = \frac{1}{s(s+2)}\]$$
 
-- Condición: $$\( n > m \)$$
-- El numerador tiene mayor grado que el denominador.
-- Este tipo de función **no es físicamente realizable** directamente, ya ue implica un sistema no causal.
+### 1. Conexión de Bloques en Cascada
 
-**Ejemplo:**
+[U₁(s)] → [G₁(s)] →  [G₂(s)] → [Y₂(s)]
 
-$$G(s) = \frac{s^2 + 1}{s + 1}$$
+**Configuración:**  
+Salida del primer bloque → Entrada del segundo bloque  
 
-- Numerador: grado 2  
-- Denominador: grado 1  
-**Clasificación**: Impropia
+**Teorema:**  
+La función de transferencia equivalente $$\( G_{eq}(s) \)$$ es el **producto** de las funciones individuales:
 
+$$\[G_{eq}(s) = G_1(s) \cdot G_2(s)\]$$
 
-####  2. Función **Estrictamente Propia**
-
-- Condición: \( n < m \)
-- El denominador tiene mayor grado que el numerador.
-- Este es el caso más común y **representa un sistema físicamente realizable y estable**.
-
-**Ejemplo:**
-
-$$G(s) = \frac{1}{s^2 + 1}$$
-
-- Numeradorgrado 0  
-- Denominador: grado 2  
-**Clasificación**: Estrictamente propia
+[U₁(s)] → [G₁(s)] →  [G₂(s)] → [Y₂(s)]    
+[U₁(s)] → [G₁(s)G₂(s)] → [Y₂(s)]
 
 
 
-#### 3. Función **Bipropia** (o simplemente Propia)
+## 5. Solución Sistemática con Álgebra de Bloques
+Las reglas de conexión en cascada permiten resolver problemas complejos paso a paso  
 
-- Condición: \( n = m \)
-- Numerador y denominador tienen el mismo grado.
-- El sistema es **realizable**, aunque puede tener un comportamiento especial a altas frecuencias.
+1. **Identificar bloques consecutivos** en la trayectoria de señal.  
+2. **Multiplicar sus funciones de transferencia** (conservando el orden).  
+3. **Simplificar el diagrama** reemplazando por un solo bloque equivalente.  
+4. **Repetir** hasta obtener una función de transferencia total.  
 
-**Ejemplo:**
+*Ejemplo práctico:*  
+Si un sistema tiene `[G₁(s)] → [G₂(s)] → [G₃(s)]`, su reducción es inmediata: 
 
-$$G(s) = \frac{s^2 - 1}{s^2 + 1}$$
+$$\[G_{total}(s) = G_1(s) \cdot G_2(s) \cdot G_3(s)\]$$    
 
-- Numerador: grado 2  
-- Denominador: grado 2  
-**Clasificación**: Bipropia (propia)
-
-### Polos y Ceros en Funciones de Transferencia
-
-#### ¿Que son los polos y cros?
-
-Dada una funci+n de transferencia en forma racional:
-
-$$G(s) = \frac{N(s)}{D(s)} = \frac{(s - z_1)(s - z_2)\dots(s - z_n)}{(s - p_1)(s - p_2)\dots(s - p_m)}$$
-
-Donde:
-
-- $$\( z_1, z_2, \dots, z_n \)$$ son los **ceros** del sistema.
-- $$\( p_1, p_2, \dots, p_m \)$$ son los **polos** del sistema.
-- $$\( N(s) \)$$: numerador, determina los ceros.
-- $$\( D(s) \)$$: denominador, determina los polos.
-- $$\( s \)$$: variable en eldominio de Laplace.
+## 6.Imagenes o archivos necesarios
+![image](https://github.com/user-attachments/assets/b177ec62-bc48-45ca-a542-935f694ad9f2)
+![image](https://github.com/user-attachments/assets/e1eb0411-7f38-4e23-b714-a2dc8cae7ed0)
 
 
-#### Importancia de los polos y ceros
-
-- Los polos determinan la estabilida y la dinámica del sistema (como su velocidad de respuesta y si oscila o no).
-- Los ceros afectan la forma de la respuesta del sistema, pero no su estabilidad.
-- La posicón de polos y ceros en el plano complejo $$\( s \)$$ es esencial para diseñar y analizar sistemas de control.
-
-
-##  Ejemplos
+## 7. Ejemplos
 
 ### Ejemplo 1: Sistema con 2ceros y 2 polos
 
-$$G(s) = \frac{(s + 2)(s - 1)}{(s + 3)(s + 5)}$$
 
-- **Ceros**: $$\( s = -2 \), \( s = 1 \)  $$
-- **Polos**: $$\( s = -3 \), \( s = -5 \)$$
 
-Sistema **estable** (todos los polos tienen parte real negativa).
-
+---
 
 ### Ejemplo 2: Sistema con un polo en el origen
 
-$$G(s) = \frac{5}{s(s + 2)}$$
-
-- **Ceros**: ninguno explícito (numerador es constante)  
-- **Polos**: $$\( s = 0 \), \( s = -2 \)$$
-
-El polo en $$\( s = 0 \)$$ implica que el sistema es tipo 1 y tiene una respuesta lenta al inicio.
 
 
-### Grado de una Función de Transferencia
-
-####  ¿Qu+e significa el orden de una función de transferencia?
-
-El orden de una función de transferencia estaa determinado por el grado del polinomio del denominador es decir, el **número más alto de la variable $$\( s \)$$ que aparece en el denominador.
-
-
-#### Ejemplo
-
-Dada la siguiente función de transferencia:
-
-$$G(s) = \frac{3s - 1}{s^2 + 3s + 2}$$
-
-- El polinomio del denominador es $$\( s^2 + 3s + 2 \)$$
-- El grado más alto de $$\( s \) es 2$$
-
-Por lo tanto, se trata de una **función de segundo orden**.
-
-
-##  ¿Por qué importa el ordenn?
-
-El orden de un sistema indica:
-
-- El **número de elementos dinámicos** (como integradores o acumuladores)
-- La **complejidad** de su respuesta (rápida, lenta, oscilatoria, etc.)
-- El número de **variables de estado** necesarias para describirlo
-
-
-
-## 4. Ejercicios
+## 8. Ejercicios
 
 ## 1. Clasificación de funciones de transferencia
 📚 # Ejemplo 1: 
 
-$$G(s) = \frac{s^3 + 2s + 1}{s^2 + 4s + 5}$$
 
-**Solución:**
-
-- Grado del numerador: 3  
-- Grado del denominador: 2  
-- Como $$\( n > m \)$$, la función es impropia.
-  
+---  
 
 
 📚 # Ejemplo 2: 
 
-  $$G(s) = \frac{2s + 3}{s^2 + 5s + 6}$$
-
-**Solución:**
-
-- Grado numerador: 1  
-- Grado denominador:2  
-- Como \( n < m \), es **estrictamente propia** (también llamada propia).  
-
-## 2. Polos y ceros
-📚 # Ejemplo 1: 
-
-$$G(s) = \frac{s^2 + 4s + 3}{s^2 + 2s + 1}$$
-
-**Solución:**
-
-- Ceros: raíces de $$\( s^2 + 4s + 3 = 0 \)$$
   
-  $$s^2 + 4s + 3 = (s + 1)(s + 3) = 0 \implies s = -1, -3$$
-
-- Polos: raíces de $$\( s^2 + 2s + 1 = 0 \)$$  
-
-$$(s + 1)^2 = 0 \implies s = -1 \quad \text{(polo doble)}$$
-
-
-
-📚 # Ejemplo 2: 
-
-$$G(s) = \frac{5(s + 1)}{s(s + 3)(s + 4)}$$
-
-**Solución:**
-
-- Cero: raíz del numerador $$\( s + 1 = 0 \Rightarrow s = -1 \)$$  
-- Polos: raíces del denominador:  
-
-  $$s = 0, \quad s = -3, \quad s = -4$$
-
-
-
-## 3. Grado de la función de transferencia
-
-📚 # Ejemplo 1: 
-
-$$G(s) = \frac{7s + 2}{s^3 + 6s^2 + 11s + 6}$$
-
-**Solución:**
-
-- Grado del denominador:3  
-- Por lo tanto, la función es de **tercer orden**.
 
 
 ## **Conclusión**
