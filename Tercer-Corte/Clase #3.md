@@ -1,13 +1,14 @@
-# Funciones de transferencia
-## 1.  Introducción a la Función de Transferencia
+# Funcion de transferencia en diagrama de bloques
+Los diagramas de bloques son herramientas para comprobar y realizar un análisis de sistemas dinámicos, ya que permiten representar de manera visual las interacciones entre las diferentes partes de un sistema y sus funciones de transferencia. Cada bloque en un diagrama representa un componente del sistema, y las conexiones entre los bloques indican cómo fluye la señal entre ellos.
 
-En el area de la ingeniería de control, se utiliza una herramienta fundamental llamada función de transferencia para analizar sistemas dinámicos. Esta herramientapermite estudiar el comportamiento del sistema sin resolver directamente su ecuación diferencial.
+## 1.  Modelamientos de sistemas
 
-Donde:
-- $$G(s)$$: función de transferencia del sistema
-- $$Y(s)$$: salida del sistema en el dominio de Laplace
-- $$U(s)$$: entrada del sistema en el dominio de Laplace
-- $$s$$: variable compleja usada en la transformada de Laplace
+
+- **Modelado a partir de funciones de transferencia individuales:**  
+  Una forma de abordar un sistema complejo es descomponerlo en sus componentes básicos, hallar la función de transferencia de cada uno, y luego integrarlos para representar el comportamiento global del sistema.
+
+- **Diversidad de procesos y dispositivos involucrados:**  
+  Incluso utilizando modelos ya conocidos, es bueno considerar que los sistemas complejos pueden integrar una amplia gama de dispositivos, procesos dinámicos y no lineales. Esto incluye, por ejemplo, sistemas térmicos, hidráulicos, eléctricos, mecánicos, etc
 
 
 
@@ -23,23 +24,45 @@ Donde:
 > 🔑 *Teorema del valor final:*  Método para encotrar el valor límite de la salida de un sistema cuando el tiempo tiende ainfinito, usando transformadas de Laplace, siempre que el sistema sea estable.
 
 
-### Clasificación de las funciones de transferencia
-#### 1. Función **Impropia**
+## 3. Modelos de sistemas más conocidos
+### 1. Modelo de un Selenoide
 
-- Condición: $$\( n > m \)$$
-- El numerador tiene mayor grado que el denominador.
-- Este tipo de función **no es físicamente realizable** directamente, ya ue implica un sistema no causal.
+Un solenoide es un sistema electromecánico compuesto por:
 
-**Ejemplo:**
-
-$$G(s) = \frac{s^2 + 1}{s + 1}$$
-
-- Numerador: grado 2  
-- Denominador: grado 1  
-**Clasificación**: Impropia
+- **Circuito eléctrico:** Embobinado con resistencia $$\( r \)$$ e inductancia $$\( L \)$$.
+- **Transductor electromagnético:** Convierte corriente en fuerza mecánica.
+- **Sistema mecánico de traslación:** Produce movimiento lineal.
 
 
-####  2. Función **Estrictamente Propia**
+#### 1. Modelo Eléctrico
+
+- **Ecuación en el tiempo:**
+
+  $$\[L \frac{di(t)}{dt} + r \cdot i(t) = v(t)\]$$
+
+- **En Laplace:**
+
+  $$\[I(s) = \frac{V(s)}{Ls + r}\]$$
+
+#### 2. Acoplamiento Electromecánico
+
+La corriente genera una fuerza proporcional:
+
+$$\[F_s(s) = K_s \cdot I(s)\]$$
+
+
+#### 3. Modelo Mecánico
+
+El sistema responde con movimiento:
+
+$$\[X(s) = \frac{F_s(s)}{ms^2 + bs + k}\]$$
+
+#### Diagrama de Bloques del Solenoide
+
+$$V(s) → [1 / (Ls + r)] → [K_s] → [1 / (ms² + bs + k)] → X(s)$$
+
+
+###  2. Función **Estrictamente Propia**
 
 - Condición: \( n < m \)
 - El denominador tiene mayor grado que el numerador.
