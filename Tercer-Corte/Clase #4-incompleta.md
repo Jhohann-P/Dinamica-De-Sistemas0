@@ -236,17 +236,69 @@ ahora, multiplicaremois g4 * g5 ya que estaria directo y lo uniremos con g3, dan
 
 ## 8. Ejercicios
 
-## 1. Clasificación de funciones de transferencia
 📚 # Ejemplo 1: 
 
+![image](https://github.com/user-attachments/assets/db9bea50-55bd-4f78-a101-fd954f16034c)  
 
----  
+Identificación de los componentes del sistema
+
+El sistema está compuesto por los siguientes elementos:
+
+- Entrada: $$\( R(s) \)$$
+- Salida: $$\( C(s) \)$$
+- Bloques funcionales:
+  - $$\( G_1 \)$$: Bloque en la trayectoria directa desde $$\( R(s) \)$$ hacia la salida.
+  - $$\( G_2 \)$$: Bloque en paralelo con $$\( G_1 \)$$.
+  - $$\( G_3 \)$$: Bloque conectado entre $$\( G_2 \)$$ y el lazo de retroalimentación.
+  - $$\( G_4 \)$$: Bloque en el camino de la retroalimentación negativa.
+
+Combinación de ramas paralelas
+
+Los bloques $$\( G_1 \) y \( G_2 \)$$ están en una configuración de paralelo. Para combinarlos, sumamos sus ganancias:
+
+$$\text{Ganancia en paralelo} = G_1 + G_2$$
+
+Esto da lugar a un único bloque equivalente que representa la ganancia combinada de ambas ramas.
 
 
-📚 # Ejemplo 2: 
+Análisis del lazo de retroalimentación
+
+El sistema tiene un lazo de retroalimentación negativa que incluye los bloques $$\( G_3 \) y \( G_4 \)$$. La retroalimentación total se calcula como:
+
+$$\text{Retroalimentación total} = G_3 - G_4$$
+
+La fórmula general para un sistema con retroalimentación negativa es:
+
+$$\text{Ganancia total} = \frac{\text{Ganancia directa}}{1 + (\text{Ganancia directa}) \cdot (\text{Retroalimentación total})}$$
+
+Sustituyendo:
+
+- Ganancia directa: $$\( G_1 + G_2 \)$$
+- Retroalimentación: $$\( G_3 - G_4 \)$$
+
+Obtenemos:
+
+$$\text{Ganancia total} = \frac{G_1 + G_2}{1 + (G_1 + G_2)(G_3 - G_4)}$$
+
+
+La función de transferencia total del sistema es la relación entre la salida \( C(s) \) y la entrada \( R(s) \):
+
+$$\frac{C(s)}{R(s)} = \frac{G_1 + G_2}{1 + (G_1 + G_2)(G_3 - G_4)}$$
+
+
+
+## Resultado Final
+
+$$\boxed{\frac{C(s)}{R(s)} = \frac{G_1 + G_2}{1 + (G_1 + G_2)(G_3 - G_4)}}$$
+
+
+
 
   
 
 
 ## **Conclusión**
-La función de transferenciaaes una herramienta fundamental para analizar y diseñar sistemas de control, ya que simplifica el estudio de sistemas dinámicos en el dominio de la frecuencia. Conocer los polos, ceros y el orden del sistema ayuda a entender su comportamiento y estabilidad.  Además, el teorema del valor final es útil para predecir la respuesta a largo plazosin resolver la ecuación diferencial completa.  Estas herramientas facilitan la modelación y el control de sistemas en ingenier+ia.
+Los diagrama de bloques fuerón simplificados de manera eficiente aplicando las propiedades de combinaciones en paralelo y retroalimentación negativa además de las leyes de bloques aplicadas en cada uno de los ejercicios.  
+El uso de conceptos como Ganancia Directa y Retroalimentación Total permitió reducir el sistema a una fórmula única, facilitando el análisis.  
+Este método puede aplicarse a sistemas similares con configuraciones de bloques más complejas, siguiendo los pasos de simplificación uno a uno.  
+La función de transferencia obtenida describe cómo la salida C(s) responde a una entrada R(s) considerando todas las interacciones internas del sistema.  
