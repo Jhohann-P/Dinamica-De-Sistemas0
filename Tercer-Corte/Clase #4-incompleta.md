@@ -106,13 +106,131 @@ $$\[G_{total}(s) = G_1(s) \cdot G_2(s) \cdot G_3(s)\]$$
 
 ## 7. Ejemplos
 
-### Ejemplo 1: Sistema con 2ceros y 2 polos
+### Ejemplo 1: 
+
+![image](https://github.com/user-attachments/assets/ef61deca-526a-402b-98b6-1b25cd5b79c4)
+
+Para solucionar este ejercicio, realizamos 1/s * 10/s+5
+
+$$\frac{1}{s} \cdot \frac{10}{s + 5} = \frac{10}{s(s + 5)}\$$
+$$\frac{10}{s^2 + 5s}\$$
+
+realizando nuevamente el esquema, nos daría:    
+
+![image](https://github.com/user-attachments/assets/16d5afdd-debf-4679-8948-21c5c37c1893)    
+
+realizando nuevamente mediante las reglas de bloques, tendriamos que: 
+
+$$\frac{\frac{10}{s^2 + 5s}}{1 + \frac{10}{s^2 + 5s} \cdot \frac{1}{s + 2}}$$
+
+## Paso 1: Factorizar
+
+Factorizamos el denominador $$\(s^2 + 5s\)$$:
+
+$$
+s^2 + 5s = s(s + 5)
+$$
+
+Entonces la expresión queda:
+
+$$
+\frac{\frac{10}{s(s + 5)}}{1 + \frac{10}{s(s + 5)} \cdot \frac{1}{s + 2}}
+$$
+
+Paso 2: Multiplicación en el denominador
+
+Multiplicamos las fracciones del segundo término del denominador:
+
+$$
+\frac{10}{s(s + 5)} \cdot \frac{1}{s + 2} = \frac{10}{s(s + 5)(s + 2)}
+$$
+
+ Paso 3: Sumar fracciones
+
+Expresamos el 1 como fracción con el mismo denominador:
+
+$$
+1 = \frac{s(s + 5)(s + 2)}{s(s + 5)(s + 2)}
+$$
+
+Entonces:
+
+$$
+1 + \frac{10}{s(s + 5)(s + 2)} = \frac{s(s + 5)(s + 2) + 10}{s(s + 5)(s + 2)}
+$$
+
+Paso 4: Reescribir la expresión
+
+Sustituimos todo en la expresión original:
+
+$$
+\frac{\frac{10}{s(s + 5)}}{\frac{s(s + 5)(s + 2) + 10}{s(s + 5)(s + 2)}}
+$$
+
+Multiplicamos por el recíproco:
+
+$$
+= \frac{10}{s(s + 5)} \cdot \frac{s(s + 5)(s + 2)}{s(s + 5)(s + 2) + 10}
+$$
+
+Simplificamos \(s(s + 5)\) en numerador y denominador:
+
+$$
+= \frac{10(s + 2)}{s(s + 5)(s + 2) + 10}
+$$
 
 
+
+Paso 5: Expandir el denominador
+
+Primero expandimos:
+
+$$
+(s + 5)(s + 2) = s^2 + 7s + 10
+$$
+
+Luego:
+
+$$
+s(s^2 + 7s + 10) = s^3 + 7s^2 + 10s
+$$
+
+Sumamos el 10 final:
+
+$$
+s^3 + 7s^2 + 10s + 10
+$$
+
+
+## Resultado final
+
+$$
+\frac{10(s + 2)}{s^3 + 7s^2 + 10s + 10} = \frac{10s + 20}{s^3 + 7s^2 + 10s + 10}
+$$
+
+![image](https://github.com/user-attachments/assets/7666643c-c501-419a-8393-1eb45dd9928f)
 
 ---
 
-### Ejemplo 2: Sistema con un polo en el origen
+### Ejemplo 2: 
+
+![image](https://github.com/user-attachments/assets/af6864d8-e9f2-4e04-a43c-d71ae5191203)  
+
+Buscaremos reducir g3 y g2 dandonos como resultado una suma, y eliminando el producto suma de al lado de g2
+dandonos el siguiente resultado:
+
+![image](https://github.com/user-attachments/assets/9549efa4-5f73-44f2-be15-4f89e664ffe0)
+
+ahora g1 lo multiplicador por g2 y g3, uniendo directamente, ademas g5 lo dividiremos en ambas partes como regla o distribucion de bloques  
+
+![image](https://github.com/user-attachments/assets/a2431223-2000-45c5-ac04-d496b570ed28)  
+
+ahora, multiplicaremois g4 * g5 ya que estaria directo y lo uniremos con g3, dandonos una multiplicacion directa, y el g5 de la parte inferior, lo multiplicamos 1/ 1 + g5, dandonos como resultado lo siguiente:  
+
+![image](https://github.com/user-attachments/assets/0c64da24-4118-4e94-866f-90372221900e)  
+
+
+
 
 
 
