@@ -1,6 +1,6 @@
 # Diagrama de flujo de señales 
 El diagrama de flujo de señales es una representación gráfica utilizada para analizar sistemas complejos. Permite visualizar las relaciones entre las diferentes variables del sistema mediante nodos y ramas. Su principal ventaja es que facilita la obtención de la función de transferencia total del sistema, haciendo el análisis más sencillo y ordenado.
-
+ 
 ## 1. Fundamentos del Algebra de Bloques
 El diagrama de flujo de señales es una herramienta gráfica que se utiliza principalmente en el análisis de sistemas lineales e invariantes en el tiempo (LTI). Su propósito es representar el flujo de señales dentro de un sistema, mostrando de forma ordenada la relación entre variables y operaciones matemáticas.
 
