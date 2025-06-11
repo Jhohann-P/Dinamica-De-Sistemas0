@@ -54,7 +54,7 @@ Funcionalidad:
 ---
 
 ## 4. Interpretación Matemática de Bloques
-*Relación entrada-salida:**  
+*Relación entrada-salida*:  
 Para un bloque con función de transferencia $$\( G(s) \)$$:
 
 $$\[Y(s) = U(s) \cdot G(s)\]$$
