@@ -63,7 +63,7 @@ indique el nombre de la señal
 ## 7. Fórmula de Mason
 ![image](https://github.com/user-attachments/assets/c11157fc-a942-4b54-902d-5806ea27c35d)
 
-• 𝑃𝑘 Ganancia de los caminos directos
+• 𝑃𝑘 Ganancia de los caminos directos.
 
 • Δ = 1 − (suma ganancias de los lazos) + (suma producto de 2 lazos que no se tocan) – (suma producto de 3 lazos que no se tocan)+…
 
